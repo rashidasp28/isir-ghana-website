@@ -1,0 +1,122 @@
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+import SectionHeader from '@/components/SectionHeader'
+import FocusCard from '@/components/FocusCard'
+import ProgramCard from '@/components/ProgramCard'
+
+export default function HomePage() {
+  return (
+    <main>
+      <Navbar />
+
+      <section className="bg-gradient-to-br from-darkNavy via-primaryBlue to-primaryGreen text-white py-32">
+        <div className="container-width max-w-5xl">
+          <p className="uppercase tracking-widest text-sm mb-6 text-lightGreen font-semibold">
+            Sustainability Through Innovation
+          </p>
+
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8">
+            Bridging Research, Innovation, and Community Action.
+          </h1>
+
+          <p className="text-xl leading-9 max-w-3xl text-gray-100 mb-10">
+            ISIR Ghana advances sustainable development through evidence-based research,
+            practical programs, STEAM education, climate resilience, agriculture,
+            and community-centered innovation.
+          </p>
+
+          <div className="flex flex-wrap gap-5">
+            <button className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
+              Explore Our Work
+            </button>
+
+            <button className="bg-white text-darkNavy px-8 py-4 rounded-full font-semibold text-lg hover:bg-lightBlue transition">
+              Partner With Us
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-white">
+        <div className="container-width">
+          <SectionHeader
+            eyebrow="Our Focus Areas"
+            title="Building Sustainable Futures Across Ghana"
+            description="ISIR Ghana works across interconnected sectors that shape resilient communities and long-term development."
+            center
+          />
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <FocusCard
+              title="STEAM Education"
+              description="Hands-on learning experiences that inspire creativity, innovation, and problem-solving among young people."
+            />
+
+            <FocusCard
+              title="Maternal Health"
+              description="Community-centered approaches that strengthen maternal and child health awareness and wellbeing."
+            />
+
+            <FocusCard
+              title="Agriculture"
+              description="Climate-smart agriculture and farmer resilience initiatives for sustainable livelihoods."
+            />
+
+            <FocusCard
+              title="Climate Change"
+              description="Renewable energy, resilience-building, and environmental sustainability initiatives."
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-lightBlue">
+        <div className="container-width">
+          <SectionHeader
+            eyebrow="Flagship Programs"
+            title="Programs Creating Practical Impact"
+            description="Our initiatives combine research, innovation, training, and community engagement to produce measurable outcomes."
+          />
+
+          <div className="grid md:grid-cols-2 gap-10">
+            <ProgramCard
+              title="Brick STEAM Discovery Caravan"
+              description="A mobile hands-on STEAM outreach initiative bringing practical science and engineering learning to schools in Northern Ghana."
+            />
+
+            <ProgramCard
+              title="SheSTEAM Project"
+              description="An innovation-focused program empowering girls and young people with coding, electronics, and creative technology skills."
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-darkNavy text-white">
+        <div className="container-width grid md:grid-cols-4 gap-10 text-center">
+          <div>
+            <h3 className="text-5xl font-bold text-primaryGreen mb-3">5,000+</h3>
+            <p className="text-gray-300">Students targeted through STEAM programs</p>
+          </div>
+
+          <div>
+            <h3 className="text-5xl font-bold text-primaryGreen mb-3">500+</h3>
+            <p className="text-gray-300">Youth and women empowered annually</p>
+          </div>
+
+          <div>
+            <h3 className="text-5xl font-bold text-primaryGreen mb-3">10</h3>
+            <p className="text-gray-300">Climate-resilient communities targeted</p>
+          </div>
+
+          <div>
+            <h3 className="text-5xl font-bold text-primaryGreen mb-3">4</h3>
+            <p className="text-gray-300">Strategic development focus areas</p>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  )
+}
