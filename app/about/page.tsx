@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
@@ -34,7 +35,14 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="rounded-3xl bg-gradient-to-br from-primaryBlue to-primaryGreen min-h-[420px]"></div>
+          <div className="relative rounded-3xl overflow-hidden min-h-[420px] shadow-lg">
+            <Image
+              src="/images/about/community.jpg"
+              alt="ISIR Ghana facilitators, students, teachers, volunteers, and partner representatives after a school-based STEAM outreach session"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
 
