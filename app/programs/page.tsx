@@ -7,14 +7,20 @@ const programs = [
   {
     title: 'Brick STEAM Discovery Caravan',
     description: 'A mobile hands-on STEAM outreach program bringing creativity, engineering, design thinking, and problem-solving to basic schools in Northern Ghana.',
+    imageSrc: '/images/programs/brick-steam.jpg',
+    imageAlt: 'Students, teachers, facilitators, volunteers, ISIR Ghana founders, and STEM Rising Mind Foundation representatives after a Brick STEAM Discovery Caravan session.',
   },
   {
     title: 'SheSTEAM Project',
     description: 'A girls-focused innovation program introducing students to electronics, coding, sensors, and creative problem-solving.',
+    imageSrc: '/images/programs/shesteam.jpg',
+    imageAlt: 'Girls and young people participating in coding, electronics, and innovation activities during an ISIR Ghana SheSTEAM session.',
   },
   {
     title: 'Mothers First Health Initiative',
     description: 'A community-centered maternal and child health initiative strengthening antenatal support, child health awareness, and local health knowledge.',
+    imageSrc: '/images/programs/mothers-first.jpg',
+    imageAlt: 'A nurse speaking to expectant mothers and new mothers during a maternal and child health education session.',
   },
   {
     title: 'AgriSmart Ghana',
@@ -50,7 +56,7 @@ export default function ProgramsPage() {
 
           <div className="grid md:grid-cols-2 gap-10">
             {programs.map((program) => (
-              <ProgramCard key={program.title} title={program.title} description={program.description} />
+              <ProgramCard key={program.title} title={program.title} description={program.description} imageSrc={program.imageSrc} imageAlt={program.imageAlt} />
             ))}
           </div>
         </div>
