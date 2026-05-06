@@ -37,7 +37,7 @@ export default function AboutPage() {
 
           <div className="relative rounded-3xl overflow-hidden min-h-[420px] shadow-lg">
             <Image
-              src="/images/about/community.jpg"
+              src="/images/about/community.png"
               alt="ISIR Ghana facilitators, students, teachers, volunteers, and partner representatives after a school-based STEAM outreach session"
               fill
               className="object-cover"
