@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
@@ -37,13 +38,13 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-wrap gap-5">
-            <button className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
+            <Link href="/programs" className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
               Explore Our Work
-            </button>
+            </Link>
 
-            <button className="bg-white text-darkNavy px-8 py-4 rounded-full font-semibold text-lg hover:bg-lightBlue transition">
+            <Link href="/partners" className="bg-white text-darkNavy px-8 py-4 rounded-full font-semibold text-lg hover:bg-lightBlue transition">
               Partner With Us
-            </button>
+            </Link>
           </div>
         </div>
       </section>
