@@ -47,12 +47,12 @@ export default function NewsPage() {
           />
 
           <div className="grid lg:grid-cols-2 gap-10 items-center bg-lightBlue rounded-3xl p-8 md:p-12 border border-softGray">
-            <div className="relative h-[360px] rounded-3xl overflow-hidden bg-white">
+            <div className="relative h-[520px] rounded-3xl overflow-hidden bg-white border border-softGray">
               <Image
                 src="/images/news/africa-youth-boom-cover.png"
                 alt="Africa youth boom policy insight cover by ISIR Ghana"
                 fill
-                className="object-cover"
+                className="object-contain p-4"
               />
             </div>
 
@@ -97,8 +97,8 @@ export default function NewsPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {latestStories.map((story) => (
               <article key={story.title} className="bg-white border border-softGray rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition">
-                <div className="relative h-56 bg-gradient-to-r from-primaryBlue to-primaryGreen">
-                  <Image src={story.image} alt={story.title} fill className="object-cover" />
+                <div className="relative h-72 bg-white border-b border-softGray">
+                  <Image src={story.image} alt={story.title} fill className="object-contain p-4" />
                 </div>
                 <div className="p-8">
                   <p className="text-primaryGreen text-sm font-semibold uppercase tracking-wide mb-3">{story.category}</p>
