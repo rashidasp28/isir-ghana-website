@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
@@ -9,8 +10,18 @@ export default function HomePage() {
     <main>
       <Navbar />
 
-      <section className="bg-gradient-to-br from-darkNavy via-primaryBlue to-primaryGreen text-white py-32">
-        <div className="container-width max-w-5xl">
+      <section className="relative overflow-hidden text-white min-h-[720px] flex items-center">
+        <Image
+          src="/images/homepage/hero.jpg"
+          alt="ISIR Ghana students, facilitators, or community members engaged in hands-on learning and innovation outreach"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-darkNavy/95 via-darkNavy/75 to-primaryBlue/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-darkNavy/80 via-transparent to-transparent"></div>
+
+        <div className="container-width relative z-10 max-w-5xl py-32">
           <p className="uppercase tracking-widest text-sm mb-6 text-lightGreen font-semibold">
             Sustainability Through Innovation
           </p>
