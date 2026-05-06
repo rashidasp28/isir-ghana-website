@@ -14,10 +14,10 @@ const navLinks = [
 export default function Navbar() {
   return (
     <nav className="w-full bg-white border-b border-softGray sticky top-0 z-50">
-      <div className="container-width flex items-center justify-between py-4">
-        <Link href="/" className="flex items-center gap-3">
+      <div className="container-width flex items-center justify-between py-3">
+        <Link href="/" className="flex items-center gap-3 text-primaryBlue font-bold text-2xl">
           <Image
-            src="/logo/isir-logo.png"
+            src="/logo/isir-logo.PNG"
             alt="ISIR Ghana logo"
             width={120}
             height={48}
