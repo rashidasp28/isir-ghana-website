@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
+import TeamSection from '@/components/TeamSection'
+import PartnersSection from '@/components/PartnersSection'
 
 const values = ['Evidence', 'Innovation', 'Inclusion', 'Integrity', 'Collaboration', 'Sustainability']
 
@@ -72,6 +74,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <TeamSection />
+
       <section className="py-24 bg-white">
         <div className="container-width">
           <SectionHeader
@@ -90,6 +94,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <PartnersSection />
 
       <section className="py-24 bg-darkNavy text-white">
         <div className="container-width text-center max-w-4xl">
