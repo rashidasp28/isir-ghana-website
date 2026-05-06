@@ -13,7 +13,7 @@ export default function HomePage() {
 
       <section className="relative overflow-hidden text-white min-h-[720px] flex items-center">
         <Image
-          src="/images/homepage/hero.jpg"
+          src="/images/homepage/hero.png"
           alt="ISIR Ghana students, facilitators, or community members engaged in hands-on learning and innovation outreach"
           fill
           className="object-cover"
@@ -59,25 +59,10 @@ export default function HomePage() {
           />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <FocusCard
-              title="STEAM Education"
-              description="Hands-on learning experiences that inspire creativity, innovation, and problem-solving among young people."
-            />
-
-            <FocusCard
-              title="Maternal Health"
-              description="Community-centered approaches that strengthen maternal and child health awareness and wellbeing."
-            />
-
-            <FocusCard
-              title="Agriculture"
-              description="Climate-smart agriculture and farmer resilience initiatives for sustainable livelihoods."
-            />
-
-            <FocusCard
-              title="Climate Change"
-              description="Renewable energy, resilience-building, and environmental sustainability initiatives."
-            />
+            <FocusCard title="STEAM Education" description="Hands-on learning experiences that inspire creativity, innovation, and problem-solving among young people." />
+            <FocusCard title="Maternal Health" description="Community-centered approaches that strengthen maternal and child health awareness and wellbeing." />
+            <FocusCard title="Agriculture" description="Climate-smart agriculture and farmer resilience initiatives for sustainable livelihoods." />
+            <FocusCard title="Climate Change" description="Renewable energy, resilience-building, and environmental sustainability initiatives." />
           </div>
         </div>
       </section>
@@ -94,14 +79,14 @@ export default function HomePage() {
             <ProgramCard
               title="Brick STEAM Discovery Caravan"
               description="A mobile hands-on STEAM outreach initiative bringing practical science and engineering learning to schools in Northern Ghana."
-              imageSrc="/images/programs/brick-steam.jpg"
+              imageSrc="/images/programs/brick-steam.png"
               imageAlt="Students actively participating in the ISIR Ghana Brick STEAM Discovery Caravan through hands-on collaborative learning and creativity"
             />
 
             <ProgramCard
               title="SheSTEAM Project"
               description="An innovation-focused program empowering girls and young people with coding, electronics, and creative technology skills."
-              imageSrc="/images/programs/shesteam.jpg"
+              imageSrc="/images/programs/shesteam.png"
               imageAlt="Girls and young people participating in coding, electronics, and innovation activities during an ISIR Ghana SheSTEAM session"
             />
           </div>
@@ -110,25 +95,10 @@ export default function HomePage() {
 
       <section className="py-24 bg-darkNavy text-white">
         <div className="container-width grid md:grid-cols-4 gap-10 text-center">
-          <div>
-            <h3 className="text-5xl font-bold text-primaryGreen mb-3">5,000+</h3>
-            <p className="text-gray-300">Students targeted through STEAM programs</p>
-          </div>
-
-          <div>
-            <h3 className="text-5xl font-bold text-primaryGreen mb-3">500+</h3>
-            <p className="text-gray-300">Youth and women empowered annually</p>
-          </div>
-
-          <div>
-            <h3 className="text-5xl font-bold text-primaryGreen mb-3">10</h3>
-            <p className="text-gray-300">Climate-resilient communities targeted</p>
-          </div>
-
-          <div>
-            <h3 className="text-5xl font-bold text-primaryGreen mb-3">4</h3>
-            <p className="text-gray-300">Strategic development focus areas</p>
-          </div>
+          <div><h3 className="text-5xl font-bold text-primaryGreen mb-3">5,000+</h3><p className="text-gray-300">Students targeted through STEAM programs</p></div>
+          <div><h3 className="text-5xl font-bold text-primaryGreen mb-3">500+</h3><p className="text-gray-300">Youth and women empowered annually</p></div>
+          <div><h3 className="text-5xl font-bold text-primaryGreen mb-3">10</h3><p className="text-gray-300">Climate-resilient communities targeted</p></div>
+          <div><h3 className="text-5xl font-bold text-primaryGreen mb-3">4</h3><p className="text-gray-300">Strategic development focus areas</p></div>
         </div>
       </section>
 
