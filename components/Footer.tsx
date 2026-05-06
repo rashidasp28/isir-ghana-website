@@ -1,9 +1,18 @@
+import Image from 'next/image'
+
 export default function Footer() {
   return (
     <footer className="bg-darkNavy text-white py-16 mt-20">
       <div className="container-width grid md:grid-cols-4 gap-10">
         <div>
-          <h3 className="text-2xl font-bold mb-4">ISIR Ghana</h3>
+          <Image
+            src="/logo/isir-logo-white.png"
+            alt="ISIR Ghana white logo"
+            width={140}
+            height={60}
+            className="h-14 w-auto object-contain mb-5"
+          />
+
           <p className="text-sm leading-7 text-gray-300">
             Bridging research, innovation, and community action for sustainable development in Ghana.
           </p>
