@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { partners } from '@/data/partners'
 
 export default function PartnersSection() {
@@ -24,18 +23,13 @@ export default function PartnersSection() {
               href={partner.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white border border-softGray rounded-3xl p-6 flex flex-col items-center justify-center shadow-sm hover:shadow-lg transition min-h-[220px]"
+              className="bg-white border border-softGray rounded-3xl p-8 flex flex-col items-center justify-center shadow-sm hover:shadow-lg transition min-h-[220px] text-center"
             >
-              <div className="relative w-full h-28 mb-6">
-                <Image
-                  src={partner.logo}
-                  alt={partner.name}
-                  fill
-                  className="object-contain"
-                />
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primaryBlue to-primaryGreen text-white flex items-center justify-center text-2xl font-bold mb-6 shadow-lg">
+                {partner.name.charAt(0)}
               </div>
 
-              <h3 className="text-lg font-bold text-darkNavy text-center leading-6">
+              <h3 className="text-lg font-bold text-darkNavy leading-6">
                 {partner.name}
               </h3>
             </a>
