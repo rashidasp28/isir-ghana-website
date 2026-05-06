@@ -1,0 +1,1 @@
+Partner logos folder for ISIR Ghana website.
