@@ -93,11 +93,15 @@ export default function HomePage() {
             <ProgramCard
               title="Brick STEAM Discovery Caravan"
               description="A mobile hands-on STEAM outreach initiative bringing practical science and engineering learning to schools in Northern Ghana."
+              imageSrc="/images/programs/brick-steam.jpg"
+              imageAlt="Students actively participating in the ISIR Ghana Brick STEAM Discovery Caravan through hands-on collaborative learning and creativity"
             />
 
             <ProgramCard
               title="SheSTEAM Project"
               description="An innovation-focused program empowering girls and young people with coding, electronics, and creative technology skills."
+              imageSrc="/images/programs/shesteam.jpg"
+              imageAlt="Girls and young people participating in coding, electronics, and innovation activities during an ISIR Ghana SheSTEAM session"
             />
           </div>
         </div>
