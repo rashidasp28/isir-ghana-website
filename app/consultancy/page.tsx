@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
@@ -23,6 +24,10 @@ export default function ConsultancyPage() {
           <p className="uppercase tracking-widest text-sm mb-6 text-lightGreen font-semibold">Consultancy Services</p>
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8">Evidence-based support for stronger development programs.</h1>
           <p className="text-xl leading-9 max-w-3xl text-gray-100">ISIR Ghana supports NGOs, schools, companies, foundations, public institutions, and development partners with research, strategy, MEL, program design, training, and impact communication services.</p>
+          <div className="flex flex-wrap gap-5 mt-10">
+            <a href="#consultancy-form" className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">Request Support</a>
+            <Link href="/contact" className="bg-white text-darkNavy px-8 py-4 rounded-full font-semibold text-lg hover:bg-lightBlue transition">Contact ISIR Ghana</Link>
+          </div>
         </div>
       </section>
 
@@ -49,7 +54,7 @@ export default function ConsultancyPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-lightBlue">
+      <section id="consultancy-form" className="py-24 bg-lightBlue">
         <div className="container-width grid lg:grid-cols-2 gap-12 items-start">
           <div>
             <SectionHeader
@@ -59,14 +64,14 @@ export default function ConsultancyPage() {
             />
           </div>
 
-          <div className="bg-white border border-softGray rounded-3xl p-8 shadow-sm">
+          <form action="mailto:isirghana@gmail.com" method="post" encType="text/plain" className="bg-white border border-softGray rounded-3xl p-8 shadow-sm">
             <h3 className="text-2xl font-bold text-darkNavy mb-6">Request Consultancy Support</h3>
             <div className="grid md:grid-cols-2 gap-5">
-              <input className="border border-softGray rounded-2xl px-5 py-4" placeholder="Full name" />
-              <input className="border border-softGray rounded-2xl px-5 py-4" placeholder="Email address" />
-              <input className="border border-softGray rounded-2xl px-5 py-4" placeholder="Organization" />
-              <input className="border border-softGray rounded-2xl px-5 py-4" placeholder="Country" />
-              <select className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2">
+              <input name="Full name" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Full name" />
+              <input name="Email address" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Email address" />
+              <input name="Organization" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Organization" />
+              <input name="Country" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Country" />
+              <select name="Consultancy service" className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2">
                 <option>Research design</option>
                 <option>Needs assessment</option>
                 <option>MEL support</option>
@@ -75,10 +80,11 @@ export default function ConsultancyPage() {
                 <option>Impact reporting</option>
                 <option>Training and capacity building</option>
               </select>
-              <textarea className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2 min-h-[160px]" placeholder="Briefly describe the support you need" />
+              <textarea name="Consultancy request" className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2 min-h-[160px]" placeholder="Briefly describe the support you need" />
             </div>
-            <button className="mt-8 bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Submit Consultancy Request</button>
-          </div>
+            <button type="submit" className="mt-8 bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Submit Consultancy Request</button>
+            <p className="text-sm text-gray-500 mt-4">This will open your email app to send the request to ISIR Ghana.</p>
+          </form>
         </div>
       </section>
 
@@ -86,7 +92,7 @@ export default function ConsultancyPage() {
         <div className="container-width text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Let’s Turn Your Development Idea Into a Stronger Program</h2>
           <p className="text-lg leading-8 text-gray-300 mb-10">ISIR Ghana can help you design, research, evaluate, document, and communicate development work that is practical, fundable, and impact-driven.</p>
-          <button className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Request Consultancy Support</button>
+          <a href="#consultancy-form" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Request Consultancy Support</a>
         </div>
       </section>
 
