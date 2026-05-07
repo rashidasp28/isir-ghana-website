@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -22,11 +23,11 @@ const benefits = [
 ]
 
 const partners = [
-  ['Eco Empower Alliance', 'https://ecoempoweralliance.org/'],
-  ['Herpol Africa', 'https://herpolafrica.org/'],
-  ['GEM Ghana', 'https://gemghana.org'],
-  ['Masjid EAl Emaan', '#'],
-  ['STEM Rising Mind Foundation', '#'],
+  { name: 'Eco Empower Alliance', website: 'https://ecoempoweralliance.org/', logo: '/images/partners/eco-empower-alliance.png' },
+  { name: 'GEM Ghana', website: 'https://gemghana.org', logo: '/images/partners/gem-ghana.jpeg' },
+  { name: 'Herpol Africa', website: 'https://herpolafrica.org/', logo: '/images/partners/herpol-africa.png' },
+  { name: 'Masjid AL Emaan', website: '#', logo: '/images/partners/masjid-al-emaan.jpeg' },
+  { name: 'STEM Rising Mind Foundation', website: '#', logo: '/images/partners/stem-rising-mind-foundation.jpeg' },
 ]
 
 export default function PartnersPage() {
@@ -90,7 +91,7 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white overflow-hidden">
         <div className="container-width">
           <SectionHeader
             eyebrow="Current and Emerging Partners"
@@ -98,13 +99,16 @@ export default function PartnersPage() {
             description="ISIR Ghana values collaboration with institutions, foundations, schools, community organizations, and development actors committed to practical and sustainable change."
             center
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
-            {partners.map(([name, website]) => (
-              <a key={name} href={website} target="_blank" rel="noopener noreferrer" className="bg-lightBlue border border-softGray rounded-3xl p-8 text-center shadow-sm hover:shadow-lg transition min-h-[200px] flex flex-col items-center justify-center">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primaryBlue to-primaryGreen text-white flex items-center justify-center text-3xl font-bold mb-5">
-                  {name.charAt(0)}
+        </div>
+
+        <div className="relative overflow-hidden mt-10">
+          <div className="flex gap-8 w-max partner-logo-slider px-8">
+            {[...partners, ...partners].map((partner, index) => (
+              <a key={`${partner.name}-${index}`} href={partner.website} target="_blank" rel="noopener noreferrer" className="bg-white border border-softGray rounded-3xl p-8 text-center shadow-sm hover:shadow-lg transition min-h-[220px] w-[260px] flex-shrink-0 flex flex-col items-center justify-center">
+                <div className="relative w-32 h-24 mb-6">
+                  <Image src={partner.logo} alt={`${partner.name} logo`} fill className="object-contain" />
                 </div>
-                <h3 className="font-bold text-darkNavy leading-6">{name}</h3>
+                <h3 className="font-bold text-darkNavy leading-6">{partner.name}</h3>
               </a>
             ))}
           </div>
