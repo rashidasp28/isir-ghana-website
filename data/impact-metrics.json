@@ -1,0 +1,87 @@
+{
+  "organization": "ISIR Ghana",
+  "lastUpdated": "2026-01-13",
+  "programMetrics": [
+    {
+      "program": "SheSTEAM Project",
+      "event": "SheSTEAM Project Launch at Anbariya Senior High School",
+      "date": "2026-01-13",
+      "school": "Anbariya Senior High School",
+      "location": "Tamale, Northern Region, Ghana",
+      "directParticipants": 15,
+      "femaleDirectParticipants": 10,
+      "maleDirectParticipants": 5,
+      "femaleParticipationRate": "66.7%",
+      "indirectReach": 60,
+      "estimatedFemaleIndirectReachRate": "55%",
+      "estimatedFemaleIndirectReach": 33,
+      "volunteersEngaged": 2,
+      "schoolsReached": 1,
+      "communitiesReached": 1,
+      "careerAspirationsBeforeSession": {
+        "Nursing": 9,
+        "Teaching": 3,
+        "Civil Engineering": 1,
+        "Medicine": 2
+      },
+      "postSessionOutcomes": {
+        "studentsConsideringEngineeringWithContinuedExposure": 6,
+        "studentsDemonstratingAICuriosity": 1
+      },
+      "mealSummary": {
+        "monitoring": "15 direct participants, 10 female students, 5 male students, approximately 60 indirect students reached, and 2 ISIR Ghana volunteers engaged.",
+        "evaluation": "The session recorded increased student interest in engineering and technology, with 6 students strongly considering engineering if given continued practical exposure.",
+        "accountability": "The programme documented participant numbers, gender distribution, career aspirations, volunteer support, and student reflections for reporting and improvement.",
+        "learning": "Hands-on electronics and coding can shift student perception of engineering and emerging technologies, especially when learners are supported to solve practical problems."
+      }
+    },
+    {
+      "program": "Brick STEAM Discovery Caravan",
+      "event": "Brick STEAM Discovery Caravan Launch at Bethany MA Junior High School",
+      "date": "2025-12-08",
+      "school": "Bethany MA Junior High School",
+      "location": "Tamale, Northern Region, Ghana",
+      "directParticipants": 30,
+      "femaleDirectParticipants": 18,
+      "maleDirectParticipants": 12,
+      "femaleParticipationRate": "60%",
+      "indirectReach": 30,
+      "volunteersEngaged": 3,
+      "traineeTeachersEngaged": 4,
+      "schoolTeachersEngaged": 2,
+      "schoolsReached": 1,
+      "communitiesReached": 1,
+      "careerAspirationsBeforeSession": {
+        "Nursing": 7,
+        "Midwifery": 6,
+        "Teaching": 3,
+        "Medicine": 3,
+        "Farming": 2,
+        "Journalism": 2,
+        "Pilot": 1,
+        "Welding": 1,
+        "Architecture": 1,
+        "Not yet decided": 4
+      },
+      "postSessionOutcomes": {
+        "studentsFindingEngineeringExcitingPromisingOrInteresting": 8,
+        "studentsInterestedButConcernedEngineeringIsDemanding": 5
+      },
+      "mealSummary": {
+        "monitoring": "30 direct participants, 18 girls, 12 boys, 30 additional students indirectly reached, 3 volunteers, 4 trainee teachers, and 2 school teachers engaged.",
+        "evaluation": "The session expanded student awareness of engineering-related pathways, with 8 students describing engineering as exciting, promising, or interesting after participation.",
+        "accountability": "The programme documented participant numbers, gender distribution, career aspiration baseline, teacher participation, volunteer engagement, and post-session reflections.",
+        "learning": "Play-based, hands-on STEAM activities can make engineering concepts more accessible and can help students connect creativity, problem-solving, and future career possibilities."
+      }
+    }
+  ],
+  "aggregateKnownMetrics": {
+    "directParticipantsFromDocumentedEvents": 45,
+    "femaleDirectParticipantsFromDocumentedEvents": 28,
+    "maleDirectParticipantsFromDocumentedEvents": 17,
+    "indirectReachFromDocumentedEvents": 90,
+    "documentedSchoolsReached": 2,
+    "documentedCommunitiesReached": 2,
+    "volunteersEngagedAcrossDocumentedEvents": 5
+  }
+}
