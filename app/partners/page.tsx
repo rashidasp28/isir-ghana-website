@@ -1,8 +1,8 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
+import PartnerLogoSlider from '@/components/PartnerLogoSlider'
 
 const partnershipTypes = [
   'Funding Partnership',
@@ -20,14 +20,6 @@ const benefits = [
   'Social media acknowledgement',
   'Website recognition',
   'Donor updates',
-]
-
-const partners = [
-  { name: 'Eco Empower Alliance', website: 'https://ecoempoweralliance.org/', logo: '/images/partners/eco-empower-alliance.png' },
-  { name: 'GEM Ghana', website: 'https://gemghana.org', logo: '/images/partners/gem-ghana.jpeg' },
-  { name: 'Herpol Africa', website: 'https://herpolafrica.org/', logo: '/images/partners/herpol-africa.png' },
-  { name: 'Masjid AL Emaan', website: '#', logo: '/images/partners/masjid-al-emaan.jpeg' },
-  { name: 'STEM Rising Mind Foundation', website: '#', logo: '/images/partners/stem-rising-mind-foundation.jpeg' },
 ]
 
 export default function PartnersPage() {
@@ -91,28 +83,15 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-white overflow-hidden">
-        <div className="container-width">
-          <SectionHeader
-            eyebrow="Current and Emerging Partners"
-            title="Organizations connected to our growing impact journey"
-            description="ISIR Ghana values collaboration with institutions, foundations, schools, community organizations, and development actors committed to practical and sustainable change."
-            center
-          />
-        </div>
+      <section className="py-24 bg-white">
+        <SectionHeader
+          eyebrow="Current and Emerging Partners"
+          title="Organizations connected to our growing impact journey"
+          description="ISIR Ghana values collaboration with institutions, foundations, schools, community organizations, and development actors committed to practical and sustainable change."
+          center
+        />
 
-        <div className="relative overflow-hidden mt-10">
-          <div className="flex gap-8 w-max partner-logo-slider px-8">
-            {[...partners, ...partners].map((partner, index) => (
-              <a key={`${partner.name}-${index}`} href={partner.website} target="_blank" rel="noopener noreferrer" className="bg-white border border-softGray rounded-3xl p-8 text-center shadow-sm hover:shadow-lg transition min-h-[220px] w-[260px] flex-shrink-0 flex flex-col items-center justify-center">
-                <div className="relative w-32 h-24 mb-6">
-                  <Image src={partner.logo} alt={`${partner.name} logo`} fill className="object-contain" />
-                </div>
-                <h3 className="font-bold text-darkNavy leading-6">{partner.name}</h3>
-              </a>
-            ))}
-          </div>
-        </div>
+        <PartnerLogoSlider />
       </section>
 
       <section className="py-24 bg-white">
