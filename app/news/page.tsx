@@ -23,6 +23,14 @@ const latestStories = [
     image: '/images/programs/shesteam.png',
   },
   {
+    title: 'ISIR Ghana Launches Brick STEAM Discovery Caravan at Bethany MA Junior High School',
+    category: 'Program Update',
+    summary:
+      'ISIR Ghana launched the Brick STEAM Discovery Caravan in Tamale, directly engaging 30 students through hands-on engineering, creativity, and innovation-centered learning activities.',
+    href: '/news/brick-steam-bethany-launch',
+    image: '/images/programs/brick-steam.png',
+  },
+  {
     title: 'Africa’s Youth Boom: Opportunity or Crisis?',
     category: 'Policy Insight',
     summary:
