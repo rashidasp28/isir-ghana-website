@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
 import FocusCard from '@/components/FocusCard'
 import ProgramCard from '@/components/ProgramCard'
+import ImpactSlider from '@/components/ImpactSlider'
 
 export default function HomePage() {
   return (
@@ -93,16 +94,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-24 bg-darkNavy text-white">
-        <div className="container-width grid sm:grid-cols-2 lg:grid-cols-6 gap-10 text-center">
-          <div><h3 className="text-5xl font-bold text-primaryGreen mb-3">5,000+</h3><p className="text-gray-300">Students targeted through STEAM programs</p></div>
-          <div><h3 className="text-5xl font-bold text-primaryGreen mb-3">500+</h3><p className="text-gray-300">Youth and women empowered annually</p></div>
-          <div><h3 className="text-5xl font-bold text-primaryGreen mb-3">4</h3><p className="text-gray-300">Communities reached</p></div>
-          <div><h3 className="text-5xl font-bold text-primaryGreen mb-3">3</h3><p className="text-gray-300">Partner schools engaged</p></div>
-          <div><h3 className="text-5xl font-bold text-primaryGreen mb-3">10</h3><p className="text-gray-300">Climate-resilient communities targeted</p></div>
-          <div><h3 className="text-5xl font-bold text-primaryGreen mb-3">4</h3><p className="text-gray-300">Strategic development focus areas</p></div>
-        </div>
-      </section>
+      <ImpactSlider />
 
       <Footer />
     </main>
