@@ -60,6 +60,25 @@ export default function BrickSteamBethanyLaunchPage() {
                 The session marked the beginning of ISIR Ghana’s mission to bring hands-on Science, Technology, Engineering, Arts, and Mathematics learning directly to schools through interactive, play-based educational activities using building bricks, creative problem-solving exercises, and innovation-centered learning experiences.
               </p>
             </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mt-14">
+              <div>
+                <div className="relative h-80 rounded-3xl overflow-hidden shadow-md mb-4">
+                  <Image
+                    src="/images/news/brick-steam-bethany-assembly.png"
+                    alt="Students at Bethany MA Junior High School smiling and raising their hands during the Brick STEAM Discovery Caravan launch"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <p className="text-sm text-gray-500">Students at Bethany MA Junior High School smiling and raising their hands during the Brick STEAM Discovery Caravan launch.</p>
+              </div>
+
+              <div className="bg-lightBlue rounded-3xl p-8 border border-softGray flex flex-col justify-center">
+                <h2 className="text-3xl font-bold text-darkNavy mb-4">Learning through creativity and confidence</h2>
+                <p className="text-charcoal leading-8">The session encouraged students to take initiative, work together, test ideas, and connect play-based learning with engineering and innovation.</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -116,6 +135,24 @@ export default function BrickSteamBethanyLaunchPage() {
               <p>
                 At the end of the session, 8 students shared that engineering-related fields now appeared exciting, promising, and interesting to them. Another 5 students indicated that they would have considered engineering careers but perceived them as demanding and requiring a lot of thinking.
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-white">
+          <div className="container-width grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative h-[420px] rounded-3xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/programs/brick-steam.png"
+                alt="A student proudly holding a completed brick car model built during the Brick STEAM Discovery Caravan practical activity"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-3">Student Creativity</p>
+              <h2 className="text-4xl font-bold text-darkNavy mb-6">From bricks to ideas</h2>
+              <p className="text-lg text-charcoal leading-8">A student proudly holds a completed brick model, reflecting how simple hands-on tools can help learners test ideas, build confidence, and connect creativity with engineering thinking.</p>
             </div>
           </div>
         </section>
