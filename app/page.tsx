@@ -94,9 +94,11 @@ export default function HomePage() {
       </section>
 
       <section className="py-24 bg-darkNavy text-white">
-        <div className="container-width grid md:grid-cols-4 gap-10 text-center">
+        <div className="container-width grid sm:grid-cols-2 lg:grid-cols-6 gap-10 text-center">
           <div><h3 className="text-5xl font-bold text-primaryGreen mb-3">5,000+</h3><p className="text-gray-300">Students targeted through STEAM programs</p></div>
           <div><h3 className="text-5xl font-bold text-primaryGreen mb-3">500+</h3><p className="text-gray-300">Youth and women empowered annually</p></div>
+          <div><h3 className="text-5xl font-bold text-primaryGreen mb-3">4</h3><p className="text-gray-300">Communities reached</p></div>
+          <div><h3 className="text-5xl font-bold text-primaryGreen mb-3">3</h3><p className="text-gray-300">Partner schools engaged</p></div>
           <div><h3 className="text-5xl font-bold text-primaryGreen mb-3">10</h3><p className="text-gray-300">Climate-resilient communities targeted</p></div>
           <div><h3 className="text-5xl font-bold text-primaryGreen mb-3">4</h3><p className="text-gray-300">Strategic development focus areas</p></div>
         </div>
