@@ -6,6 +6,7 @@ import SectionHeader from '@/components/SectionHeader'
 import FocusCard from '@/components/FocusCard'
 import ProgramCard from '@/components/ProgramCard'
 import ImpactSlider from '@/components/ImpactSlider'
+import ImpactDashboard from '@/components/ImpactDashboard'
 
 const latestStories = [
   {
@@ -77,26 +78,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="container-width grid md:grid-cols-4 gap-8 text-center">
-          <div className="bg-lightBlue rounded-3xl p-8 border border-softGray">
-            <h3 className="text-5xl font-bold text-primaryGreen mb-3">30+</h3>
-            <p className="text-charcoal">Students engaged at The Kings School session</p>
-          </div>
-          <div className="bg-lightBlue rounded-3xl p-8 border border-softGray">
-            <h3 className="text-5xl font-bold text-primaryGreen mb-3">16</h3>
-            <p className="text-charcoal">Girls reached in one STEAM outreach session</p>
-          </div>
-          <div className="bg-lightBlue rounded-3xl p-8 border border-softGray">
-            <h3 className="text-5xl font-bold text-primaryGreen mb-3">3</h3>
-            <p className="text-charcoal">Research and insight articles published</p>
-          </div>
-          <div className="bg-lightBlue rounded-3xl p-8 border border-softGray">
-            <h3 className="text-5xl font-bold text-primaryGreen mb-3">5</h3>
-            <p className="text-charcoal">Strategic partners highlighted</p>
-          </div>
-        </div>
-      </section>
+      <ImpactDashboard />
 
       <section className="py-24 bg-white">
         <div className="container-width">
