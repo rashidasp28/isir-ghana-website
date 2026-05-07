@@ -28,6 +28,7 @@ export default function Footer() {
             <li><Link href="/programs" className="hover:text-primaryGreen transition">Programs</Link></li>
             <li><Link href="/research" className="hover:text-primaryGreen transition">Research</Link></li>
             <li><Link href="/impact" className="hover:text-primaryGreen transition">Impact</Link></li>
+            <li><Link href="/consultancy" className="hover:text-primaryGreen transition">Consultancy</Link></li>
             <li><Link href="/partners" className="hover:text-primaryGreen transition">Partners</Link></li>
             <li><Link href="/news" className="hover:text-primaryGreen transition">News</Link></li>
             <li><Link href="/contact" className="hover:text-primaryGreen transition">Contact</Link></li>
@@ -41,6 +42,7 @@ export default function Footer() {
             <li><Link href="/programs" className="hover:text-primaryGreen transition">Maternal Health</Link></li>
             <li><Link href="/programs" className="hover:text-primaryGreen transition">Agriculture</Link></li>
             <li><Link href="/programs" className="hover:text-primaryGreen transition">Climate Change</Link></li>
+            <li><Link href="/consultancy" className="hover:text-primaryGreen transition">Research and MEL Services</Link></li>
           </ul>
         </div>
 
@@ -51,9 +53,14 @@ export default function Footer() {
             <br />
             isirghana@gmail.com
           </p>
-          <Link href="/contact" className="inline-flex bg-primaryGreen text-white px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition">
-            Contact Us
-          </Link>
+          <div className="flex flex-col gap-3 items-start">
+            <Link href="/contact" className="inline-flex bg-primaryGreen text-white px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition">
+              Contact Us
+            </Link>
+            <Link href="/consultancy" className="inline-flex border border-white/30 text-white px-5 py-2 rounded-full text-sm font-semibold hover:border-primaryGreen hover:text-primaryGreen transition">
+              Request Consultancy
+            </Link>
+          </div>
         </div>
       </div>
 
