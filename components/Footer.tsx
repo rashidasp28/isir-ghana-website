@@ -16,9 +16,52 @@ export default function Footer() {
             />
           </Link>
 
-          <p className="text-sm leading-7 text-gray-300">
+          <p className="text-sm leading-7 text-gray-300 mb-6">
             Bridging research, innovation, and community action for sustainable development in Ghana.
           </p>
+
+          <div className="flex flex-wrap gap-3 text-sm">
+            <a
+              href="https://www.linkedin.com/company/institute-for-sustainable-and-innovative-research/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primaryGreen transition"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://instagram.com/isir.ghana"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primaryGreen transition"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://tiktok.com/@isir.ghana"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primaryGreen transition"
+            >
+              TikTok
+            </a>
+            <a
+              href="https://youtube.com/@isirghana"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primaryGreen transition"
+            >
+              YouTube
+            </a>
+            <a
+              href="https://x.com/ISIRGhana"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primaryGreen transition"
+            >
+              X
+            </a>
+          </div>
         </div>
 
         <div>
@@ -49,10 +92,17 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-4">Contact</h4>
           <p className="text-sm text-gray-300 leading-7 mb-4">
-            Tamale, Ghana
+            Building #NL148 Blk A
+            <br />
+            North Lamashegu – Tamale, Ghana
+            <br />
+            Digital Address: NT-0047-6051
+            <br />
+            +233 20 743 6517
             <br />
             isirghana@gmail.com
           </p>
+
           <div className="flex flex-col gap-3 items-start">
             <Link href="/contact" className="inline-flex bg-primaryGreen text-white px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition">
               Contact Us
