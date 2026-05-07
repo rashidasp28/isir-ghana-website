@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
@@ -18,6 +19,31 @@ const services = [
   'Policy and Strategy Briefs',
   'Program Design Research',
   'Impact Reporting',
+]
+
+const featuredPublications = [
+  {
+    category: 'Research Publication',
+    title:
+      'Community Storytelling as a Mental Health Promotion Strategy: Evidence from Northern Ghana',
+    summary:
+      'A mixed-methods study examining how culturally grounded storytelling interventions improved emotional wellbeing, social support, and interpersonal trust among adults in Northern Ghana.',
+    href: '/news/community-storytelling-mental-health-ghana',
+  },
+  {
+    category: 'Policy Insight',
+    title: 'Africa’s Youth Boom: Opportunity or Crisis?',
+    summary:
+      'An evidence-based policy insight exploring youth development, leadership, education, innovation, and demographic transformation across Africa.',
+    href: '/news/africa-youth-boom',
+  },
+  {
+    category: 'Program Impact',
+    title: 'Brick STEAM Discovery Caravan at The Kings School',
+    summary:
+      'ISIR Ghana expanded its hands-on STEAM outreach initiative to The Kings School, inspiring students through practical engineering, creativity, and innovation activities.',
+    href: '/news/brick-steam-kings-school',
+  },
 ]
 
 export default function ResearchPage() {
@@ -60,6 +86,45 @@ export default function ResearchPage() {
       <section className="py-24 bg-lightGreen">
         <div className="container-width">
           <SectionHeader
+            eyebrow="Featured Publications"
+            title="Research outputs and development insights"
+            description="Explore ISIR Ghana publications, evidence-based insights, and community-centered development work."
+            center
+          />
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {featuredPublications.map((publication) => (
+              <article
+                key={publication.title}
+                className="bg-white border border-softGray rounded-3xl p-8 shadow-sm hover:shadow-lg transition"
+              >
+                <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">
+                  {publication.category}
+                </p>
+
+                <h3 className="text-3xl font-bold text-darkNavy mb-5 leading-tight">
+                  {publication.title}
+                </h3>
+
+                <p className="text-charcoal leading-8 text-lg mb-8">
+                  {publication.summary}
+                </p>
+
+                <Link
+                  href={publication.href}
+                  className="text-primaryBlue font-semibold text-lg"
+                >
+                  Read More
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-white">
+        <div className="container-width">
+          <SectionHeader
             eyebrow="Knowledge Products"
             title="What We Publish"
             description="ISIR Ghana produces accessible and practical knowledge products for communities, NGOs, schools, policy actors, and development partners."
@@ -73,20 +138,6 @@ export default function ResearchPage() {
                 <p className="text-charcoal leading-7">Clear, useful, and action-oriented publications designed to support decision-making and development learning.</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-white">
-        <div className="container-width grid lg:grid-cols-2 gap-12 items-center">
-          <div className="bg-gradient-to-br from-primaryBlue to-primaryGreen rounded-3xl min-h-[420px]"></div>
-          <div>
-            <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Featured Publication</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-darkNavy leading-tight mb-6">ISIR Ghana White Paper</h2>
-            <p className="text-lg text-charcoal leading-8 mb-8">
-              Bridging Knowledge and Action for Sustainable Development in Ghana presents ISIR Ghana’s institutional vision, strategic focus areas, theory of change, sustainability strategy, and commitment to evidence-based development.
-            </p>
-            <button className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Download White Paper</button>
           </div>
         </div>
       </section>
@@ -115,7 +166,7 @@ export default function ResearchPage() {
         <div className="container-width text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Evidence Should Lead to Action</h2>
           <p className="text-lg leading-8 text-gray-300 mb-10">Partner with ISIR Ghana to generate research, insights, and practical solutions that strengthen communities and support sustainable development.</p>
-          <button className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Collaborate on Research</button>
+          <Link href="/contact" className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg inline-flex">Collaborate on Research</Link>
         </div>
       </section>
 
