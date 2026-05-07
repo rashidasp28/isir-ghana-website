@@ -21,15 +21,32 @@ body {
   padding-right: 1.5rem;
 }
 
-@keyframes impactSlide {
-  0% {
+@keyframes impactStepSlide {
+  0%, 14% {
     transform: translateX(0%);
   }
+  16%, 30% {
+    transform: translateX(-100%);
+  }
+  32%, 46% {
+    transform: translateX(-200%);
+  }
+  48%, 62% {
+    transform: translateX(-300%);
+  }
+  64%, 78% {
+    transform: translateX(-400%);
+  }
+  80%, 94% {
+    transform: translateX(-500%);
+  }
   100% {
-    transform: translateX(-600%);
+    transform: translateX(0%);
   }
 }
 
-.animate-impactSlide {
-  animation: impactSlide 36s linear infinite;
+.impact-step-slider {
+  width: 600%;
+  display: flex;
+  animation: impactStepSlide 30s infinite ease-in-out;
 }
