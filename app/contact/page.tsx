@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
@@ -42,7 +43,7 @@ export default function ContactPage() {
             <div className="bg-lightGreen rounded-3xl p-8 space-y-5">
               <div>
                 <h3 className="font-bold text-darkNavy mb-1">Email</h3>
-                <p className="text-charcoal">isirghana@gmail.com</p>
+                <a href="mailto:isirghana@gmail.com" className="text-primaryBlue font-semibold hover:underline">isirghana@gmail.com</a>
               </div>
               <div>
                 <h3 className="font-bold text-darkNavy mb-1">Location</h3>
@@ -52,22 +53,28 @@ export default function ContactPage() {
                 <h3 className="font-bold text-darkNavy mb-1">Motto</h3>
                 <p className="text-primaryGreen font-semibold">Sustainability Through Innovation</p>
               </div>
+              <div>
+                <h3 className="font-bold text-darkNavy mb-1">Direct Email</h3>
+                <p className="text-charcoal leading-7 text-sm">You can also email us directly using the button below.</p>
+                <a href="mailto:isirghana@gmail.com?subject=Inquiry%20from%20ISIR%20Ghana%20Website" className="inline-flex mt-3 bg-primaryGreen text-white px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition">Email ISIR Ghana</a>
+              </div>
             </div>
           </div>
 
-          <form className="lg:col-span-2 bg-white border border-softGray rounded-3xl p-8 shadow-sm">
+          <form action="mailto:isirghana@gmail.com" method="post" encType="text/plain" className="lg:col-span-2 bg-white border border-softGray rounded-3xl p-8 shadow-sm">
             <div className="grid md:grid-cols-2 gap-6">
-              <input className="border border-softGray rounded-2xl px-5 py-4" placeholder="Full name" />
-              <input className="border border-softGray rounded-2xl px-5 py-4" placeholder="Email address" />
-              <input className="border border-softGray rounded-2xl px-5 py-4" placeholder="Phone number" />
-              <input className="border border-softGray rounded-2xl px-5 py-4" placeholder="Organization, optional" />
-              <select className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2">
+              <input name="Full name" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Full name" />
+              <input name="Email address" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Email address" />
+              <input name="Phone number" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Phone number" />
+              <input name="Organization" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Organization, optional" />
+              <select name="Inquiry type" className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2">
                 {inquiryTypes.map((type) => <option key={type}>{type}</option>)}
               </select>
-              <input className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2" placeholder="Subject" />
-              <textarea className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2 min-h-[180px]" placeholder="Message" />
+              <input name="Subject" className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2" placeholder="Subject" />
+              <textarea name="Message" className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2 min-h-[180px]" placeholder="Message" />
             </div>
-            <button className="mt-8 bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Submit Message</button>
+            <button type="submit" className="mt-8 bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Submit Message</button>
+            <p className="text-sm text-gray-500 mt-4">This will open your email app to send the message to ISIR Ghana.</p>
           </form>
         </div>
       </section>
@@ -76,7 +83,7 @@ export default function ContactPage() {
         <div className="container-width text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Let’s Build Sustainable Futures Together</h2>
           <p className="text-lg leading-8 text-gray-300 mb-10">Your message could begin a partnership, a school outreach, a research collaboration, a funded program, or a new opportunity for community impact.</p>
-          <button className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Explore Our Programs</button>
+          <Link href="/programs" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Explore Our Programs</Link>
         </div>
       </section>
 
