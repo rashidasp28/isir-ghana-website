@@ -20,7 +20,7 @@ const latestStories = [
     summary:
       'ISIR Ghana launched its flagship SheSTEAM Project at Anbariya Senior High School, directly engaging 15 students in hands-on electronics, coding, and innovation-driven learning.',
     href: '/news/shesteam-anbariya-launch',
-    image: '/images/news/shesteam-anbariya-led-breadboard.png',
+    image: '/images/news/shesteam-anbariya-led-breadboard.jpg',
   },
   {
     title: 'ISIR Ghana Launches Brick STEAM Discovery Caravan at Bethany MA Junior High School',
@@ -65,7 +65,7 @@ export default function NewsPage() {
           <div className="grid lg:grid-cols-2 gap-10 items-center bg-lightBlue rounded-3xl p-8 md:p-12 border border-softGray">
             <div className="relative h-[520px] rounded-3xl overflow-hidden bg-white border border-softGray">
               <Image
-                src="/images/news/shesteam-anbariya-led-breadboard.png"
+                src="/images/news/shesteam-anbariya-led-breadboard.jpg"
                 alt="A female student working with LED components and a breadboard during the SheSTEAM practical electronics session at Anbariya Senior High School"
                 fill
                 className="object-cover"
