@@ -5,7 +5,9 @@ import SectionHeader from '@/components/SectionHeader'
 const counters = [
   ['5,000+', 'Students targeted through STEAM education programs'],
   ['500+', 'Youth and women targeted annually'],
-  ['10', 'Climate-resilient communities targeted'],
+  ['4', 'Communities reached'],
+  ['3', 'Partner schools engaged'],
+  ['10', 'Climate-resilient communities targeted by Year 5'],
   ['4', 'Strategic development focus areas'],
 ]
 
@@ -37,9 +39,9 @@ export default function ImpactPage() {
             description="We track both numbers and stories to understand reach, learning, confidence, behavior change, and community transformation."
             center
           />
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {counters.map(([number, label]) => (
-              <div key={label} className="bg-lightBlue rounded-3xl p-8 text-center border border-softGray">
+              <div key={label} className="bg-lightBlue rounded-3xl p-8 text-center border border-softGray shadow-sm">
                 <h3 className="text-5xl font-bold text-primaryGreen mb-4">{number}</h3>
                 <p className="text-charcoal leading-7">{label}</p>
               </div>
