@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
@@ -20,6 +21,14 @@ const benefits = [
   'Donor updates',
 ]
 
+const partners = [
+  ['Eco Empower Alliance', 'https://ecoempoweralliance.org/'],
+  ['Herpol Africa', 'https://herpolafrica.org/'],
+  ['GEM Ghana', 'https://gemghana.org'],
+  ['Masjid EAl Emaan', '#'],
+  ['STEM Rising Mind Foundation', '#'],
+]
+
 export default function PartnersPage() {
   return (
     <main>
@@ -34,6 +43,10 @@ export default function PartnersPage() {
           <p className="text-xl text-charcoal leading-9 max-w-3xl">
             ISIR Ghana works with schools, communities, donors, NGOs, companies, researchers, and institutions that share our commitment to evidence-based action and sustainable change.
           </p>
+          <div className="flex flex-wrap gap-5 mt-10">
+            <a href="#partner-form" className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">Become a Partner</a>
+            <Link href="/contact" className="bg-white text-darkNavy px-8 py-4 rounded-full font-semibold text-lg border border-softGray hover:bg-lightGreen transition">Contact Us</Link>
+          </div>
         </div>
       </section>
 
@@ -78,6 +91,27 @@ export default function PartnersPage() {
       </section>
 
       <section className="py-24 bg-white">
+        <div className="container-width">
+          <SectionHeader
+            eyebrow="Current and Emerging Partners"
+            title="Organizations connected to our growing impact journey"
+            description="ISIR Ghana values collaboration with institutions, foundations, schools, community organizations, and development actors committed to practical and sustainable change."
+            center
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
+            {partners.map(([name, website]) => (
+              <a key={name} href={website} target="_blank" rel="noopener noreferrer" className="bg-lightBlue border border-softGray rounded-3xl p-8 text-center shadow-sm hover:shadow-lg transition min-h-[200px] flex flex-col items-center justify-center">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primaryBlue to-primaryGreen text-white flex items-center justify-center text-3xl font-bold mb-5">
+                  {name.charAt(0)}
+                </div>
+                <h3 className="font-bold text-darkNavy leading-6">{name}</h3>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-white">
         <div className="container-width grid lg:grid-cols-2 gap-12 items-start">
           <div>
             <SectionHeader
@@ -94,11 +128,37 @@ export default function PartnersPage() {
         </div>
       </section>
 
+      <section id="partner-form" className="py-24 bg-lightBlue">
+        <div className="container-width grid lg:grid-cols-2 gap-12 items-start">
+          <div>
+            <SectionHeader
+              eyebrow="Partnership Inquiry"
+              title="Start a partnership conversation"
+              description="Tell us about your organization, partnership interest, and how you would like to work with ISIR Ghana."
+            />
+          </div>
+          <form action="mailto:isirghana@gmail.com" method="post" encType="text/plain" className="bg-white border border-softGray rounded-3xl p-8 shadow-sm">
+            <div className="grid md:grid-cols-2 gap-5">
+              <input name="Full name" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Full name" />
+              <input name="Email address" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Email address" />
+              <input name="Organization" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Organization" />
+              <input name="Country" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Country" />
+              <select name="Partnership type" className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2">
+                {partnershipTypes.map((type) => <option key={type}>{type}</option>)}
+              </select>
+              <textarea name="Partnership message" className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2 min-h-[160px]" placeholder="Briefly describe the partnership opportunity" />
+            </div>
+            <button type="submit" className="mt-8 bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Submit Partnership Inquiry</button>
+            <p className="text-sm text-gray-500 mt-4">This will open your email app to send the inquiry to ISIR Ghana.</p>
+          </form>
+        </div>
+      </section>
+
       <section className="py-24 bg-darkNavy text-white">
         <div className="container-width text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Let’s Build Sustainable Futures Together</h2>
           <p className="text-lg leading-8 text-gray-300 mb-10">Your partnership can help students learn, mothers thrive, farmers adapt, and communities become more resilient.</p>
-          <button className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Become a Partner</button>
+          <a href="#partner-form" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Become a Partner</a>
         </div>
       </section>
 
