@@ -7,12 +7,33 @@ import FocusCard from '@/components/FocusCard'
 import ProgramCard from '@/components/ProgramCard'
 import ImpactSlider from '@/components/ImpactSlider'
 
+const latestStories = [
+  {
+    title: 'Brick STEAM Discovery Caravan reaches The Kings School',
+    category: 'Program Update',
+    href: '/news/brick-steam-kings-school',
+    image: '/images/field/brick-steam-1.jpg',
+  },
+  {
+    title: 'Africa’s Youth Boom: Opportunity or Crisis?',
+    category: 'Policy Insight',
+    href: '/news/africa-youth-boom',
+    image: '/images/news/africa-youth-boom-cover.png',
+  },
+  {
+    title: 'Community Storytelling and Mental Health in Northern Ghana',
+    category: 'Research Publication',
+    href: '/news/community-storytelling-mental-health-ghana',
+    image: '/images/field/community-engagement-1.jpeg',
+  },
+]
+
 export default function HomePage() {
   return (
     <main>
       <Navbar />
 
-      <section className="relative overflow-hidden text-white min-h-[720px] flex items-center">
+      <section className="relative overflow-hidden text-white min-h-[760px] flex items-center">
         <Image
           src="/images/homepage/hero.png"
           alt="ISIR Ghana students, facilitators, or community members engaged in hands-on learning and innovation outreach"
@@ -20,32 +41,59 @@ export default function HomePage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-darkNavy/95 via-darkNavy/75 to-primaryBlue/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-darkNavy/80 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-darkNavy/95 via-darkNavy/75 to-primaryBlue/35"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-darkNavy/85 via-transparent to-transparent"></div>
 
-        <div className="container-width relative z-10 max-w-5xl py-32">
+        <div className="container-width relative z-10 max-w-6xl py-32">
           <p className="uppercase tracking-widest text-sm mb-6 text-lightGreen font-semibold">
             Sustainability Through Innovation
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8">
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8 max-w-5xl">
             Bridging Research, Innovation, and Community Action.
           </h1>
 
           <p className="text-xl leading-9 max-w-3xl text-gray-100 mb-10">
-            ISIR Ghana advances sustainable development through evidence-based research,
-            practical programs, STEAM education, climate resilience, agriculture,
-            and community-centered innovation.
+            ISIR Ghana advances sustainable development through evidence-based research, practical programs, STEAM education, public health, climate resilience, agriculture, and community-centered innovation.
           </p>
 
-          <div className="flex flex-wrap gap-5">
+          <div className="flex flex-wrap gap-5 mb-12">
             <Link href="/programs" className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
               Explore Our Work
             </Link>
 
-            <Link href="/partners" className="bg-white text-darkNavy px-8 py-4 rounded-full font-semibold text-lg hover:bg-lightBlue transition">
-              Partner With Us
+            <Link href="/research" className="bg-white text-darkNavy px-8 py-4 rounded-full font-semibold text-lg hover:bg-lightBlue transition">
+              View Research
             </Link>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-4 max-w-4xl">
+            {['Research', 'Innovation', 'Community Impact'].map((item) => (
+              <div key={item} className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl px-5 py-4 text-sm font-semibold text-white">
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="container-width grid md:grid-cols-4 gap-8 text-center">
+          <div className="bg-lightBlue rounded-3xl p-8 border border-softGray">
+            <h3 className="text-5xl font-bold text-primaryGreen mb-3">30+</h3>
+            <p className="text-charcoal">Students engaged at The Kings School session</p>
+          </div>
+          <div className="bg-lightBlue rounded-3xl p-8 border border-softGray">
+            <h3 className="text-5xl font-bold text-primaryGreen mb-3">16</h3>
+            <p className="text-charcoal">Girls reached in one STEAM outreach session</p>
+          </div>
+          <div className="bg-lightBlue rounded-3xl p-8 border border-softGray">
+            <h3 className="text-5xl font-bold text-primaryGreen mb-3">3</h3>
+            <p className="text-charcoal">Research and insight articles published</p>
+          </div>
+          <div className="bg-lightBlue rounded-3xl p-8 border border-softGray">
+            <h3 className="text-5xl font-bold text-primaryGreen mb-3">5</h3>
+            <p className="text-charcoal">Strategic partners highlighted</p>
           </div>
         </div>
       </section>
@@ -76,25 +124,102 @@ export default function HomePage() {
             description="Our initiatives combine research, innovation, training, and community engagement to produce measurable outcomes."
           />
 
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid md:grid-cols-3 gap-10">
             <ProgramCard
               title="Brick STEAM Discovery Caravan"
               description="A mobile hands-on STEAM outreach initiative bringing practical science and engineering learning to schools in Northern Ghana."
-              imageSrc="/images/programs/brick-steam.png"
-              imageAlt="Students actively participating in the ISIR Ghana Brick STEAM Discovery Caravan through hands-on collaborative learning and creativity"
+              imageSrc="/images/field/brick-steam-2.png"
+              imageAlt="Students participating in a Brick STEAM Discovery Caravan activity"
             />
 
             <ProgramCard
               title="SheSTEAM Project"
               description="An innovation-focused program empowering girls and young people with coding, electronics, and creative technology skills."
               imageSrc="/images/programs/shesteam.png"
-              imageAlt="Girls and young people participating in coding, electronics, and innovation activities during an ISIR Ghana SheSTEAM session"
+              imageAlt="Girls and young people participating in coding and innovation activities"
+            />
+
+            <ProgramCard
+              title="Mothers First Health Initiative"
+              description="A community-centered health initiative promoting maternal and child health education, wellbeing, and practical health awareness."
+              imageSrc="/images/field/health-outreach-1.jpg"
+              imageAlt="Health outreach session with mothers and community health workers"
             />
           </div>
         </div>
       </section>
 
+      <section className="py-24 bg-white">
+        <div className="container-width grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <SectionHeader
+              eyebrow="Research and Publications"
+              title="Evidence that informs action"
+              description="ISIR Ghana connects research, policy insight, and community experience to support practical development solutions."
+            />
+            <p className="text-charcoal leading-8 text-lg mb-8">
+              From peer-reviewed mental health research to policy insights on Africa’s youth future, ISIR Ghana uses evidence to strengthen programs, partnerships, and public understanding.
+            </p>
+            <Link href="/research" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">
+              Explore Publications
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="relative h-72 rounded-3xl overflow-hidden bg-lightBlue">
+              <Image src="/images/field/community-engagement-2.jpeg" alt="Community engagement activity" fill className="object-cover" />
+            </div>
+            <div className="relative h-72 rounded-3xl overflow-hidden bg-lightBlue mt-10">
+              <Image src="/images/field/health-outreach-2.jpg" alt="Health outreach activity" fill className="object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-lightGreen">
+        <div className="container-width">
+          <SectionHeader
+            eyebrow="Latest News"
+            title="Stories, research, and field updates"
+            description="Follow ISIR Ghana’s latest program updates, publications, and community stories."
+            center
+          />
+          <div className="grid md:grid-cols-3 gap-8">
+            {latestStories.map((story) => (
+              <article key={story.title} className="bg-white border border-softGray rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition">
+                <div className="relative h-60 bg-white">
+                  <Image src={story.image} alt={story.title} fill className="object-cover" />
+                </div>
+                <div className="p-8">
+                  <p className="text-primaryGreen text-sm font-semibold uppercase tracking-wide mb-3">{story.category}</p>
+                  <h3 className="text-2xl font-bold text-darkNavy mb-6">{story.title}</h3>
+                  <Link href={story.href} className="text-primaryBlue font-semibold">
+                    Read More
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <ImpactSlider />
+
+      <section className="py-24 bg-darkNavy text-white">
+        <div className="container-width text-center max-w-4xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Partner With Us to Scale Community Innovation</h2>
+          <p className="text-lg leading-8 text-gray-300 mb-10">
+            ISIR Ghana welcomes collaboration with schools, donors, researchers, foundations, companies, and community organizations working toward sustainable impact.
+          </p>
+          <div className="flex flex-wrap justify-center gap-5">
+            <Link href="/partners" className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">
+              Partner With Us
+            </Link>
+            <Link href="/get-involved" className="bg-white text-darkNavy px-8 py-4 rounded-full font-semibold text-lg">
+              Get Involved
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </main>
