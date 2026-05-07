@@ -37,14 +37,14 @@ export default function SheSTEAMAnbariyaLaunchPage() {
           <div className="container-width max-w-5xl">
             <div className="relative h-[520px] rounded-3xl overflow-hidden shadow-lg mb-10">
               <Image
-                src="/images/programs/shesteam.png"
-                alt="Students, volunteers, and teachers gathered after the SheSTEAM session at Anbariya Senior High School"
+                src="/images/news/shesteam-anbariya-led-breadboard.jpg"
+                alt="A female student working with LED components and a breadboard during the SheSTEAM practical electronics session at Anbariya Senior High School"
                 fill
                 className="object-cover"
                 priority
               />
             </div>
-            <p className="text-sm text-gray-500 mb-12">Students, volunteers, facilitators, and teachers gathered after the SheSTEAM session at Anbariya Senior High School.</p>
+            <p className="text-sm text-gray-500 mb-12">A female student working with LED components and a breadboard during the SheSTEAM practical electronics session at Anbariya Senior High School.</p>
 
             <div className="prose prose-lg max-w-none text-charcoal leading-8">
               <p>
@@ -56,6 +56,25 @@ export default function SheSTEAMAnbariyaLaunchPage() {
               <p>
                 During the session, students were introduced to fundamental electronic components and their functions, including breadboards, resistors, LEDs, connecting wires, and ESP32 microcontrollers. The training combined theory with practical demonstrations to help students understand how electronic systems work and how technology can be applied to solve real-world problems.
               </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mt-14">
+              <div>
+                <div className="relative h-80 rounded-3xl overflow-hidden shadow-md mb-4">
+                  <Image
+                    src="/images/news/shesteam-anbariya-group.jpg"
+                    alt="Students, teachers, volunteers, and ISIR Ghana staff gathered after the SheSTEAM Project launch session at Anbariya Senior High School"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <p className="text-sm text-gray-500">Students, teachers, volunteers, and ISIR Ghana staff gathered after the SheSTEAM Project launch session at Anbariya Senior High School.</p>
+              </div>
+
+              <div className="bg-lightBlue rounded-3xl p-8 border border-softGray flex flex-col justify-center">
+                <h2 className="text-3xl font-bold text-darkNavy mb-4">Practical tools for future innovators</h2>
+                <p className="text-charcoal leading-8">The session introduced students to electronic components and encouraged them to connect technology, creativity, and problem-solving with real career possibilities.</p>
+              </div>
             </div>
           </div>
         </section>
