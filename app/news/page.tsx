@@ -15,6 +15,14 @@ const categories = [
 
 const latestStories = [
   {
+    title: 'SheSTEAM Project Launch Inspires Students at Anbariya Senior High School',
+    category: 'Program Update',
+    summary:
+      'ISIR Ghana launched its flagship SheSTEAM Project at Anbariya Senior High School, directly engaging 15 students in hands-on electronics, coding, and innovation-driven learning.',
+    href: '/news/shesteam-anbariya-launch',
+    image: '/images/programs/shesteam.png',
+  },
+  {
     title: 'Africa’s Youth Boom: Opportunity or Crisis?',
     category: 'Policy Insight',
     summary:
@@ -40,28 +48,28 @@ export default function NewsPage() {
       <section className="py-24 bg-white">
         <div className="container-width">
           <SectionHeader
-            eyebrow="Featured Insight"
-            title="Thought leadership for sustainable development"
-            description="ISIR Ghana uses its platform to translate development evidence into practical insights for communities, partners, donors, and decision-makers."
+            eyebrow="Featured Story"
+            title="Field stories and impact moments from ISIR Ghana"
+            description="ISIR Ghana documents program learning, field outcomes, and practical development insights for communities, partners, donors, and decision-makers."
             center
           />
 
           <div className="grid lg:grid-cols-2 gap-10 items-center bg-lightBlue rounded-3xl p-8 md:p-12 border border-softGray">
             <div className="relative h-[520px] rounded-3xl overflow-hidden bg-white border border-softGray">
               <Image
-                src="/images/news/africa-youth-boom-cover.png"
-                alt="Africa youth boom policy insight cover by ISIR Ghana"
+                src="/images/programs/shesteam.png"
+                alt="Students, volunteers, and teachers gathered after the SheSTEAM session at Anbariya Senior High School"
                 fill
-                className="object-contain p-4"
+                className="object-cover"
               />
             </div>
 
             <div>
-              <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Policy Insight</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-darkNavy mb-6">Africa’s Youth Boom: Opportunity or Crisis?</h2>
-              <p className="text-lg text-charcoal leading-8 mb-8">Africa’s growing youth population is not a problem. It is a test of leadership, systems, education, health, jobs, innovation, and investment. This insight explores how Ghana and Africa can turn demographic pressure into a development dividend.</p>
-              <Link href="/news/africa-youth-boom" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
-                Read Full Article
+              <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Program Update</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-darkNavy mb-6">SheSTEAM Project Launch Inspires Students at Anbariya Senior High School</h2>
+              <p className="text-lg text-charcoal leading-8 mb-8">On 13 January 2026, ISIR Ghana launched its flagship SheSTEAM Project, directly engaging 15 students and indirectly reaching about 60 students through hands-on electronics, coding, peer engagement, and school-wide visibility.</p>
+              <Link href="/news/shesteam-anbariya-launch" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
+                Read Full Story
               </Link>
             </div>
           </div>
@@ -98,7 +106,7 @@ export default function NewsPage() {
             {latestStories.map((story) => (
               <article key={story.title} className="bg-white border border-softGray rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition">
                 <div className="relative h-72 bg-white border-b border-softGray">
-                  <Image src={story.image} alt={story.title} fill className="object-contain p-4" />
+                  <Image src={story.image} alt={story.title} fill className="object-cover" />
                 </div>
                 <div className="p-8">
                   <p className="text-primaryGreen text-sm font-semibold uppercase tracking-wide mb-3">{story.category}</p>
