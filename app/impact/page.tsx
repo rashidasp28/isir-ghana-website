@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
@@ -16,6 +17,21 @@ const areas = [
   'STEAM Education',
   'Agriculture',
   'Climate Change',
+]
+
+const impactVisuals = [
+  {
+    image: '/images/field/brick-steam-1.jpg',
+    title: 'STEAM Education Outreach',
+  },
+  {
+    image: '/images/field/health-outreach-1.jpg',
+    title: 'Maternal Health Community Engagement',
+  },
+  {
+    image: '/images/field/community-engagement-1.jpeg',
+    title: 'Community Participation and Learning',
+  },
 ]
 
 export default function ImpactPage() {
@@ -70,7 +86,7 @@ export default function ImpactPage() {
       </section>
 
       <section className="py-24 bg-white">
-        <div className="container-width grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container-width grid lg:grid-cols-2 gap-12 items-start">
           <div>
             <SectionHeader
               eyebrow="MEL"
@@ -85,7 +101,31 @@ export default function ImpactPage() {
               <li>Reporting and accountability for partners and communities</li>
             </ul>
           </div>
-          <div className="rounded-3xl bg-gradient-to-br from-primaryBlue to-primaryGreen min-h-[420px]"></div>
+
+          <div className="space-y-6">
+            {impactVisuals.map((visual) => (
+              <div
+                key={visual.title}
+                className="relative overflow-hidden rounded-3xl shadow-lg border border-softGray"
+              >
+                <div className="relative h-64 md:h-72">
+                  <Image
+                    src={visual.image}
+                    alt={visual.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-darkNavy/80 via-darkNavy/10 to-transparent"></div>
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-white text-2xl font-bold leading-tight">
+                    {visual.title}
+                  </h3>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
