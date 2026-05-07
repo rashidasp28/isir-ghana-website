@@ -2,71 +2,36 @@ export const teamMembers = [
   {
     name: 'Abdul-Rashid Iddi',
     role: 'Executive Director and Co-Founder',
-    image: '/images/team/abdul-rashid-iddi.png',
+    image: '/images/team/abdul-rashid-iddi.jpeg',
   },
   {
     name: 'Kisa Owusu Ansah',
     role: 'Deputy Director',
-    image: '/images/team/kisa-owusu-ansah.png',
+    image: '/images/team/Kisa-owusu-ansah.jpg',
   },
   {
     name: 'Bashiru Aminu',
     role: 'Programs Manager',
-    image: '/images/team/bashiru-aminu.png',
+    image: '/images/team/bashiru-aminu.jpg',
   },
   {
     name: 'Mubarik H. Iddrisu',
     role: 'Monitoring, Evaluation, Accountability and Learning Lead',
-    image: '/images/team/mubarik-h-iddrisu.png',
+    image: '/images/team/mubarik-h-iddrisu.jpg',
   },
   {
     name: 'Yasmin Fatai',
     role: 'Project Manager, Education',
-    image: '/images/team/yasmin-fatai.png',
-  },
-  {
-    name: 'Iren Assina Gai',
-    role: 'Project Manager, Agriculture',
-    image: '/images/team/iren-assina-gai.png',
+    image: '/images/team/yasmin-fatai.PNG',
   },
   {
     name: 'Tamimu Mustapha',
     role: 'Project Manager, Climate Resilience',
-    image: '/images/team/tamimu-mustapha.png',
+    image: '/images/team/tamimu-mustapha.jpg',
   },
   {
     name: 'Hawa Ibrahim',
     role: 'Project Manager, Health',
-    image: '/images/team/hawa-ibrahim.png',
-  },
-  {
-    name: 'Dr. Manfred Anim',
-    role: 'Partnerships and Grant Manager',
-    image: '/images/team/manfred-anim.png',
-  },
-  {
-    name: 'Khadija Ibrahim',
-    role: 'Volunteer, Education',
-    image: '/images/team/khadija-ibrahim.png',
-  },
-  {
-    name: 'Kennedy',
-    role: 'Web Volunteer',
-    image: '/images/team/kennedy.png',
-  },
-  {
-    name: 'Emmanuel',
-    role: 'Web Volunteer',
-    image: '/images/team/emmanuel.png',
-  },
-  {
-    name: 'Abdul-Majeed Yakubu',
-    role: 'Volunteer',
-    image: '/images/team/abdul-majeed-yakubu.png',
-  },
-  {
-    name: 'Rebecca',
-    role: 'Volunteer, Health',
-    image: '/images/team/rebecca.png',
+    image: '/images/team/hawa-ibrahim.jpeg',
   },
 ]
