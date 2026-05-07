@@ -7,19 +7,19 @@ const programs = [
   {
     title: 'Brick STEAM Discovery Caravan',
     description: 'A mobile hands-on STEAM outreach program bringing creativity, engineering, design thinking, and problem-solving to basic schools in Northern Ghana.',
-    imageSrc: '/images/programs/brick-steam.jpg',
+    imageSrc: '/images/programs/brick-steam.png',
     imageAlt: 'Students, teachers, facilitators, volunteers, ISIR Ghana founders, and STEM Rising Mind Foundation representatives after a Brick STEAM Discovery Caravan session.',
   },
   {
     title: 'SheSTEAM Project',
     description: 'A girls-focused innovation program introducing students to electronics, coding, sensors, and creative problem-solving.',
-    imageSrc: '/images/programs/shesteam.jpg',
+    imageSrc: '/images/programs/shesteam.png',
     imageAlt: 'Girls and young people participating in coding, electronics, and innovation activities during an ISIR Ghana SheSTEAM session.',
   },
   {
     title: 'Mothers First Health Initiative',
     description: 'A community-centered maternal and child health initiative strengthening antenatal support, child health awareness, and local health knowledge.',
-    imageSrc: '/images/programs/mothers-first.jpg',
+    imageSrc: '/images/programs/mothers-first.png',
     imageAlt: 'A nurse speaking to expectant mothers and new mothers during a maternal and child health education session.',
   },
   {
