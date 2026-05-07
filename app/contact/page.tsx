@@ -46,35 +46,39 @@ export default function ContactPage() {
                 <a href="mailto:isirghana@gmail.com" className="text-primaryBlue font-semibold hover:underline">isirghana@gmail.com</a>
               </div>
               <div>
+                <h3 className="font-bold text-darkNavy mb-1">Phone</h3>
+                <a href="tel:+233207436517" className="text-primaryBlue font-semibold hover:underline">+233 20 743 6517</a>
+              </div>
+              <div>
                 <h3 className="font-bold text-darkNavy mb-1">Location</h3>
-                <p className="text-charcoal">Tamale, Ghana</p>
+                <p className="text-charcoal leading-7">
+                  Building #NL148 Blk A<br />
+                  North Lamashegu – Tamale, Ghana<br />
+                  Digital Address: NT-0047-6051
+                </p>
               </div>
               <div>
                 <h3 className="font-bold text-darkNavy mb-1">Motto</h3>
                 <p className="text-primaryGreen font-semibold">Sustainability Through Innovation</p>
               </div>
-              <div>
-                <h3 className="font-bold text-darkNavy mb-1">Direct Email</h3>
-                <p className="text-charcoal leading-7 text-sm">You can also email us directly using the button below.</p>
-                <a href="mailto:isirghana@gmail.com?subject=Inquiry%20from%20ISIR%20Ghana%20Website" className="inline-flex mt-3 bg-primaryGreen text-white px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition">Email ISIR Ghana</a>
-              </div>
             </div>
           </div>
 
-          <form action="mailto:isirghana@gmail.com" method="post" encType="text/plain" className="lg:col-span-2 bg-white border border-softGray rounded-3xl p-8 shadow-sm">
+          <form action="https://formspree.io/f/xzdoaaoz" method="POST" className="lg:col-span-2 bg-white border border-softGray rounded-3xl p-8 shadow-sm">
+            <input type="hidden" name="Form source" value="ISIR Ghana Contact Page" />
             <div className="grid md:grid-cols-2 gap-6">
-              <input name="Full name" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Full name" />
-              <input name="Email address" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Email address" />
+              <input required name="Full name" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Full name" />
+              <input required type="email" name="Email address" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Email address" />
               <input name="Phone number" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Phone number" />
               <input name="Organization" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Organization, optional" />
               <select name="Inquiry type" className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2">
                 {inquiryTypes.map((type) => <option key={type}>{type}</option>)}
               </select>
-              <input name="Subject" className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2" placeholder="Subject" />
-              <textarea name="Message" className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2 min-h-[180px]" placeholder="Message" />
+              <input required name="Subject" className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2" placeholder="Subject" />
+              <textarea required name="Message" className="border border-softGray rounded-2xl px-5 py-4 md:col-span-2 min-h-[180px]" placeholder="Message" />
             </div>
-            <button type="submit" className="mt-8 bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Submit Message</button>
-            <p className="text-sm text-gray-500 mt-4">This will open your email app to send the message to ISIR Ghana.</p>
+            <button type="submit" className="mt-8 bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">Submit Message</button>
+            <p className="text-sm text-gray-500 mt-4">Your message will be sent securely to ISIR Ghana through Formspree.</p>
           </form>
         </div>
       </section>
