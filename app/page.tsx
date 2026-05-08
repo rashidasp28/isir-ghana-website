@@ -20,33 +20,33 @@ const heroSlides = [
 const featuredVideos = [
   {
     title: 'Innovation in Action',
-    description: 'A short visual glimpse of ISIR Ghana’s field engagement and community-centered work.',
+    description: 'A visual glimpse into ISIR Ghana’s community-centered innovation, education, research, and outreach activities across Northern Ghana.',
     src: '/videos/hero/isir-hero-video.mp4',
   },
   {
     title: 'Brick STEAM Discovery Caravan',
-    description: 'Students exploring creativity, teamwork, and engineering thinking through hands-on LEGO-style building activities.',
+    description: 'Children exploring engineering, creativity, robotics, and hands-on learning through ISIR Ghana’s mobile STEAM outreach initiative.',
     src: '/videos/programs/lego-building-activity-1.mp4',
   },
   {
-    title: 'Hands-on Learning Moments',
-    description: 'Young learners building, testing, collaborating, and discovering practical STEAM concepts through play.',
+    title: 'Future Innovators in Action',
+    description: 'Students building confidence, teamwork, coding skills, and problem-solving abilities through practical experiential learning.',
     src: '/videos/programs/lego-building-activity-1.mp4',
   },
 ]
 
 const latestStories = [
   {
-    title: 'Brick STEAM Discovery Caravan reaches The Kings School',
-    category: 'Program Update',
-    href: '/news/brick-steam-kings-school',
-    image: '/images/field/brick-steam-1.jpg',
+    title: 'ISIR Ghana Launches Mother First Health Initiative',
+    category: 'Maternal Health',
+    href: '/news/mother-first-health-initiative',
+    image: '/images/field/mother-first-health-initiative.jpg',
   },
   {
-    title: 'Africa’s Youth Boom: Opportunity or Crisis?',
-    category: 'Policy Insight',
-    href: '/news/africa-youth-boom',
-    image: '/images/news/africa-youth-boom-cover.png',
+    title: 'Brick STEAM Discovery Caravan reaches The Kings School',
+    category: 'STEAM Education',
+    href: '/news/brick-steam-kings-school',
+    image: '/images/field/brick-steam-1.jpg',
   },
   {
     title: 'Community Storytelling and Mental Health in Northern Ghana',
@@ -85,25 +85,25 @@ export default function HomePage() {
           </p>
 
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8 max-w-5xl">
-            Bridging Research, Innovation, and Community Action.
+            Building research-driven solutions for resilient communities.
           </h1>
 
-          <p className="text-xl leading-9 max-w-3xl text-gray-100 mb-10">
-            ISIR Ghana advances sustainable development through evidence-based research, practical programs, STEAM education, public health, climate resilience, agriculture, and community-centered innovation.
+          <p className="text-xl leading-9 max-w-4xl text-gray-100 mb-10">
+            ISIR Ghana is a multidisciplinary research and innovation institute advancing STEAM education, maternal health, climate resilience, agriculture, renewable energy, and community-centered development through evidence-based programs, practical learning, and sustainable partnerships.
           </p>
 
           <div className="flex flex-wrap gap-5 mb-12">
             <Link href="/programs" className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
-              Explore Our Work
+              Explore Our Programs
             </Link>
 
-            <Link href="/research" className="bg-white text-darkNavy px-8 py-4 rounded-full font-semibold text-lg hover:bg-lightBlue transition">
+            <Link href="/publications" className="bg-white text-darkNavy px-8 py-4 rounded-full font-semibold text-lg hover:bg-lightBlue transition">
               View Research
             </Link>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-4 max-w-4xl">
-            {['Research', 'Innovation', 'Community Impact'].map((item) => (
+          <div className="grid sm:grid-cols-3 gap-4 max-w-5xl">
+            {['Research and Innovation', 'Community Health and Education', 'Sustainable Development Partnerships'].map((item) => (
               <div key={item} className="bg-white/10 backdrop-blur border border-white/20 rounded-2xl px-5 py-4 text-sm font-semibold text-white">
                 {item}
               </div>
@@ -121,10 +121,10 @@ export default function HomePage() {
               Video Stories
             </p>
             <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
-              See innovation in action
+              Innovation, learning, and impact in action
             </h2>
             <p className="text-lg text-white leading-8">
-              Short field videos from ISIR Ghana programs show how students, volunteers, educators, and communities engage with practical innovation, learning, and sustainable development.
+              Explore short visual stories documenting ISIR Ghana’s educational outreach, maternal health engagement, youth innovation activities, and community-centered development initiatives.
             </p>
           </div>
 
@@ -132,14 +132,7 @@ export default function HomePage() {
             {featuredVideos.map((video) => (
               <article key={video.title} className="bg-white/10 border border-white/10 rounded-3xl overflow-hidden shadow-lg">
                 <div className="relative aspect-video bg-black">
-                  <video
-                    className="w-full h-full object-cover"
-                    src={video.src}
-                    controls
-                    muted
-                    playsInline
-                    preload="metadata"
-                  />
+                  <video className="w-full h-full object-cover" src={video.src} controls muted playsInline preload="metadata" />
                 </div>
                 <div className="p-7">
                   <h3 className="text-2xl font-bold mb-3">{video.title}</h3>
@@ -154,17 +147,17 @@ export default function HomePage() {
       <section className="py-24 bg-white">
         <div className="container-width">
           <SectionHeader
-            eyebrow="Our Focus Areas"
-            title="Building Sustainable Futures Across Ghana"
-            description="ISIR Ghana works across interconnected sectors that shape resilient communities and long-term development."
+            eyebrow="Strategic Focus Areas"
+            title="Integrated solutions for sustainable development"
+            description="ISIR Ghana operates across interconnected sectors to strengthen innovation ecosystems, improve livelihoods, and build resilient communities across Northern Ghana."
             center
           />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <FocusCard title="STEAM Education" description="Hands-on learning experiences that inspire creativity, innovation, and problem-solving among young people." />
-            <FocusCard title="Maternal Health" description="Community-centered approaches that strengthen maternal and child health awareness and wellbeing." />
-            <FocusCard title="Agriculture" description="Climate-smart agriculture and farmer resilience initiatives for sustainable livelihoods." />
-            <FocusCard title="Climate Change" description="Renewable energy, resilience-building, and environmental sustainability initiatives." />
+            <FocusCard title="STEAM Education and Innovation" description="Hands-on learning ecosystems using coding, robotics, electronics, engineering, and play-based learning to inspire future innovators." />
+            <FocusCard title="Maternal and Community Health" description="Research-informed maternal health outreach, NHIS support, nutrition awareness, and dignity-centered healthcare engagement." />
+            <FocusCard title="Climate-Smart Agriculture" description="Technology-driven agricultural innovation supporting youth entrepreneurship, smart farming, and climate resilience." />
+            <FocusCard title="Renewable Energy and Water Access" description="Sustainable solar-powered community solutions improving access to clean water, sanitation, and environmental resilience." />
           </div>
         </div>
       </section>
@@ -172,29 +165,29 @@ export default function HomePage() {
       <section className="py-24 bg-lightBlue">
         <div className="container-width">
           <SectionHeader
-            eyebrow="Flagship Programs"
-            title="Programs Creating Practical Impact"
-            description="Our initiatives combine research, innovation, training, and community engagement to produce measurable outcomes."
+            eyebrow="Flagship Initiatives"
+            title="Programs designed for measurable and scalable impact"
+            description="ISIR Ghana’s flagship initiatives combine research, innovation, training, sustainability, and community engagement to solve practical development challenges."
           />
 
           <div className="grid md:grid-cols-3 gap-10">
             <ProgramCard
               title="Brick STEAM Discovery Caravan"
-              description="A mobile hands-on STEAM outreach initiative bringing practical science and engineering learning to schools in Northern Ghana."
+              description="A mobile STEAM learning initiative bringing practical engineering, robotics, creativity, and hands-on problem-solving opportunities to underserved schools across Northern Ghana."
               imageSrc="/images/field/brick-steam-2.png"
               imageAlt="Students participating in a Brick STEAM Discovery Caravan activity"
             />
 
             <ProgramCard
-              title="SheSTEAM Project"
-              description="An innovation-focused program empowering girls and young people with coding, electronics, and creative technology skills."
+              title="SheSTEAM Ghana"
+              description="A gender-inclusive innovation initiative empowering students, especially girls, through coding, electronics, Arduino and ESP32 projects, and technology-driven problem-solving."
               imageSrc="/images/programs/shesteam.png"
               imageAlt="Girls and young people participating in coding and innovation activities"
             />
 
             <ProgramCard
-              title="Mothers First Health Initiative"
-              description="A community-centered health initiative promoting maternal and child health education, wellbeing, and practical health awareness."
+              title="Mother First Health Initiative"
+              description="A maternal health and community support initiative improving healthcare access, maternal education, NHIS coverage, and maternal well-being in underserved communities."
               imageSrc="/images/field/health-outreach-1.jpg"
               imageAlt="Health outreach session with mothers and community health workers"
             />
@@ -207,16 +200,17 @@ export default function HomePage() {
           <div>
             <SectionHeader
               eyebrow="Research and Publications"
-              title="Evidence that informs action"
-              description="ISIR Ghana connects research, policy insight, and community experience to support practical development solutions."
+              title="Knowledge that drives action and innovation"
+              description="ISIR Ghana produces research, policy insights, impact stories, and evidence-based learning products that support sustainable development and community transformation."
             />
             <p className="text-charcoal leading-8 text-lg mb-8">
-              From peer-reviewed mental health research to policy insights on Africa’s youth future, ISIR Ghana uses evidence to strengthen programs, partnerships, and public understanding.
+              From peer-reviewed mental health research to innovation concept notes, maternal health initiatives, climate resilience solutions, and youth-focused STEAM programs, ISIR Ghana uses evidence to strengthen policy, practice, and public understanding.
             </p>
-            <Link href="/research" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">
+            <Link href="/publications" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">
               Explore Publications
             </Link>
           </div>
+
           <div className="grid grid-cols-2 gap-4">
             <div className="relative h-72 rounded-3xl overflow-hidden bg-lightBlue">
               <Image src="/images/field/community-engagement-2.jpeg" alt="Community engagement activity" fill className="object-cover" />
@@ -231,11 +225,12 @@ export default function HomePage() {
       <section className="py-24 bg-lightGreen">
         <div className="container-width">
           <SectionHeader
-            eyebrow="Latest News"
-            title="Stories, research, and field updates"
-            description="Follow ISIR Ghana’s latest program updates, publications, and community stories."
+            eyebrow="Latest News and Field Updates"
+            title="Stories from communities, classrooms, and research activities"
+            description="Follow ISIR Ghana’s latest outreach activities, research publications, maternal health initiatives, educational programs, and institutional developments."
             center
           />
+
           <div className="grid md:grid-cols-3 gap-8">
             {latestStories.map((story) => (
               <article key={story.title} className="bg-white border border-softGray rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition">
@@ -259,9 +254,9 @@ export default function HomePage() {
 
       <section className="py-24 bg-darkNavy text-white">
         <div className="container-width text-center max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Partner With Us to Scale Community Innovation</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Partner With ISIR Ghana to Build Sustainable Futures</h2>
           <p className="text-lg leading-8 text-gray-300 mb-10">
-            ISIR Ghana welcomes collaboration with schools, donors, researchers, foundations, companies, and community organizations working toward sustainable impact.
+            ISIR Ghana welcomes collaboration with development agencies, foundations, researchers, schools, private sector actors, NGOs, and community organizations committed to innovation, sustainability, and inclusive development.
           </p>
           <div className="flex flex-wrap justify-center gap-5">
             <Link href="/partners" className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">
