@@ -4,6 +4,7 @@ import Link from 'next/link'
 const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/programs', label: 'Programs' },
+  { href: '/stem-kits', label: 'STEM Kits' },
   { href: '/research', label: 'Research' },
   { href: '/impact', label: 'Impact' },
   { href: '/gallery', label: 'Gallery' },
