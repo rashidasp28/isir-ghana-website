@@ -1,73 +1,139 @@
-const metrics = [
+const impactMetrics = [
   {
     value: '500+',
     label: 'Students Reached',
-    description: 'Students engaged through STEAM outreach and innovation programs.',
+    description: 'Students engaged through STEAM and innovation-focused outreach programs.',
   },
   {
-    value: '5+',
+    value: '3+',
     label: 'Schools Engaged',
-    description: 'Educational institutions reached through community-based learning initiatives.',
+    description: 'Basic schools reached through practical community-centered education programs.',
   },
   {
-    value: '3',
-    label: 'Research Publications',
-    description: 'Research articles, policy insights, and development publications released.',
+    value: '53%',
+    label: 'Female Participation',
+    description: 'Girls actively participating in ISIR Ghana educational initiatives.',
+  },
+  {
+    value: '35+',
+    label: 'Women Engaged',
+    description: 'Women reached through maternal health and community health activities.',
+  },
+  {
+    value: '12',
+    label: 'Mothers Supported',
+    description: 'Mothers directly supported through the Mother First Health Initiative.',
+  },
+  {
+    value: '4+',
+    label: 'Publications & Reports',
+    description: 'Research outputs, reports, and institutional knowledge products published.',
   },
   {
     value: '5+',
     label: 'Strategic Partners',
-    description: 'Organizations and institutions collaborating with ISIR Ghana.',
+    description: 'Organizations collaborating with ISIR Ghana on education, health, and innovation.',
   },
   {
-    value: '60%',
-    label: 'Girls Participation Goal',
-    description: 'Target inclusion level for girls in STEAM-focused learning activities.',
+    value: '15+',
+    label: 'Volunteers Mobilized',
+    description: 'Dedicated volunteers supporting outreach, education, and health programs.',
+  },
+]
+
+const sdgs = [
+  {
+    title: 'SDG 3',
+    subtitle: 'Good Health and Well-being',
   },
   {
-    value: '10+',
-    label: 'Community Initiatives',
-    description: 'Programs supporting education, health, climate resilience, and innovation.',
+    title: 'SDG 4',
+    subtitle: 'Quality Education',
+  },
+  {
+    title: 'SDG 5',
+    subtitle: 'Gender Equality',
+  },
+  {
+    title: 'SDG 13',
+    subtitle: 'Climate Action',
+  },
+  {
+    title: 'SDG 17',
+    subtitle: 'Partnerships for the Goals',
   },
 ]
 
 export default function ImpactDashboard() {
   return (
-    <section className="py-24 bg-gradient-to-br from-darkNavy via-primaryBlue to-primaryGreen text-white overflow-hidden">
+    <section className="py-24 bg-white">
       <div className="container-width">
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <p className="uppercase tracking-widest text-sm mb-4 text-lightGreen font-semibold">
+          <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">
             Impact Dashboard
           </p>
 
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-            Measuring impact through innovation and community action.
+          <h2 className="text-4xl md:text-6xl font-bold text-darkNavy leading-tight mb-6">
+            Measuring sustainable impact through research, innovation, and community action.
           </h2>
 
-          <p className="text-xl leading-9 text-gray-100">
-            ISIR Ghana combines research, education, innovation, and partnerships to create measurable and sustainable development outcomes.
+          <p className="text-lg text-charcoal leading-8">
+            ISIR Ghana combines practical outreach, research-driven interventions, partnerships, and evidence-based community engagement to create measurable outcomes across Northern Ghana.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {metrics.map((metric) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+          {impactMetrics.map((metric) => (
             <div
               key={metric.label}
-              className="bg-white/10 backdrop-blur border border-white/15 rounded-3xl p-8 hover:bg-white/15 transition"
+              className="bg-lightBlue border border-softGray rounded-3xl p-8 shadow-sm hover:shadow-lg transition"
             >
-              <div className="text-5xl md:text-6xl font-bold text-lightGreen mb-4">
+              <p className="text-5xl font-bold text-primaryGreen mb-4">
                 {metric.value}
-              </div>
+              </p>
 
-              <h3 className="text-2xl font-bold mb-4">
+              <h3 className="text-2xl font-bold text-darkNavy mb-4">
                 {metric.label}
               </h3>
 
-              <p className="text-gray-200 leading-7 text-lg">
+              <p className="text-charcoal leading-7">
                 {metric.description}
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="bg-darkNavy rounded-3xl p-10 md:p-14 text-white">
+          <div className="max-w-4xl mb-12">
+            <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">
+              Sustainable Development Goals
+            </p>
+
+            <h3 className="text-4xl font-bold leading-tight mb-6">
+              Aligning local action with global development priorities.
+            </h3>
+
+            <p className="text-lg text-gray-300 leading-8">
+              ISIR Ghana’s programs and research activities contribute directly to internationally recognized Sustainable Development Goals through education, health, partnerships, innovation, and community resilience.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {sdgs.map((sdg) => (
+              <div
+                key={sdg.title}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+              >
+                <p className="text-primaryGreen font-bold text-2xl mb-3">
+                  {sdg.title}
+                </p>
+
+                <p className="text-white font-medium leading-6">
+                  {sdg.subtitle}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
