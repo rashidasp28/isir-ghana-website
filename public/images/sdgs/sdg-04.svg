@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="24" fill="#C5192D"/>
+<text x="40" y="90" font-family="Arial" font-size="60" font-weight="700" fill="white">4</text>
+<text x="130" y="80" font-family="Arial" font-size="30" font-weight="700" fill="white">QUALITY</text>
+<text x="130" y="120" font-family="Arial" font-size="30" font-weight="700" fill="white">EDUCATION</text>
+<rect x="110" y="190" width="130" height="190" rx="12" fill="white"/>
+<rect x="272" y="190" width="130" height="190" rx="12" fill="white"/>
+<line x1="140" y1="235" x2="210" y2="235" stroke="#C5192D" stroke-width="14" stroke-linecap="round"/>
+<line x1="140" y1="280" x2="210" y2="280" stroke="#C5192D" stroke-width="14" stroke-linecap="round"/>
+<line x1="302" y1="235" x2="372" y2="235" stroke="#C5192D" stroke-width="14" stroke-linecap="round"/>
+<line x1="302" y1="280" x2="372" y2="280" stroke="#C5192D" stroke-width="14" stroke-linecap="round"/>
+</svg>
