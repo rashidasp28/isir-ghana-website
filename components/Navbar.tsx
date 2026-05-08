@@ -6,6 +6,7 @@ const navLinks = [
   { href: '/programs', label: 'Programs' },
   { href: '/research', label: 'Research' },
   { href: '/impact', label: 'Impact' },
+  { href: '/gallery', label: 'Gallery' },
   { href: '/consultancy', label: 'Consultancy' },
   { href: '/partners', label: 'Partners' },
   { href: '/news', label: 'News' },
@@ -28,7 +29,7 @@ export default function Navbar() {
           <span className="sr-only">ISIR Ghana</span>
         </Link>
 
-        <div className="hidden xl:flex gap-5 text-charcoal font-medium text-sm">
+        <div className="hidden xl:flex gap-4 text-charcoal font-medium text-sm">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} className="hover:text-primaryBlue transition whitespace-nowrap">
               {link.label}
