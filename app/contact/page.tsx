@@ -64,7 +64,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <form action="https://formspree.io/f/meenlrjq" method="POST" className="lg:col-span-2 bg-white border border-softGray rounded-3xl p-8 shadow-sm">
+          <form action="https://formspree.io/f/mrejadjv" method="POST" className="lg:col-span-2 bg-white border border-softGray rounded-3xl p-8 shadow-sm">
             <input type="hidden" name="Form source" value="ISIR Ghana Contact Page" />
             <div className="grid md:grid-cols-2 gap-6">
               <input required name="Full name" className="border border-softGray rounded-2xl px-5 py-4" placeholder="Full name" />
