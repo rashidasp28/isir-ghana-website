@@ -17,6 +17,24 @@ const heroSlides = [
   '/images/gallery/research/scientific-presentation-1.png',
 ]
 
+const featuredVideos = [
+  {
+    title: 'Innovation in Action',
+    description: 'A short visual glimpse of ISIR Ghana’s field engagement and community-centered work.',
+    src: '/videos/hero/isir-hero-video.mp4',
+  },
+  {
+    title: 'Brick STEAM Discovery Caravan',
+    description: 'Students exploring creativity, teamwork, and engineering thinking through hands-on LEGO-style building activities.',
+    src: '/videos/programs/brick-steam-session-1.mp4',
+  },
+  {
+    title: 'Hands-on Learning Moments',
+    description: 'Young learners building, testing, collaborating, and discovering practical STEAM concepts through play.',
+    src: '/videos/programs/lego-building-activity-1.mp4',
+  },
+]
+
 const latestStories = [
   {
     title: 'Brick STEAM Discovery Caravan reaches The Kings School',
@@ -95,6 +113,38 @@ export default function HomePage() {
       </section>
 
       <ImpactDashboard />
+
+      <section className="py-24 bg-darkNavy text-white">
+        <div className="container-width">
+          <SectionHeader
+            eyebrow="Video Stories"
+            title="See innovation in action"
+            description="Short field videos from ISIR Ghana programs show how students, volunteers, educators, and communities engage with practical innovation, learning, and sustainable development."
+            center
+          />
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {featuredVideos.map((video) => (
+              <article key={video.title} className="bg-white/10 border border-white/10 rounded-3xl overflow-hidden shadow-lg">
+                <div className="relative aspect-video bg-black">
+                  <video
+                    className="w-full h-full object-cover"
+                    src={video.src}
+                    controls
+                    muted
+                    playsInline
+                    preload="metadata"
+                  />
+                </div>
+                <div className="p-7">
+                  <h3 className="text-2xl font-bold mb-3">{video.title}</h3>
+                  <p className="text-gray-300 leading-7">{video.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="py-24 bg-white">
         <div className="container-width">
