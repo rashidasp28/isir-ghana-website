@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="24" fill="#3F7E44"/>
+<text x="34" y="88" font-family="Arial" font-size="58" font-weight="700" fill="white">13</text>
+<text x="150" y="80" font-family="Arial" font-size="28" font-weight="700" fill="white">CLIMATE</text>
+<text x="150" y="118" font-family="Arial" font-size="28" font-weight="700" fill="white">ACTION</text>
+<circle cx="256" cy="268" r="88" fill="none" stroke="white" stroke-width="18"/>
+<path d="M256 180c-26 22-42 54-42 88s16 66 42 88c26-22 42-54 42-88s-16-66-42-88z" fill="white" opacity="0.9"/>
+<path d="M168 268h176" stroke="white" stroke-width="16" stroke-linecap="round"/>
+<path d="M256 180v176" stroke="#3F7E44" stroke-width="12" stroke-linecap="round"/>
+</svg>
