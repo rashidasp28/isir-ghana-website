@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Institute for Sustainable and Innovative Research Ghana' }],
   creator: 'ISIR Ghana',
   publisher: 'ISIR Ghana',
-  metadataBase: new URL('https://isir-ghana-website.vercel.app'),
+  metadataBase: new URL('https://project-4v4p7.vercel.app'),
   icons: {
     icon: '/icon.png',
     shortcut: '/icon.png',
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     title: 'ISIR Ghana | Sustainability Through Innovation',
     description:
       'Bridging research, innovation, and community action for sustainable development in Ghana.',
-    url: 'https://isir-ghana-website.vercel.app',
+    url: 'https://project-4v4p7.vercel.app',
     siteName: 'ISIR Ghana',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.png?v=5',
         width: 1200,
         height: 630,
-        alt: 'ISIR Ghana community innovation and outreach',
+        alt: 'ISIR Ghana research innovation and community impact',
       },
     ],
     locale: 'en_US',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: 'ISIR Ghana | Sustainability Through Innovation',
     description:
       'Research, innovation, STEAM education, maternal health, agriculture, and climate resilience initiatives in Ghana.',
-    images: ['/og-image.png'],
+    images: ['/og-image.png?v=5'],
   },
 }
 
