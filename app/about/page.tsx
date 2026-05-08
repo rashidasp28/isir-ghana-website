@@ -6,39 +6,70 @@ import SectionHeader from '@/components/SectionHeader'
 const values = ['Evidence', 'Innovation', 'Inclusion', 'Integrity', 'Collaboration', 'Sustainability']
 
 const teamMembers = [
-  ['Abdul-Rashid Iddi', 'Executive Director and Co-Founder'],
-  ['Kisa Owusu Ansah', 'Deputy Director'],
-  ['Bashiru Aminu', 'Programs Manager'],
-  ['Mubarik H. Iddrisu', 'Monitoring, Evaluation, Accountability and Learning Lead'],
-  ['Yasmin Fatai', 'Project Manager, Education'],
-  ['Iren Assina Gai', 'Project Manager, Agriculture'],
-  ['Tamimu Mustapha', 'Project Manager, Climate Resilience'],
-  ['Hawa Ibrahim', 'Project Manager, Health'],
-  ['Dr. Manfred Anim', 'Partnerships and Grant Manager'],
-  ['Khadija Ibrahim', 'Volunteer, Education'],
-  ['Kennedy', 'Web Volunteer'],
-  ['Emmanuel', 'Web Volunteer'],
-  ['Abdul-Majeed Yakubu', 'Volunteer'],
-  ['Rebecca', 'Volunteer, Health'],
+  {
+    name: 'Abdul-Rashid Iddi',
+    role: 'Executive Director and Co-Founder',
+    image: '/images/team/abdul-rashid-iddi.jpeg',
+  },
+  {
+    name: 'Kisa Owusu Ansah',
+    role: 'Deputy Director',
+    image: '/images/team/Kisa-owusu-ansah.jpg',
+  },
+  {
+    name: 'Bashiru Aminu',
+    role: 'Programs Manager',
+    image: '/images/team/bashiru-aminu.jpg',
+  },
+  {
+    name: 'Mubarik H. Iddrisu',
+    role: 'Monitoring, Evaluation, Accountability and Learning Lead',
+    image: '/images/team/mubarik-h-iddrisu.jpg',
+  },
+  {
+    name: 'Yasmin Fatai',
+    role: 'Project Manager, Education',
+    image: '/images/team/yasmin-fatai.PNG',
+  },
+  {
+    name: 'Tamimu Mustapha',
+    role: 'Project Manager, Climate Resilience',
+    image: '/images/team/tamimu-mustapha.jpg',
+  },
+  {
+    name: 'Hawa Ibrahim',
+    role: 'Project Manager, Health',
+    image: '/images/team/hawa-ibrahim.jpeg',
+  },
 ]
 
 const partners = [
-  ['Eco Empower Alliance', 'https://ecoempoweralliance.org/'],
-  ['Herpol Africa', 'https://herpolafrica.org/'],
-  ['GEM Ghana', 'https://gemghana.org'],
-  ['Masjid EAl Emaan', '#'],
-  ['STEM Rising Mind Foundation', '#'],
+  {
+    name: 'Eco Empower Alliance',
+    website: 'https://ecoempoweralliance.org/',
+    logo: '/images/partners/eco-empower-alliance.png',
+  },
+  {
+    name: 'Herpol Africa',
+    website: 'https://herpolafrica.org/',
+    logo: '/images/partners/herpol-africa.png',
+  },
+  {
+    name: 'GEM Ghana',
+    website: 'https://gemghana.org',
+    logo: '/images/partners/gem-ghana.png',
+  },
+  {
+    name: 'Masjid EAl Emaan',
+    website: '#',
+    logo: '/images/partners/masjid-eal-emaan.png',
+  },
+  {
+    name: 'STEM Rising Mind Foundation',
+    website: '#',
+    logo: '/images/partners/stem-rising-mind-foundation.png',
+  },
 ]
-
-function initials(name: string) {
-  return name
-    .split(' ')
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0])
-    .join('')
-    .toUpperCase()
-}
 
 export default function AboutPage() {
   return (
@@ -117,16 +148,19 @@ export default function AboutPage() {
           />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map(([name, role]) => (
-              <div key={name} className="bg-white border border-softGray rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition">
-                <div className="h-56 bg-gradient-to-br from-primaryBlue to-primaryGreen flex items-center justify-center">
-                  <div className="w-28 h-28 rounded-full bg-white/95 flex items-center justify-center text-3xl font-bold text-primaryBlue shadow-lg">
-                    {initials(name)}
-                  </div>
+            {teamMembers.map((member) => (
+              <div key={member.name} className="bg-white border border-softGray rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition">
+                <div className="relative h-80 bg-lightBlue">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover object-top"
+                  />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-darkNavy mb-2">{name}</h3>
-                  <p className="text-primaryGreen font-medium leading-6">{role}</p>
+                  <h3 className="text-xl font-bold text-darkNavy mb-2">{member.name}</h3>
+                  <p className="text-primaryGreen font-medium leading-6">{member.role}</p>
                 </div>
               </div>
             ))}
@@ -163,18 +197,23 @@ export default function AboutPage() {
           />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
-            {partners.map(([name, website]) => (
+            {partners.map((partner) => (
               <a
-                key={name}
-                href={website}
+                key={partner.name}
+                href={partner.website}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white border border-softGray rounded-3xl p-8 flex flex-col items-center justify-center shadow-sm hover:shadow-lg transition min-h-[220px] text-center"
               >
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primaryBlue to-primaryGreen text-white flex items-center justify-center text-2xl font-bold mb-6 shadow-lg">
-                  {name.charAt(0)}
+                <div className="relative w-full h-28 mb-6">
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    fill
+                    className="object-contain"
+                  />
                 </div>
-                <h3 className="text-lg font-bold text-darkNavy leading-6">{name}</h3>
+                <h3 className="text-lg font-bold text-darkNavy leading-6">{partner.name}</h3>
               </a>
             ))}
           </div>
