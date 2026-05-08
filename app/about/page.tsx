@@ -57,17 +57,17 @@ const partners = [
   {
     name: 'GEM Ghana',
     website: 'https://gemghana.org',
-    logo: '/images/partners/gem-ghana.png',
+    logo: '/images/partners/gem-ghana.jpeg',
   },
   {
     name: 'Masjid EAl Emaan',
     website: '#',
-    logo: '/images/partners/masjid-eal-emaan.png',
+    logo: '/images/partners/masjid-al-emaan.jpeg',
   },
   {
     name: 'STEM Rising Mind Foundation',
     website: '#',
-    logo: '/images/partners/stem-rising-mind-foundation.png',
+    logo: '/images/partners/stem-rising-mind-foundation.jpeg',
   },
 ]
 
