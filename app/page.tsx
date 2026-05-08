@@ -26,7 +26,7 @@ const featuredVideos = [
   {
     title: 'Brick STEAM Discovery Caravan',
     description: 'Students exploring creativity, teamwork, and engineering thinking through hands-on LEGO-style building activities.',
-    src: '/videos/programs/brick-steam-session-1.mp4',
+    src: '/videos/programs/lego-building-activity-1.mp4',
   },
   {
     title: 'Hands-on Learning Moments',
@@ -116,12 +116,17 @@ export default function HomePage() {
 
       <section className="py-24 bg-darkNavy text-white">
         <div className="container-width">
-          <SectionHeader
-            eyebrow="Video Stories"
-            title="See innovation in action"
-            description="Short field videos from ISIR Ghana programs show how students, volunteers, educators, and communities engage with practical innovation, learning, and sustainable development."
-            center
-          />
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">
+              Video Stories
+            </p>
+            <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+              See innovation in action
+            </h2>
+            <p className="text-lg text-white leading-8">
+              Short field videos from ISIR Ghana programs show how students, volunteers, educators, and communities engage with practical innovation, learning, and sustainable development.
+            </p>
+          </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {featuredVideos.map((video) => (
