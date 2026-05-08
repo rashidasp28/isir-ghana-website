@@ -8,6 +8,14 @@ import ProgramCard from '@/components/ProgramCard'
 import ImpactSlider from '@/components/ImpactSlider'
 import ImpactDashboard from '@/components/ImpactDashboard'
 
+const heroSlides = [
+  '/images/gallery/steam/brick-steam-building-session-1.png',
+  '/images/gallery/steam/shesteam-girls-coding-1.png',
+  '/images/gallery/health/maternal-health-session-1.png',
+  '/images/gallery/community/isir-team-outreach-1.png',
+  '/images/gallery/research/scientific-presentation-1.png',
+]
+
 const latestStories = [
   {
     title: 'Brick STEAM Discovery Caravan reaches The Kings School',
@@ -35,13 +43,20 @@ export default function HomePage() {
       <Navbar />
 
       <section className="relative overflow-hidden text-white min-h-[760px] flex items-center">
-        <Image
-          src="/images/homepage/hero.png"
-          alt="ISIR Ghana students, facilitators, or community members engaged in hands-on learning and innovation outreach"
-          fill
-          className="object-cover"
-          priority
-        />
+        <div className="absolute inset-0">
+          {heroSlides.map((slide, index) => (
+            <div key={slide} className="hero-slide">
+              <Image
+                src={slide}
+                alt={`ISIR Ghana impact image ${index + 1}`}
+                fill
+                className="object-cover"
+                priority={index === 0}
+              />
+            </div>
+          ))}
+        </div>
+
         <div className="absolute inset-0 bg-gradient-to-r from-darkNavy/95 via-darkNavy/75 to-primaryBlue/35"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-darkNavy/85 via-transparent to-transparent"></div>
 
