@@ -4,54 +4,102 @@ import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
 
 const publicationCategories = [
-  'Peer-Reviewed Articles',
-  'White Papers',
-  'Policy Briefs',
-  'Research Reports',
-  'Impact Reports',
-  'Learning Notes',
+  {
+    title: 'Peer-Reviewed Articles',
+    description:
+      'Scientific publications, interdisciplinary research articles, and evidence-based studies addressing mental health, innovation, sustainability, and community development.',
+  },
+  {
+    title: 'Concept Notes and Development Frameworks',
+    description:
+      'Institutional concept notes and scalable program frameworks designed to mobilize partnerships, funding, innovation ecosystems, and sustainable impact.',
+  },
+  {
+    title: 'White Papers and Policy Insights',
+    description:
+      'Strategic analyses, policy-oriented publications, and development insights informing sustainable education, health, agriculture, and resilience systems.',
+  },
+  {
+    title: 'Research and Impact Reports',
+    description:
+      'Field-based reports, monitoring and evaluation outputs, institutional learning documents, and community-centered evidence products.',
+  },
+  {
+    title: 'Innovation and Program Documentation',
+    description:
+      'Documentation of STEAM programs, innovation hubs, outreach models, and scalable youth-centered technology and sustainability initiatives.',
+  },
+  {
+    title: 'Community Learning and Knowledge Products',
+    description:
+      'Practical educational resources, field learning products, and community-driven documentation supporting long-term development and local empowerment.',
+  },
 ]
 
 const publications = [
   {
-    type: 'Peer-Reviewed Article',
+    type: 'Peer-Reviewed Research',
     title: 'Community Storytelling as a Mental Health Promotion Strategy: Evidence from Northern Ghana',
     authors: 'Hassan Mubarik Iddrisu and Abdul-Rashid Iddi',
     year: '2026',
     summary:
-      'A mixed-methods study examining how culturally grounded storytelling interventions improved emotional relief, perceived social support, and interpersonal trust among adults in Northern Ghana.',
+      'A mixed-methods study examining how culturally grounded storytelling interventions improved emotional well-being, social support, trust, and mental health resilience within communities in Northern Ghana.',
     href: '/news/community-storytelling-mental-health-ghana',
     external: 'https://doi.org/10.1177/08901171261417440',
   },
   {
-    type: 'Policy Insight',
-    title: 'Africa’s Youth Boom: Opportunity or Crisis?',
+    type: 'Innovation Concept Framework',
+    title: 'Brick STEAM Discovery Caravan: Unlock Creativity. Build the Future.',
     authors: 'ISIR Ghana',
     year: '2026',
     summary:
-      'A development insight exploring Africa’s youth population growth, education systems, employment pathways, innovation, and leadership opportunities.',
-    href: '/news/africa-youth-boom',
+      'A scalable mobile STEAM education and innovation ecosystem designed to bring hands-on robotics, engineering, creative problem-solving, and play-based learning to underserved schools across Northern Ghana.',
+    href: '/news/brick-steam-kings-school',
     external: '',
   },
   {
-    type: 'Program Impact Story',
-    title: 'ISIR Ghana Expands Brick STEAM Discovery Caravan to The Kings School',
+    type: 'Maternal Health Initiative',
+    title: 'Mother First Health Initiative: Caring for Mothers, Securing Futures',
     authors: 'ISIR Ghana',
     year: '2026',
     summary:
-      'A field-based impact story documenting hands-on STEAM education, gender inclusion, student aspirations, and partnership-driven community learning in Northern Ghana.',
-    href: '/news/brick-steam-kings-school',
+      'A maternal and community health framework integrating NHIS access support, maternal education, outreach engagement, nutrition awareness, and dignity-centered maternal healthcare systems.',
+    href: '/news/mother-first-health-initiative',
     external: '',
   },
 ]
 
 const researchThemes = [
-  'STEAM Education and Youth Innovation',
-  'Mental Health and Community Wellbeing',
-  'Maternal and Child Health',
-  'Agriculture and Food Systems',
-  'Climate Resilience and Sustainability',
-  'Monitoring, Evaluation, Accountability and Learning',
+  {
+    title: 'STEAM Education and Innovation Ecosystems',
+    description:
+      'Research and practical implementation models focused on robotics, coding, engineering, creativity, experiential learning, and innovation-driven youth empowerment.',
+  },
+  {
+    title: 'Maternal and Community Health Systems',
+    description:
+      'Evidence-based maternal health engagement, healthcare accessibility, nutrition awareness, NHIS support systems, and community-centered public health interventions.',
+  },
+  {
+    title: 'Climate-Smart Agriculture and Agri-Tech',
+    description:
+      'Technology-enabled agriculture, smart irrigation systems, youth agri-tech innovation, sustainable farming, and climate resilience solutions.',
+  },
+  {
+    title: 'Renewable Energy and Water Sustainability',
+    description:
+      'Solar-powered infrastructure, clean water access systems, environmental resilience, and sustainable rural development models.',
+  },
+  {
+    title: 'Youth Development and Inclusive Innovation',
+    description:
+      'Gender-inclusive innovation systems, youth leadership, entrepreneurship pathways, and community-centered empowerment initiatives.',
+  },
+  {
+    title: 'Monitoring, Evaluation, Accountability and Learning',
+    description:
+      'Data-driven impact assessment, institutional learning systems, evidence generation, and sustainable development measurement frameworks.',
+  },
 ]
 
 export default function PublicationsPage() {
@@ -60,13 +108,17 @@ export default function PublicationsPage() {
       <Navbar />
 
       <section className="bg-lightBlue py-24">
-        <div className="container-width max-w-5xl">
-          <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Research and Publications Hub</p>
+        <div className="container-width max-w-6xl">
+          <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">
+            Research and Publications Hub
+          </p>
+
           <h1 className="text-5xl md:text-7xl font-bold text-darkNavy leading-tight mb-8">
-            Evidence, insights, and knowledge products for sustainable development.
+            Research, innovation, and knowledge systems for sustainable development.
           </h1>
-          <p className="text-xl text-charcoal leading-9 max-w-3xl">
-            ISIR Ghana produces and shares research outputs, policy insights, white papers, reports, and learning products that connect knowledge with community action.
+
+          <p className="text-xl text-charcoal leading-9 max-w-5xl">
+            ISIR Ghana produces interdisciplinary research, innovation frameworks, white papers, concept notes, impact reports, and evidence-based knowledge products that connect research with practical community-centered solutions across education, health, agriculture, climate resilience, and sustainable development.
           </p>
         </div>
       </section>
@@ -74,19 +126,17 @@ export default function PublicationsPage() {
       <section className="py-24 bg-white">
         <div className="container-width">
           <SectionHeader
-            eyebrow="Knowledge Repository"
-            title="What you can find here"
-            description="This hub brings together ISIR Ghana’s research publications, institutional reports, policy analysis, and field-based learning products."
+            eyebrow="Knowledge Infrastructure"
+            title="Institutional research and learning ecosystem"
+            description="This repository brings together ISIR Ghana’s scientific research, concept frameworks, policy insights, institutional reports, innovation strategies, and field-based learning documentation."
             center
           />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {publicationCategories.map((category) => (
-              <div key={category} className="bg-white border border-softGray rounded-3xl p-8 shadow-sm hover:shadow-lg transition">
-                <h3 className="text-2xl font-bold text-darkNavy mb-4">{category}</h3>
-                <p className="text-charcoal leading-7">
-                  Curated knowledge products designed to support research, development practice, donor engagement, and community-centered learning.
-                </p>
+              <div key={category.title} className="bg-white border border-softGray rounded-3xl p-8 shadow-sm hover:shadow-lg transition">
+                <h3 className="text-2xl font-bold text-darkNavy mb-4">{category.title}</h3>
+                <p className="text-charcoal leading-7">{category.description}</p>
               </div>
             ))}
           </div>
@@ -96,9 +146,9 @@ export default function PublicationsPage() {
       <section className="py-24 bg-lightGreen">
         <div className="container-width">
           <SectionHeader
-            eyebrow="Featured Outputs"
-            title="Selected publications and insights"
-            description="Explore ISIR Ghana’s growing body of research, development insights, and documented field learning."
+            eyebrow="Featured Knowledge Products"
+            title="Selected research, frameworks, and institutional insights"
+            description="Explore ISIR Ghana’s growing body of scientific publications, development frameworks, innovation concepts, and community-centered evidence products."
             center
           />
 
@@ -107,13 +157,19 @@ export default function PublicationsPage() {
               <article key={publication.title} className="bg-white border border-softGray rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-lg transition">
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
                   <div className="max-w-4xl">
-                    <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">{publication.type}</p>
+                    <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">
+                      {publication.type}
+                    </p>
+
                     <h2 className="text-3xl md:text-4xl font-bold text-darkNavy leading-tight mb-4">
                       {publication.title}
                     </h2>
+
                     <p className="text-charcoal mb-4">
-                      <span className="font-semibold">Authors:</span> {publication.authors} | <span className="font-semibold">Year:</span> {publication.year}
+                      <span className="font-semibold">Authors:</span> {publication.authors} |
+                      <span className="font-semibold"> Year:</span> {publication.year}
                     </p>
+
                     <p className="text-lg text-charcoal leading-8">
                       {publication.summary}
                     </p>
@@ -123,6 +179,7 @@ export default function PublicationsPage() {
                     <Link href={publication.href} className="bg-primaryGreen text-white px-6 py-3 rounded-full text-center font-semibold hover:opacity-90 transition">
                       View Summary
                     </Link>
+
                     {publication.external && (
                       <a
                         href={publication.external}
@@ -144,19 +201,17 @@ export default function PublicationsPage() {
       <section className="py-24 bg-white">
         <div className="container-width">
           <SectionHeader
-            eyebrow="Research Themes"
-            title="Areas of knowledge generation"
-            description="ISIR Ghana’s research and publications focus on practical themes that support sustainable development, innovation, and community resilience."
+            eyebrow="Strategic Research Themes"
+            title="Areas of knowledge generation and innovation"
+            description="ISIR Ghana’s research ecosystem focuses on interdisciplinary themes that strengthen innovation, sustainability, resilience, and community-centered development."
             center
           />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {researchThemes.map((theme) => (
-              <div key={theme} className="bg-lightBlue border border-softGray rounded-3xl p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-darkNavy mb-4">{theme}</h3>
-                <p className="text-charcoal leading-7">
-                  Evidence, field learning, and practical insights to improve programs, strengthen systems, and inform development action.
-                </p>
+              <div key={theme.title} className="bg-lightBlue border border-softGray rounded-3xl p-8 shadow-sm">
+                <h3 className="text-2xl font-bold text-darkNavy mb-4">{theme.title}</h3>
+                <p className="text-charcoal leading-7">{theme.description}</p>
               </div>
             ))}
           </div>
@@ -164,15 +219,20 @@ export default function PublicationsPage() {
       </section>
 
       <section className="py-24 bg-darkNavy text-white">
-        <div className="container-width text-center max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Collaborate on Research and Knowledge Products</h2>
+        <div className="container-width text-center max-w-5xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Collaborate on research, innovation, and evidence-driven development
+          </h2>
+
           <p className="text-lg leading-8 text-gray-300 mb-10">
-            ISIR Ghana welcomes research partnerships, policy collaborations, field studies, white paper development, and evidence-based reporting opportunities.
+            ISIR Ghana welcomes interdisciplinary research collaborations, policy partnerships, innovation ecosystem development, white paper production, impact evaluation, community studies, and evidence-based program design opportunities.
           </p>
+
           <div className="flex flex-wrap justify-center gap-5">
             <Link href="/contact" className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">
               Contact Us
             </Link>
+
             <Link href="/consultancy" className="bg-white text-darkNavy px-8 py-4 rounded-full font-semibold text-lg">
               Request Research Support
             </Link>
