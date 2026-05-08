@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" rx="24" fill="#FF3A21"/>
+<text x="40" y="90" font-family="Arial" font-size="60" font-weight="700" fill="white">5</text>
+<text x="130" y="80" font-family="Arial" font-size="30" font-weight="700" fill="white">GENDER</text>
+<text x="130" y="120" font-family="Arial" font-size="30" font-weight="700" fill="white">EQUALITY</text>
+<circle cx="256" cy="220" r="72" fill="none" stroke="white" stroke-width="20"/>
+<line x1="256" y1="292" x2="256" y2="392" stroke="white" stroke-width="20" stroke-linecap="round"/>
+<line x1="206" y1="342" x2="306" y2="342" stroke="white" stroke-width="20" stroke-linecap="round"/>
+<line x1="308" y1="168" x2="370" y2="106" stroke="white" stroke-width="18" stroke-linecap="round"/>
+<line x1="338" y1="106" x2="370" y2="106" stroke="white" stroke-width="18" stroke-linecap="round"/>
+<line x1="370" y1="106" x2="370" y2="138" stroke="white" stroke-width="18" stroke-linecap="round"/>
+</svg>
