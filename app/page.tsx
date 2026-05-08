@@ -9,6 +9,7 @@ import ImpactSlider from '@/components/ImpactSlider'
 import ImpactDashboard from '@/components/ImpactDashboard'
 
 const heroSlides = [
+  '/images/homepage/hero.png',
   '/images/gallery/steam/brick-steam-building-session-1.png',
   '/images/gallery/steam/shesteam-girls-coding-1.png',
   '/images/gallery/health/maternal-health-session-1.png',
