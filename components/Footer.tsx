@@ -71,6 +71,7 @@ export default function Footer() {
             <li><Link href="/programs" className="hover:text-primaryGreen transition">Programs</Link></li>
             <li><Link href="/research" className="hover:text-primaryGreen transition">Research</Link></li>
             <li><Link href="/impact" className="hover:text-primaryGreen transition">Impact</Link></li>
+            <li><Link href="/gallery" className="hover:text-primaryGreen transition">Gallery</Link></li>
             <li><Link href="/consultancy" className="hover:text-primaryGreen transition">Consultancy</Link></li>
             <li><Link href="/partners" className="hover:text-primaryGreen transition">Partners</Link></li>
             <li><Link href="/news" className="hover:text-primaryGreen transition">News</Link></li>
