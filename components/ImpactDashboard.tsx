@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const impactMetrics = [
   {
     value: '500+',
@@ -45,22 +47,27 @@ const sdgs = [
   {
     title: 'SDG 3',
     subtitle: 'Good Health and Well-being',
+    icon: '/images/sdgs/sdg-03.svg',
   },
   {
     title: 'SDG 4',
     subtitle: 'Quality Education',
+    icon: '/images/sdgs/sdg-04.svg',
   },
   {
     title: 'SDG 5',
     subtitle: 'Gender Equality',
+    icon: '/images/sdgs/sdg-05.svg',
   },
   {
     title: 'SDG 13',
     subtitle: 'Climate Action',
+    icon: '/images/sdgs/sdg-13.svg',
   },
   {
     title: 'SDG 17',
     subtitle: 'Partnerships for the Goals',
+    icon: '/images/sdgs/sdg-17.svg',
   },
 ]
 
@@ -122,8 +129,17 @@ export default function ImpactDashboard() {
             {sdgs.map((sdg) => (
               <div
                 key={sdg.title}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center"
               >
+                <div className="bg-white rounded-2xl p-3 mb-5 inline-flex">
+                  <Image
+                    src={sdg.icon}
+                    alt={sdg.subtitle}
+                    width={88}
+                    height={88}
+                  />
+                </div>
+
                 <p className="text-primaryGreen font-bold text-2xl mb-3">
                   {sdg.title}
                 </p>
