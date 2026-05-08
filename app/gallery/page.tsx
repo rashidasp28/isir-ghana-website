@@ -4,31 +4,26 @@ import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
 
 const steamGallery = [
-  '/images/gallery/steam/brick-steam-kings-school-1.jpg',
-  '/images/gallery/steam/brick-steam-kings-school-2.jpg',
-  '/images/gallery/steam/shesteam-electronics-session-1.jpg',
-  '/images/gallery/steam/shesteam-girls-coding-1.jpg',
+  '/images/gallery/steam/brick-steam-building-session-1.png',
+  '/images/gallery/steam/brick-steam-kings-school-1.png',
+  '/images/gallery/steam/brick-steam-students-1.png',
+  '/images/gallery/steam/shesteam-electronics-session-1.png',
+  '/images/gallery/steam/shesteam-girls-coding-1.png',
+  '/images/gallery/steam/shesteam-innovation-workshop-1.png',
 ]
 
 const healthGallery = [
-  '/images/gallery/health/mother-first-outreach-1.jpg',
-  '/images/gallery/health/maternal-health-session-1.jpg',
-  '/images/gallery/health/women-health-engagement-1.jpg',
-  '/images/gallery/health/health-center-visit-1.jpg',
+  '/images/gallery/health/health-center-visit-1.png',
+  '/images/gallery/health/maternal-health-session-1.png',
 ]
 
 const researchGallery = [
-  '/images/gallery/research/research-conference-1.jpg',
-  '/images/gallery/research/scientific-presentation-1.jpg',
-  '/images/gallery/research/workshop-session-1.jpg',
-  '/images/gallery/research/research-collaboration-1.jpg',
+  '/images/gallery/research/scientific-presentation-1.png',
 ]
 
 const communityGallery = [
-  '/images/gallery/community/community-engagement-1.jpg',
-  '/images/gallery/community/volunteer-session-1.jpg',
-  '/images/gallery/community/partnership-meeting-1.jpg',
-  '/images/gallery/community/isir-team-outreach-1.jpg',
+  '/images/gallery/community/isir-team-outreach-1.png',
+  '/images/gallery/community/partnership-meeting-1.png',
 ]
 
 function GallerySection({ title, description, images }: { title: string; description: string; images: string[] }) {
@@ -40,15 +35,15 @@ function GallerySection({ title, description, images }: { title: string; descrip
           <p className="text-lg text-charcoal leading-8">{description}</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {images.map((image, index) => (
             <div
-              key={index}
+              key={image}
               className="relative rounded-3xl overflow-hidden min-h-[320px] bg-lightBlue shadow-sm hover:shadow-xl transition"
             >
               <Image
                 src={image}
-                alt={title}
+                alt={`${title} gallery image ${index + 1}`}
                 fill
                 className="object-cover hover:scale-105 transition duration-500"
               />
