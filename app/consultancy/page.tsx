@@ -114,7 +114,7 @@ export default function ConsultancyPage() {
                 <li>• LEGO Education Learning Through Play</li>
                 <li>• Arduino Education Framework</li>
                 <li>• IB Approaches to Learning</li>
-                <li>• Stanford d.school Design Thinking</li>
+                <li>• Stanford school Design Thinking</li>
                 <li>• SDG-aligned educational innovation systems</li>
               </ul>
             </div>
