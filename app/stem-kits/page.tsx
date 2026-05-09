@@ -1,50 +1,43 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
 
-const engineeringImg = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAH0AyADASIAAhEBAxEB/8QAHAAAAgMBAQEBAAAAAAAAAAAAAAYBAwQCBQcI/8QAPhAAAgEDAgQDBgMGBQQDAAAAAQIDAAQRBRIhMQYTUWEiMnGBkaGxByNCUrHR8BQVYnIWQ3KSwuHxJDNj/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAIDBAEFBv/EACsRAAICAgICAQMDAwUBAAAAAAABAhEDIRIxBBNBUSIyYXEUM5HRQpHB/9oADAMBAAIRAxEAPwD7/2BSVUZP/2Q=='
-
-const arduinoImg = engineeringImg
-const roboticsImg = engineeringImg
-const renewableImg = engineeringImg
-const iotImg = engineeringImg
-const steamImg = engineeringImg
-
 const plannedKits = [
   {
     title: 'Beginner Engineering and Building Kits',
-    image: engineeringImg,
+    image: '/images/stem-kits/engineering-building.svg',
     description:
       'Hands-on construction and design kits introducing young learners to engineering thinking, creativity, teamwork, and problem-solving through interactive building activities.',
   },
   {
     title: 'Arduino and ESP32 Innovation Kits',
-    image: arduinoImg,
+    image: '/images/stem-kits/arduino-kit.svg',
     description:
       'Practical electronics and coding kits supporting programming, sensors, automation, IoT systems, and real-world technology prototyping for youth innovators.',
   },
   {
     title: 'Robotics and Coding Starter Kits',
-    image: roboticsImg,
+    image: '/images/stem-kits/engineering-building.svg',
     description:
       'Entry-level robotics learning systems designed to help learners explore computational thinking, robotics logic, coding fundamentals, and creative experimentation.',
   },
   {
     title: 'Renewable Energy Learning Kits',
-    image: renewableImg,
+    image: '/images/stem-kits/renewable-energy.svg',
     description:
       'Interactive clean energy learning tools introducing students to solar energy, sustainability systems, environmental resilience, and climate-smart innovation.',
   },
   {
     title: 'SheSTEAM Innovation Kits',
-    image: iotImg,
+    image: '/images/stem-kits/arduino-kit.svg',
     description:
       'Gender-responsive STEAM learning kits supporting girls and young women in coding, electronics, engineering, innovation leadership, and confidence building.',
   },
   {
     title: 'School Innovation Challenge Kits',
-    image: steamImg,
+    image: '/images/stem-kits/renewable-energy.svg',
     description:
       'Collaborative classroom and bootcamp kits designed for innovation competitions, design thinking activities, prototyping, and community-centered problem solving.',
   },
@@ -101,9 +94,17 @@ export default function StemKitsPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {plannedKits.map((kit) => (
-              <div key={kit.title} className="bg-white border border-softGray rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition">
-                <div className="h-56 w-full bg-lightGreen">
-                  <img src={kit.image} alt={kit.title} className="h-full w-full object-cover" />
+              <div
+                key={kit.title}
+                className="bg-white border border-softGray rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition"
+              >
+                <div className="relative h-56 w-full bg-lightGreen">
+                  <Image
+                    src={kit.image}
+                    alt={kit.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
 
                 <div className="p-8">
