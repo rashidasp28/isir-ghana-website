@@ -45,6 +45,11 @@ const impactMetrics = [
 
 const sdgs = [
   {
+    title: 'SDG 2',
+    subtitle: 'Zero Hunger',
+    icon: '/images/sdgs/sdg-02.svg',
+  },
+  {
     title: 'SDG 3',
     subtitle: 'Good Health and Well-being',
     icon: '/images/sdgs/sdg-03.svg',
@@ -58,6 +63,31 @@ const sdgs = [
     title: 'SDG 5',
     subtitle: 'Gender Equality',
     icon: '/images/sdgs/sdg-05.svg',
+  },
+  {
+    title: 'SDG 6',
+    subtitle: 'Clean Water and Sanitation',
+    icon: '/images/sdgs/sdg-06.svg',
+  },
+  {
+    title: 'SDG 7',
+    subtitle: 'Affordable and Clean Energy',
+    icon: '/images/sdgs/sdg-07.svg',
+  },
+  {
+    title: 'SDG 8',
+    subtitle: 'Decent Work and Economic Growth',
+    icon: '/images/sdgs/sdg-08.svg',
+  },
+  {
+    title: 'SDG 9',
+    subtitle: 'Industry, Innovation and Infrastructure',
+    icon: '/images/sdgs/sdg-09.svg',
+  },
+  {
+    title: 'SDG 10',
+    subtitle: 'Reduced Inequalities',
+    icon: '/images/sdgs/sdg-10.svg',
   },
   {
     title: 'SDG 13',
@@ -125,7 +155,7 @@ export default function ImpactDashboard() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {sdgs.map((sdg) => (
               <div
                 key={sdg.title}
