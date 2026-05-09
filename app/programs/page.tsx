@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
@@ -138,9 +139,9 @@ export default function ProgramsPage() {
             ISIR Ghana welcomes collaboration with donors, NGOs, educational institutions, CSR programs, research organizations, and development partners committed to advancing innovation, education, health, climate resilience, and sustainable community transformation.
           </p>
 
-          <button className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">
+          <Link href="/partners#partner-form" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
             Become a Strategic Partner
-          </button>
+          </Link>
         </div>
       </section>
 
