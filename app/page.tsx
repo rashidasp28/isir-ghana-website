@@ -7,6 +7,7 @@ import FocusCard from '@/components/FocusCard'
 import ProgramCard from '@/components/ProgramCard'
 import ImpactSlider from '@/components/ImpactSlider'
 import ImpactDashboard from '@/components/ImpactDashboard'
+import SDGSection from '@/components/SDGSection'
 
 const heroSlides = [
   '/images/homepage/hero.png',
@@ -113,6 +114,8 @@ export default function HomePage() {
       </section>
 
       <ImpactDashboard />
+
+      <SDGSection />
 
       <section className="py-24 bg-darkNavy text-white">
         <div className="container-width">
