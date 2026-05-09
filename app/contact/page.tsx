@@ -36,7 +36,7 @@ export default function ContactPage() {
           <div className="lg:col-span-1">
             <SectionHeader
               eyebrow="Reach Us"
-              title="We would love to hear from you"
+              title="We Would Love To Hear From You"
               description="ISIR Ghana welcomes inquiries from donors, schools, NGOs, companies, researchers, volunteers, government agencies, media organizations, and community partners."
             />
 
