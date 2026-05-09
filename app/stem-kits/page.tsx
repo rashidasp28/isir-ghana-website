@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -6,31 +7,37 @@ import SectionHeader from '@/components/SectionHeader'
 const plannedKits = [
   {
     title: 'Beginner Engineering and Building Kits',
+    image: '/images/stem-kits/engineering-building.svg',
     description:
       'Hands-on construction and design kits introducing young learners to engineering thinking, creativity, teamwork, and problem-solving through interactive building activities.',
   },
   {
     title: 'Arduino and ESP32 Innovation Kits',
+    image: '/images/stem-kits/arduino-kit.svg',
     description:
       'Practical electronics and coding kits supporting programming, sensors, automation, IoT systems, and real-world technology prototyping for youth innovators.',
   },
   {
     title: 'Robotics and Coding Starter Kits',
+    image: '/images/stem-kits/engineering-building.svg',
     description:
       'Entry-level robotics learning systems designed to help learners explore computational thinking, robotics logic, coding fundamentals, and creative experimentation.',
   },
   {
     title: 'Renewable Energy Learning Kits',
+    image: '/images/stem-kits/renewable-energy.svg',
     description:
       'Interactive clean energy learning tools introducing students to solar energy, sustainability systems, environmental resilience, and climate-smart innovation.',
   },
   {
     title: 'SheSTEAM Innovation Kits',
+    image: '/images/stem-kits/arduino-kit.svg',
     description:
       'Gender-responsive STEAM learning kits supporting girls and young women in coding, electronics, engineering, innovation leadership, and confidence building.',
   },
   {
     title: 'School Innovation Challenge Kits',
+    image: '/images/stem-kits/renewable-energy.svg',
     description:
       'Collaborative classroom and bootcamp kits designed for innovation competitions, design thinking activities, prototyping, and community-centered problem solving.',
   },
@@ -95,19 +102,26 @@ export default function StemKitsPage() {
             {plannedKits.map((kit) => (
               <div
                 key={kit.title}
-                className="bg-white border border-softGray rounded-3xl p-8 shadow-sm hover:shadow-lg transition"
+                className="bg-white border border-softGray rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition"
               >
-                <div className="w-14 h-14 rounded-2xl bg-lightGreen flex items-center justify-center mb-6">
-                  <div className="w-6 h-6 rounded-full bg-primaryGreen"></div>
+                <div className="relative h-56 w-full bg-lightGreen">
+                  <Image
+                    src={kit.image}
+                    alt={kit.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
 
-                <h3 className="text-2xl font-bold text-darkNavy mb-4">
-                  {kit.title}
-                </h3>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-darkNavy mb-4 leading-tight">
+                    {kit.title}
+                  </h3>
 
-                <p className="text-charcoal leading-7">
-                  {kit.description}
-                </p>
+                  <p className="text-charcoal leading-7">
+                    {kit.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
