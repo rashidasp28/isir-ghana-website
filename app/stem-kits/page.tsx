@@ -1,43 +1,50 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
 
+const engineeringImg = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAH0AyADASIAAhEBAxEB/8QAHAAAAgMBAQEBAAAAAAAAAAAAAAYBAwQCBQcI/8QAPhAAAgEDAgQDBgMGBQQDAAAAAQIDAAQRBRIhMQYTUWEiMnGBkaGxByNCUrHR8BQVYnIWQ3KSwuHxJDNj/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAIDBAEFBv/EACsRAAICAgICAQMDAwUBAAAAAAABAhEDIRIxBBNBUSIyYXEUM5HRQpHB/9oADAMBAAIRAxEAPwD7/2BSVUZP/2Q=='
+
+const arduinoImg = engineeringImg
+const roboticsImg = engineeringImg
+const renewableImg = engineeringImg
+const iotImg = engineeringImg
+const steamImg = engineeringImg
+
 const plannedKits = [
   {
     title: 'Beginner Engineering and Building Kits',
-    image: '/images/stem-kits/engineering-building.svg',
+    image: engineeringImg,
     description:
       'Hands-on construction and design kits introducing young learners to engineering thinking, creativity, teamwork, and problem-solving through interactive building activities.',
   },
   {
     title: 'Arduino and ESP32 Innovation Kits',
-    image: '/images/stem-kits/arduino-kit.svg',
+    image: arduinoImg,
     description:
       'Practical electronics and coding kits supporting programming, sensors, automation, IoT systems, and real-world technology prototyping for youth innovators.',
   },
   {
     title: 'Robotics and Coding Starter Kits',
-    image: '/images/stem-kits/engineering-building.svg',
+    image: roboticsImg,
     description:
       'Entry-level robotics learning systems designed to help learners explore computational thinking, robotics logic, coding fundamentals, and creative experimentation.',
   },
   {
     title: 'Renewable Energy Learning Kits',
-    image: '/images/stem-kits/renewable-energy.svg',
+    image: renewableImg,
     description:
       'Interactive clean energy learning tools introducing students to solar energy, sustainability systems, environmental resilience, and climate-smart innovation.',
   },
   {
     title: 'SheSTEAM Innovation Kits',
-    image: '/images/stem-kits/arduino-kit.svg',
+    image: iotImg,
     description:
       'Gender-responsive STEAM learning kits supporting girls and young women in coding, electronics, engineering, innovation leadership, and confidence building.',
   },
   {
     title: 'School Innovation Challenge Kits',
-    image: '/images/stem-kits/renewable-energy.svg',
+    image: steamImg,
     description:
       'Collaborative classroom and bootcamp kits designed for innovation competitions, design thinking activities, prototyping, and community-centered problem solving.',
   },
@@ -72,17 +79,11 @@ export default function StemKitsPage() {
           </p>
 
           <div className="flex flex-wrap gap-5 mt-10">
-            <Link
-              href="/contact"
-              className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition"
-            >
+            <Link href="/contact" className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
               Request Information
             </Link>
 
-            <Link
-              href="/programs"
-              className="bg-white text-darkNavy px-8 py-4 rounded-full font-semibold text-lg hover:bg-lightBlue transition"
-            >
+            <Link href="/programs" className="bg-white text-darkNavy px-8 py-4 rounded-full font-semibold text-lg hover:bg-lightBlue transition">
               Explore Programs
             </Link>
           </div>
@@ -100,17 +101,9 @@ export default function StemKitsPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {plannedKits.map((kit) => (
-              <div
-                key={kit.title}
-                className="bg-white border border-softGray rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition"
-              >
-                <div className="relative h-56 w-full bg-lightGreen">
-                  <Image
-                    src={kit.image}
-                    alt={kit.title}
-                    fill
-                    className="object-cover"
-                  />
+              <div key={kit.title} className="bg-white border border-softGray rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition">
+                <div className="h-56 w-full bg-lightGreen">
+                  <img src={kit.image} alt={kit.title} className="h-full w-full object-cover" />
                 </div>
 
                 <div className="p-8">
@@ -158,17 +151,11 @@ export default function StemKitsPage() {
           />
 
           <div className="flex flex-wrap justify-center gap-5 mt-10">
-            <Link
-              href="/contact"
-              className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg"
-            >
+            <Link href="/contact" className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">
               Join the Waitlist
             </Link>
 
-            <Link
-              href="/partners"
-              className="bg-darkNavy text-white px-8 py-4 rounded-full font-semibold text-lg"
-            >
+            <Link href="/partners" className="bg-darkNavy text-white px-8 py-4 rounded-full font-semibold text-lg">
               Partner With ISIR Ghana
             </Link>
           </div>
@@ -185,10 +172,7 @@ export default function StemKitsPage() {
             ISIR Ghana believes every child and young person should have access to hands-on learning experiences that develop creativity, confidence, technical skills, leadership, and innovation capacity for the future.
           </p>
 
-          <Link
-            href="/contact"
-            className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg"
-          >
+          <Link href="/contact" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">
             Contact ISIR Ghana
           </Link>
         </div>
