@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
@@ -133,7 +134,9 @@ export default function ImpactPage() {
         <div className="container-width text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Help Us Scale What Works</h2>
           <p className="text-lg leading-8 text-gray-300 mb-10">With the right partners, ISIR Ghana’s solutions can reach more schools, families, farmers, and communities across Ghana.</p>
-          <button className="bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Become an Impact Partner</button>
+          <Link href="/partners#partner-form" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
+            Become an Impact Partner
+          </Link>
         </div>
       </section>
 
