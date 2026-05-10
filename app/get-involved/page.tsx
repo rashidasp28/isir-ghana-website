@@ -37,7 +37,7 @@ const waysToSupport = [
   {
     title: 'Partner With Us',
     description: 'Work with ISIR Ghana to co-design, fund, implement, or scale programs across education, health, agriculture, climate, and research.',
-    href: '/partners',
+    href: '/partners#partner-form',
     cta: 'Start a Partnership',
   },
 ]
@@ -110,7 +110,9 @@ export default function GetInvolvedPage() {
         <div className="container-width text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Be Part of the Change</h2>
           <p className="text-lg leading-8 text-gray-300 mb-10">Your support can help young people learn, women thrive, communities adapt, and ideas become sustainable solutions.</p>
-          <Link href="/partners" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Partner With ISIR Ghana</Link>
+          <Link href="/partners#partner-form" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
+            Partner With ISIR Ghana
+          </Link>
         </div>
       </section>
 
