@@ -9,6 +9,7 @@ const navLinks = [
   { href: '/programs', label: 'Programs' },
   { href: '/stem-kits', label: 'STEM Kits' },
   { href: '/research', label: 'Research' },
+  { href: '/downloads', label: 'Downloads' },
   { href: '/impact', label: 'Impact' },
   { href: '/gallery', label: 'Gallery' },
   { href: '/consultancy', label: 'Consultancy' },
@@ -69,7 +70,7 @@ export default function Navbar() {
       <div
         id="mobile-menu"
         className={`xl:hidden overflow-hidden border-t border-softGray bg-white transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-[520px] opacity-100' : 'max-h-0 opacity-0 border-t-0'
+          isOpen ? 'max-h-[620px] opacity-100' : 'max-h-0 opacity-0 border-t-0'
         }`}
       >
         <div className="container-width py-4 grid grid-cols-2 gap-4 text-sm font-medium text-charcoal">
