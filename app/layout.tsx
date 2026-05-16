@@ -1,5 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import { organizationJsonLd } from './seo-config'
 
 export const metadata: Metadata = {
   title: {
@@ -7,21 +8,42 @@ export const metadata: Metadata = {
     template: '%s | ISIR Ghana',
   },
   description:
-    'The Institute for Sustainable and Innovative Research Ghana advances evidence-based research, STEAM education, maternal and child health, agriculture, climate resilience, and community innovation.',
+    'ISIR Ghana is a research and innovation organization advancing STEAM education, maternal and child health, climate resilience, agriculture, and sustainable development through evidence-based solutions in Ghana.',
   keywords: [
     'ISIR Ghana',
     'Institute for Sustainable and Innovative Research Ghana',
     'STEAM education Ghana',
     'STEM NGO Ghana',
-    'sustainable development Ghana',
+    'girls in STEM Ghana',
     'maternal health Ghana',
     'climate resilience Ghana',
+    'sustainable agriculture Ghana',
     'research institute Ghana',
+    'NGO Ghana',
+    'community innovation Ghana',
+    'development research Ghana',
+    'monitoring and evaluation Ghana',
+    'Northern Ghana development',
   ],
   authors: [{ name: 'Institute for Sustainable and Innovative Research Ghana' }],
   creator: 'ISIR Ghana',
   publisher: 'ISIR Ghana',
   metadataBase: new URL('https://project-4v4p7.vercel.app'),
+  category: 'Research and Sustainable Development',
+  alternates: {
+    canonical: 'https://project-4v4p7.vercel.app',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: '/icon.png',
     shortcut: '/icon.png',
@@ -30,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'ISIR Ghana | Sustainability Through Innovation',
     description:
-      'Bridging research, innovation, and community action for sustainable development in Ghana.',
+      'Research, innovation, STEAM education, maternal health, agriculture, and climate resilience initiatives in Ghana.',
     url: 'https://project-4v4p7.vercel.app',
     siteName: 'ISIR Ghana',
     images: [
@@ -48,7 +70,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'ISIR Ghana | Sustainability Through Innovation',
     description:
-      'Research, innovation, STEAM education, maternal health, agriculture, and climate resilience initiatives in Ghana.',
+      'Evidence-based research and community innovation for sustainable development in Ghana.',
     images: ['/og-image.png?v=5'],
   },
 }
@@ -60,7 +82,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        {children}
+      </body>
     </html>
   )
 }
