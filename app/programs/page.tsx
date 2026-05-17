@@ -49,6 +49,7 @@ const programs = [
     imageSrc: '/images/programs/ruralstar.JPG',
     imageAlt:
       'RuralStar Initiative education recognition and motivation activity supporting pupils and teachers in Northern Ghana.',
+    href: '/programs/ruralstar-initiative',
   },
 ]
 
