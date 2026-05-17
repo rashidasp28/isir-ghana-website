@@ -12,6 +12,7 @@ const programs = [
     imageSrc: '/images/programs/brick-steam.png',
     imageAlt:
       'Students, teachers, facilitators, volunteers, ISIR Ghana founders, and STEM Rising Mind Foundation representatives after a Brick STEAM Discovery Caravan session.',
+    href: '/programs/brick-steam-discovery-caravan',
   },
   {
     title: 'SheSTEAM Ghana',
@@ -87,6 +88,7 @@ export default function ProgramsPage() {
                 description={program.description}
                 imageSrc={program.imageSrc}
                 imageAlt={program.imageAlt}
+                href={program.href}
               />
             ))}
           </div>
