@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+
+const articleImage = '/images/news/international-day-of-light-isir-ghana.PNG'
 
 export const metadata: Metadata = {
   title: 'International Day of Light: Celebrating Science, Innovation and Discovery',
@@ -23,7 +26,7 @@ export const metadata: Metadata = {
       'ISIR Ghana joins the world in celebrating light as a symbol of knowledge, discovery, hope, and innovation for sustainable development.',
     type: 'article',
     url: '/news/international-day-of-light-2026',
-    images: ['/og-image.png?v=5'],
+    images: [articleImage],
   },
 }
 
@@ -51,6 +54,16 @@ export default function InternationalDayOfLightPage() {
           <div className="container-width max-w-4xl">
             <div className="mb-10 text-sm text-primaryGreen font-semibold uppercase tracking-wide">
               Published by ISIR Ghana | 16 May
+            </div>
+
+            <div className="relative aspect-square md:aspect-[16/10] rounded-3xl overflow-hidden border border-softGray shadow-sm mb-12 bg-lightBlue">
+              <Image
+                src={articleImage}
+                alt="ISIR Ghana International Day of Light flyer celebrating science, innovation, STEM education and sustainable communities"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
 
             <div className="prose prose-lg max-w-none text-charcoal prose-headings:text-darkNavy prose-a:text-primaryBlue">
