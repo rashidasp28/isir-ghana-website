@@ -159,8 +159,8 @@ const resources = [
   {
     title: 'Impact Brief',
     description: 'A summary of schools reached, learners engaged, gender participation, early outcomes, and field learning.',
-    href: '/downloads',
-    cta: 'Coming Soon',
+    href: '#impact',
+    cta: 'View Impact Snapshot',
   },
   {
     title: 'Curriculum Snapshot',
@@ -217,7 +217,7 @@ export default function BrickSteamProgramPage() {
           </div>
         </div>
       </section>
-      <section className="py-24 bg-white">
+      <section id="impact" className="py-24 bg-white scroll-mt-24">
         <div className="container-width">
           <div className="text-center max-w-4xl mx-auto mb-14">
             <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Early Impact From the Field</p>
