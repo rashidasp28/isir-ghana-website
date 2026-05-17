@@ -17,6 +17,14 @@ const categories = [
 
 const latestStories = [
   {
+    title: 'ISIR Ghana Returns to Bethany MA JHS for the Second Session of the Brick STEAM Discovery Caravan',
+    category: 'Field Story',
+    summary:
+      'ISIR Ghana continues its practical STEAM learning journey at Bethany MA Junior High School through the second session of the Brick STEAM Discovery Caravan.',
+    href: '/news/bethany-brick-steam-second-session',
+    image: '/images/news/bethany-brick-steam-second-session.jpg',
+  },
+  {
     title: 'International Day of Light: Celebrating Science, Innovation and Discovery',
     category: 'Science Education',
     summary:
@@ -75,18 +83,18 @@ export default function NewsPage() {
           <div className="grid lg:grid-cols-2 gap-10 items-center bg-lightBlue rounded-3xl p-8 md:p-12 border border-softGray">
             <div className="relative aspect-square rounded-3xl overflow-hidden bg-white border border-softGray">
               <Image
-                src={internationalDayOfLightImage}
-                alt="ISIR Ghana International Day of Light flyer celebrating science, innovation and sustainable communities"
+                src="/images/news/bethany-brick-steam-second-session.jpg"
+                alt="Brick STEAM Discovery Caravan second session flyer for Bethany MA Junior High School"
                 fill
                 className="object-cover"
               />
             </div>
 
             <div>
-              <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Science Education</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-darkNavy mb-6">International Day of Light: Celebrating Science, Innovation and Discovery</h2>
-              <p className="text-lg text-charcoal leading-8 mb-8">ISIR Ghana joins the world in celebrating the International Day of Light, highlighting the importance of science, innovation, STEM education, and sustainable development for resilient communities.</p>
-              <Link href="/news/international-day-of-light-2026" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
+              <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Field Story</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-darkNavy mb-6">ISIR Ghana Returns to Bethany MA JHS for the Second Session of the Brick STEAM Discovery Caravan</h2>
+              <p className="text-lg text-charcoal leading-8 mb-8">ISIR Ghana continues its hands-on STEAM learning journey at Bethany MA Junior High School through the second session of the Brick STEAM Discovery Caravan.</p>
+              <Link href="/news/bethany-brick-steam-second-session" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
                 Read Full Story
               </Link>
             </div>
