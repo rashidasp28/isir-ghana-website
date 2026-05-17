@@ -43,6 +43,9 @@ const programs = [
     title: 'RuralStar Initiative',
     description:
       'A rural education recognition and motivation initiative rewarding high-performing pupils and outstanding teachers with learning materials, mentorship opportunities, and community recognition to strengthen educational equity and learning motivation across Northern Ghana.',
+    imageSrc: '/images/programs/ruralstar.JPG',
+    imageAlt:
+      'RuralStar Initiative education recognition and motivation activity supporting pupils and teachers in Northern Ghana.',
   },
 ]
 
