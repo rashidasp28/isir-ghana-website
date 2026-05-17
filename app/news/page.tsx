@@ -4,6 +4,8 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
 
+const internationalDayOfLightImage = '/images/news/international-day-of-light-isir-ghana.PNG'
+
 const categories = [
   'Program Updates',
   'Field Stories',
@@ -20,7 +22,7 @@ const latestStories = [
     summary:
       'ISIR Ghana joins the world in celebrating the International Day of Light, highlighting science, STEM education, innovation, and sustainable development.',
     href: '/news/international-day-of-light-2026',
-    image: '/images/news/shesteam-anbariya-led-breadboard.jpg',
+    image: internationalDayOfLightImage,
   },
   {
     title: 'SheSTEAM Project Launch Inspires Students at Anbariya Senior High School',
@@ -71,10 +73,10 @@ export default function NewsPage() {
           />
 
           <div className="grid lg:grid-cols-2 gap-10 items-center bg-lightBlue rounded-3xl p-8 md:p-12 border border-softGray">
-            <div className="relative h-[520px] rounded-3xl overflow-hidden bg-white border border-softGray">
+            <div className="relative aspect-square rounded-3xl overflow-hidden bg-white border border-softGray">
               <Image
-                src="/images/news/shesteam-anbariya-led-breadboard.jpg"
-                alt="Students exploring practical electronics and innovation learning during a STEAM education session"
+                src={internationalDayOfLightImage}
+                alt="ISIR Ghana International Day of Light flyer celebrating science, innovation and sustainable communities"
                 fill
                 className="object-cover"
               />
