@@ -41,6 +41,7 @@ const programs = [
     title: 'Solar4Change Initiative',
     description:
       'A climate resilience and renewable energy initiative providing solar-powered clean water systems to underserved communities while strengthening public health, women’s empowerment, sustainable infrastructure, and community-led water management systems.',
+    href: '/programs/solar4change',
   },
   {
     title: 'RuralStar Initiative',
