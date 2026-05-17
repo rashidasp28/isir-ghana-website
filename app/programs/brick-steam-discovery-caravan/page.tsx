@@ -4,6 +4,39 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
+const learningModel = [
+  {
+    title: 'Hands-on engineering challenges',
+    description:
+      'Students build cars, rockets, motorbikes, and other structures to understand balance, motion, stability, design, and problem-solving through practical activity.',
+  },
+  {
+    title: 'Creative problem-solving',
+    description:
+      'Learners are encouraged to test ideas, make mistakes, improve designs, and explain how their creations work.',
+  },
+  {
+    title: 'Teamwork and confidence building',
+    description:
+      'Students work in groups, share roles, communicate ideas, and gain confidence as they complete tasks together.',
+  },
+  {
+    title: 'Robotics and design exposure',
+    description:
+      'The sessions introduce learners to early engineering and robotics concepts in a simple, accessible, and playful way.',
+  },
+  {
+    title: 'Low-resource learning model',
+    description:
+      'The Caravan uses mobile, reusable, hands-on learning materials that can work in underserved schools with limited laboratory infrastructure.',
+  },
+  {
+    title: 'Future STEAM Hub pipeline',
+    description:
+      'The program identifies interested learners and schools that can later feed into innovation clubs, SheSTEAM pathways, and a future Northern Regional STEAM Discovery Hub.',
+  },
+]
+
 export const metadata: Metadata = {
   title: 'Brick STEAM Discovery Caravan | Hands-on STEM Education in Ghana',
   description:
@@ -35,10 +68,20 @@ export default function BrickSteamProgramPage() {
         </div>
       </section>
       <section className="py-24 bg-lightGreen">
-        <div className="container-width grid md:grid-cols-3 gap-8">
-          {['Hands-on engineering challenges', 'Creative problem-solving', 'Teamwork and confidence building', 'Robotics and design exposure', 'Low-resource learning model', 'Future STEAM Hub pipeline'].map((item) => (
-            <div key={item} className="bg-white rounded-3xl p-8 border border-softGray shadow-sm"><h3 className="text-2xl font-bold text-darkNavy mb-4">{item}</h3><p className="text-charcoal leading-7">A core element of the Caravan model designed to strengthen practical learning and innovation capacity among young learners.</p></div>
-          ))}
+        <div className="container-width">
+          <div className="text-center max-w-4xl mx-auto mb-14">
+            <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Learning Model</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-darkNavy leading-tight mb-6">How the Caravan builds practical STEAM confidence</h2>
+            <p className="text-lg text-charcoal leading-8">The Brick STEAM Discovery Caravan uses active learning, creativity, teamwork, and simple engineering challenges to make science and technology visible, enjoyable, and relevant to young learners.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {learningModel.map((item) => (
+              <div key={item.title} className="bg-white rounded-3xl p-8 border border-softGray shadow-sm">
+                <h3 className="text-2xl font-bold text-darkNavy mb-4">{item.title}</h3>
+                <p className="text-charcoal leading-7">{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
       <section className="py-24 bg-darkNavy text-white">
