@@ -122,6 +122,27 @@ const sdgAlignment = [
   },
 ]
 
+const educationPartners = [
+  {
+    title: 'Ghana Education Service',
+    role: 'Main education partner and institutional alignment body',
+    description:
+      'The Brick STEAM Discovery Caravan is positioned to complement Ghana’s education priorities by expanding practical, hands-on STEAM learning opportunities for learners in underserved schools.',
+  },
+  {
+    title: 'Bethany MA JHS, Tamale',
+    role: 'Launch school and first implementation site',
+    description:
+      'Bethany MA JHS hosted the first Brick STEAM Discovery Caravan session, directly engaging 30 learners and providing early evidence of student curiosity and engineering interest.',
+  },
+  {
+    title: 'The Kings School, Kumbungu',
+    role: 'Second implementation site and expansion point',
+    description:
+      'The Kings School hosted the second session, strengthening the Caravan’s field evidence and supporting the expansion of practical STEAM learning beyond Tamale.',
+  },
+]
+
 const resources = [
   {
     title: 'Brick STEAM Concept Note',
@@ -229,6 +250,25 @@ export default function BrickSteamProgramPage() {
                 </div>
                 <figcaption className="p-6 text-charcoal leading-7 font-medium">{image.caption}</figcaption>
               </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-24 bg-white">
+        <div className="container-width">
+          <div className="text-center max-w-4xl mx-auto mb-14">
+            <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Education Partnership and Implementation Sites</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-darkNavy leading-tight mb-6">Working through Ghana’s education ecosystem</h2>
+            <p className="text-lg text-charcoal leading-8">ISIR Ghana works through education stakeholders, school leadership, volunteers, and community actors to deliver structured learning experiences that build curiosity, confidence, creativity, and early innovation capacity.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {educationPartners.map((partner) => (
+              <article key={partner.title} className="bg-lightBlue rounded-3xl p-8 border border-softGray shadow-sm">
+                <div className="w-16 h-16 rounded-2xl bg-primaryGreen text-white flex items-center justify-center text-2xl font-bold mb-6">✓</div>
+                <p className="text-primaryGreen font-semibold uppercase tracking-wide text-sm mb-3">{partner.role}</p>
+                <h3 className="text-2xl font-bold text-darkNavy mb-4">{partner.title}</h3>
+                <p className="text-charcoal leading-7">{partner.description}</p>
+              </article>
             ))}
           </div>
         </div>
