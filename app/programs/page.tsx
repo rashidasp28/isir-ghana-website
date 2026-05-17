@@ -21,6 +21,7 @@ const programs = [
     imageSrc: '/images/programs/shesteam.png',
     imageAlt:
       'Girls and young people participating in coding, electronics, and innovation activities during an ISIR Ghana SheSTEAM session.',
+    href: '/programs/shesteam-ghana',
   },
   {
     title: 'Mother First Health Initiative',
@@ -29,6 +30,7 @@ const programs = [
     imageSrc: '/images/programs/mothers-first.png',
     imageAlt:
       'A nurse speaking to expectant mothers and new mothers during a maternal and child health education session.',
+    href: '/programs/mother-first-health-initiative',
   },
   {
     title: 'AgriSTEAM Innovation Hub',
