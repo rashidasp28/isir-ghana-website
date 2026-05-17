@@ -89,6 +89,39 @@ const galleryImages = [
   },
 ]
 
+const sdgAlignment = [
+  {
+    title: 'SDG 4',
+    subtitle: 'Quality Education',
+    icon: '/images/sdgs/sdg-04.svg',
+    description: 'Improves access to practical, inclusive, hands-on STEAM learning for children in underserved school communities.',
+  },
+  {
+    title: 'SDG 5',
+    subtitle: 'Gender Equality',
+    icon: '/images/sdgs/sdg-05.svg',
+    description: 'Encourages girls to participate confidently in engineering, creativity, teamwork, and technology-related learning.',
+  },
+  {
+    title: 'SDG 9',
+    subtitle: 'Industry, Innovation and Infrastructure',
+    icon: '/images/sdgs/sdg-09.svg',
+    description: 'Builds early innovation mindsets through design, construction, prototyping, and problem-solving activities.',
+  },
+  {
+    title: 'SDG 10',
+    subtitle: 'Reduced Inequalities',
+    icon: '/images/sdgs/sdg-10.svg',
+    description: 'Expands access to quality STEAM experiences for learners in low-resource and underserved settings.',
+  },
+  {
+    title: 'SDG 17',
+    subtitle: 'Partnerships for the Goals',
+    icon: '/images/sdgs/sdg-17.svg',
+    description: 'Strengthens collaboration with schools, volunteers, partners, and community actors to scale practical learning.',
+  },
+]
+
 export const metadata: Metadata = {
   title: 'Brick STEAM Discovery Caravan | Hands-on STEM Education in Ghana',
   description:
@@ -169,6 +202,27 @@ export default function BrickSteamProgramPage() {
                 </div>
                 <figcaption className="p-6 text-charcoal leading-7 font-medium">{image.caption}</figcaption>
               </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-24 bg-white">
+        <div className="container-width">
+          <div className="text-center max-w-4xl mx-auto mb-14">
+            <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">SDG Alignment</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-darkNavy leading-tight mb-6">Contributing to global development priorities through practical STEAM education</h2>
+            <p className="text-lg text-charcoal leading-8">The Brick STEAM Discovery Caravan contributes to inclusive education, gender equity, innovation capacity, reduced inequalities, and partnerships for sustainable development.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {sdgAlignment.map((sdg) => (
+              <article key={sdg.title} className="bg-white border border-softGray rounded-3xl p-8 shadow-sm hover:shadow-lg transition">
+                <div className="bg-lightBlue rounded-2xl p-4 inline-flex mb-6">
+                  <Image src={sdg.icon} alt={sdg.subtitle} width={80} height={80} />
+                </div>
+                <p className="text-primaryGreen font-bold text-xl mb-2">{sdg.title}</p>
+                <h3 className="text-2xl font-bold text-darkNavy mb-4">{sdg.subtitle}</h3>
+                <p className="text-charcoal leading-7">{sdg.description}</p>
+              </article>
             ))}
           </div>
         </div>
