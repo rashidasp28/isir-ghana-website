@@ -36,6 +36,7 @@ const programs = [
     title: 'AgriSTEAM Innovation Hub',
     description:
       'A technology-driven agriculture and youth innovation ecosystem designed to train young people in smart agriculture, coding, IoT systems, automation, climate-smart farming, and agri-tech entrepreneurship through hands-on innovation and prototype development.',
+    href: '/programs/agristream-innovation-hub',
   },
   {
     title: 'Solar4Change Initiative',
