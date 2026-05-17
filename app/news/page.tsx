@@ -15,6 +15,14 @@ const categories = [
 
 const latestStories = [
   {
+    title: 'International Day of Light: Celebrating Science, Innovation and Discovery',
+    category: 'Science Education',
+    summary:
+      'ISIR Ghana joins the world in celebrating the International Day of Light, highlighting science, STEM education, innovation, and sustainable development.',
+    href: '/news/international-day-of-light-2026',
+    image: '/images/news/shesteam-anbariya-led-breadboard.jpg',
+  },
+  {
     title: 'SheSTEAM Project Launch Inspires Students at Anbariya Senior High School',
     category: 'Program Update',
     summary:
@@ -66,17 +74,17 @@ export default function NewsPage() {
             <div className="relative h-[520px] rounded-3xl overflow-hidden bg-white border border-softGray">
               <Image
                 src="/images/news/shesteam-anbariya-led-breadboard.jpg"
-                alt="A female student working with LED components and a breadboard during the SheSTEAM practical electronics session at Anbariya Senior High School"
+                alt="Students exploring practical electronics and innovation learning during a STEAM education session"
                 fill
                 className="object-cover"
               />
             </div>
 
             <div>
-              <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Program Update</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-darkNavy mb-6">SheSTEAM Project Launch Inspires Students at Anbariya Senior High School</h2>
-              <p className="text-lg text-charcoal leading-8 mb-8">On 13 January 2026, ISIR Ghana launched its flagship SheSTEAM Project, directly engaging 15 students and indirectly reaching about 60 students through hands-on electronics, coding, peer engagement, and school-wide visibility.</p>
-              <Link href="/news/shesteam-anbariya-launch" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
+              <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Science Education</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-darkNavy mb-6">International Day of Light: Celebrating Science, Innovation and Discovery</h2>
+              <p className="text-lg text-charcoal leading-8 mb-8">ISIR Ghana joins the world in celebrating the International Day of Light, highlighting the importance of science, innovation, STEM education, and sustainable development for resilient communities.</p>
+              <Link href="/news/international-day-of-light-2026" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
                 Read Full Story
               </Link>
             </div>
