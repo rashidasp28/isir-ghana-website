@@ -122,6 +122,33 @@ const sdgAlignment = [
   },
 ]
 
+const resources = [
+  {
+    title: 'Brick STEAM Concept Note',
+    description: 'A donor-facing overview of the program model, objectives, implementation strategy, and partnership opportunities.',
+    href: '/downloads',
+    cta: 'Request Copy',
+  },
+  {
+    title: 'Sponsorship Package',
+    description: 'Information for donors, schools, companies, and CSR partners interested in supporting school outreach sessions.',
+    href: '/partners#partner-form',
+    cta: 'Become a Sponsor',
+  },
+  {
+    title: 'Impact Brief',
+    description: 'A summary of schools reached, learners engaged, gender participation, early outcomes, and field learning.',
+    href: '/downloads',
+    cta: 'Coming Soon',
+  },
+  {
+    title: 'Curriculum Snapshot',
+    description: 'A short overview of the Brick STEAM learning approach, target age group, activity types, and progression model.',
+    href: '/stem-kits',
+    cta: 'View STEM Kits',
+  },
+]
+
 export const metadata: Metadata = {
   title: 'Brick STEAM Discovery Caravan | Hands-on STEM Education in Ghana',
   description:
@@ -222,6 +249,27 @@ export default function BrickSteamProgramPage() {
                 <p className="text-primaryGreen font-bold text-xl mb-2">{sdg.title}</p>
                 <h3 className="text-2xl font-bold text-darkNavy mb-4">{sdg.subtitle}</h3>
                 <p className="text-charcoal leading-7">{sdg.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-24 bg-lightGreen">
+        <div className="container-width">
+          <div className="text-center max-w-4xl mx-auto mb-14">
+            <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Resources and Program Documents</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-darkNavy leading-tight mb-6">Tools for partners, donors, schools, and supporters</h2>
+            <p className="text-lg text-charcoal leading-8">Access or request key documents that explain the Brick STEAM Discovery Caravan model, sponsorship opportunities, learning approach, and early impact evidence.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {resources.map((resource) => (
+              <article key={resource.title} className="bg-white rounded-3xl p-8 border border-softGray shadow-sm flex flex-col">
+                <h3 className="text-2xl font-bold text-darkNavy mb-4">{resource.title}</h3>
+                <p className="text-charcoal leading-7 mb-8 flex-grow">{resource.description}</p>
+                <Link href={resource.href} className="inline-flex items-center justify-center gap-2 bg-primaryGreen text-white px-5 py-3 rounded-full font-semibold hover:-translate-y-1 hover:shadow-lg transition duration-300">
+                  {resource.cta}
+                  <span aria-hidden="true">→</span>
+                </Link>
               </article>
             ))}
           </div>
