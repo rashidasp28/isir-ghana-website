@@ -37,6 +37,39 @@ const learningModel = [
   },
 ]
 
+const impactSnapshot = [
+  {
+    value: '2',
+    label: 'Schools engaged',
+    description: 'Bethany MA JHS and The Kings School have hosted Brick STEAM Discovery Caravan sessions.',
+  },
+  {
+    value: '60',
+    label: 'Direct learners reached',
+    description: 'Two school sessions directly engaged 30 students each through practical STEAM learning.',
+  },
+  {
+    value: '34',
+    label: 'Girls directly engaged',
+    description: '18 girls at Bethany MA JHS and 16 girls at The Kings School participated directly.',
+  },
+  {
+    value: '26',
+    label: 'Boys directly engaged',
+    description: '12 boys at Bethany MA JHS and 14 boys at The Kings School participated directly.',
+  },
+  {
+    value: '13',
+    label: 'Learners interested in engineering',
+    description: '8 learners at Bethany MA JHS and 5 learners at The Kings School expressed interest in engineering after the sessions.',
+  },
+  {
+    value: '4+',
+    label: 'Hands-on project types',
+    description: 'Students built and explored cars, rockets, motorbikes, and other creative structures.',
+  },
+]
+
 export const metadata: Metadata = {
   title: 'Brick STEAM Discovery Caravan | Hands-on STEM Education in Ghana',
   description:
@@ -79,6 +112,24 @@ export default function BrickSteamProgramPage() {
               <div key={item.title} className="bg-white rounded-3xl p-8 border border-softGray shadow-sm">
                 <h3 className="text-2xl font-bold text-darkNavy mb-4">{item.title}</h3>
                 <p className="text-charcoal leading-7">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-24 bg-white">
+        <div className="container-width">
+          <div className="text-center max-w-4xl mx-auto mb-14">
+            <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Early Impact From the Field</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-darkNavy leading-tight mb-6">Evidence of curiosity, confidence, and growing engineering interest</h2>
+            <p className="text-lg text-charcoal leading-8">The Brick STEAM Discovery Caravan is already generating early evidence of practical learning, gender-inclusive participation, and increased interest in engineering among basic school learners in Northern Ghana.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {impactSnapshot.map((metric) => (
+              <div key={metric.label} className="bg-lightBlue rounded-3xl p-8 border border-softGray shadow-sm">
+                <p className="text-5xl font-bold text-primaryGreen mb-4">{metric.value}</p>
+                <h3 className="text-2xl font-bold text-darkNavy mb-4">{metric.label}</h3>
+                <p className="text-charcoal leading-7">{metric.description}</p>
               </div>
             ))}
           </div>
