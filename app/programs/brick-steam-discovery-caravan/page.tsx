@@ -70,6 +70,25 @@ const impactSnapshot = [
   },
 ]
 
+const galleryImages = [
+  {
+    src: '/images/gallery/steam/brick-steam-building-session-1.png',
+    caption: 'Learners building and testing creative structures during a hands-on STEAM session.',
+  },
+  {
+    src: '/images/field/brick-steam-1.jpg',
+    caption: 'Students engaging with practical materials during a Brick STEAM Discovery Caravan activity.',
+  },
+  {
+    src: '/images/field/brick-steam-2.png',
+    caption: 'Group-based learning moments that strengthen teamwork, confidence, and creativity.',
+  },
+  {
+    src: '/images/news/brick-steam-bethany-brick-selection.png',
+    caption: 'Brick selection and design exploration during the Bethany MA JHS launch session.',
+  },
+]
+
 export const metadata: Metadata = {
   title: 'Brick STEAM Discovery Caravan | Hands-on STEM Education in Ghana',
   description:
@@ -131,6 +150,25 @@ export default function BrickSteamProgramPage() {
                 <h3 className="text-2xl font-bold text-darkNavy mb-4">{metric.label}</h3>
                 <p className="text-charcoal leading-7">{metric.description}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-24 bg-lightBlue">
+        <div className="container-width">
+          <div className="text-center max-w-4xl mx-auto mb-14">
+            <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Brick STEAM in Action</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-darkNavy leading-tight mb-6">Real moments from hands-on learning sessions</h2>
+            <p className="text-lg text-charcoal leading-8">Moments from ISIR Ghana’s hands-on learning sessions, where learners explore engineering, creativity, teamwork, and practical problem-solving.</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {galleryImages.map((image) => (
+              <figure key={image.src} className="bg-white rounded-3xl overflow-hidden border border-softGray shadow-sm">
+                <div className="relative h-80 bg-white">
+                  <Image src={image.src} alt={image.caption} fill className="object-cover" />
+                </div>
+                <figcaption className="p-6 text-charcoal leading-7 font-medium">{image.caption}</figcaption>
+              </figure>
             ))}
           </div>
         </div>
