@@ -23,7 +23,7 @@ const learningModel = [
   {
     title: 'Robotics and design exposure',
     description:
-      'The sessions introduce learners to early engineering and robotics concepts in a simple, accessible, and playful way.',
+      'The sessions introduce learners to early engineering and design concepts in a simple, accessible, and playful way.',
   },
   {
     title: 'Low-resource learning model',
@@ -39,34 +39,34 @@ const learningModel = [
 
 const impactSnapshot = [
   {
-    value: '2',
-    label: 'Schools engaged',
-    description: 'Bethany MA JHS and The Kings School have hosted Brick STEAM Discovery Caravan sessions.',
+    value: '3',
+    label: 'Sessions delivered',
+    description: 'Brick STEAM sessions have been delivered at Bethany MA JHS and The Kings School, including Bethany Session Two.',
   },
   {
-    value: '60',
+    value: '90',
     label: 'Direct learners reached',
-    description: 'Two school sessions directly engaged 30 students each through practical STEAM learning.',
+    description: 'Three sessions have directly engaged 90 learners through practical STEAM learning activities.',
   },
   {
-    value: '34',
+    value: '54',
     label: 'Girls directly engaged',
-    description: '18 girls at Bethany MA JHS and 16 girls at The Kings School participated directly.',
+    description: 'Girls reached directly include 18 at Bethany Session One, 16 at The Kings School, and 20 at Bethany Session Two.',
   },
   {
-    value: '26',
+    value: '36',
     label: 'Boys directly engaged',
-    description: '12 boys at Bethany MA JHS and 14 boys at The Kings School participated directly.',
+    description: 'Boys reached directly include 12 at Bethany Session One, 14 at The Kings School, and 10 at Bethany Session Two.',
   },
   {
-    value: '13',
-    label: 'Learners interested in engineering',
-    description: '8 learners at Bethany MA JHS and 5 learners at The Kings School expressed interest in engineering after the sessions.',
+    value: '20',
+    label: 'Indirect learners reached in Session Two',
+    description: 'Bethany Session Two also pulled in an additional 20 students indirectly before the end of the day.',
   },
   {
-    value: '4+',
-    label: 'Hands-on project types',
-    description: 'Students built and explored cars, rockets, motorbikes, and other creative structures.',
+    value: '60%',
+    label: 'First-time material exposure',
+    description: 'For 60% of Bethany Session Two participants, this was their first time working with this kind of hands-on building material.',
   },
 ]
 
@@ -84,8 +84,8 @@ const galleryImages = [
     caption: 'Group-based learning moments that strengthen teamwork, confidence, and creativity.',
   },
   {
-    src: '/images/news/brick-steam-bethany-brick-selection.png',
-    caption: 'Brick selection and design exploration during the Bethany MA JHS launch session.',
+    src: '/images/news/bethany-brick-steam-second-session.jpg',
+    caption: 'Bethany MA JHS Session Two expanded hands-on STEAM learning through teamwork, design, and model building.',
   },
 ]
 
@@ -130,16 +130,16 @@ const educationPartners = [
       'The Brick STEAM Discovery Caravan is positioned to complement Ghana’s education priorities by expanding practical, hands-on STEAM learning opportunities for learners in underserved schools.',
   },
   {
-    title: 'Bethany MA JHS, Tamale',
-    role: 'Launch school and first implementation site',
+    title: 'GEM-Ghana',
+    role: 'Implementation partner',
     description:
-      'Bethany MA JHS hosted the first Brick STEAM Discovery Caravan session, directly engaging 30 learners and providing early evidence of student curiosity and engineering interest.',
+      'GEM-Ghana supports session implementation and community-centered collaboration, including the second Brick STEAM session at Bethany MA JHS.',
   },
   {
-    title: 'The Kings School, Kumbungu',
-    role: 'Second implementation site and expansion point',
+    title: 'Bethany MA JHS and The Kings School',
+    role: 'Implementation sites',
     description:
-      'The Kings School hosted the second session, strengthening the Caravan’s field evidence and supporting the expansion of practical STEAM learning beyond Tamale.',
+      'Bethany MA JHS and The Kings School have hosted Brick STEAM sessions, helping build early field evidence for practical STEAM education in Northern Ghana.',
   },
 ]
 
@@ -158,7 +158,7 @@ const resources = [
   },
   {
     title: 'Impact Brief',
-    description: 'A summary of schools reached, learners engaged, gender participation, early outcomes, and field learning.',
+    description: 'A summary of schools reached, learners engaged, gender participation, first-time exposure, and field learning.',
     href: '#impact',
     cta: 'View Impact Snapshot',
   },
@@ -222,7 +222,7 @@ export default function BrickSteamProgramPage() {
           <div className="text-center max-w-4xl mx-auto mb-14">
             <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Early Impact From the Field</p>
             <h2 className="text-4xl md:text-5xl font-bold text-darkNavy leading-tight mb-6">Evidence of curiosity, confidence, and growing engineering interest</h2>
-            <p className="text-lg text-charcoal leading-8">The Brick STEAM Discovery Caravan is already generating early evidence of practical learning, gender-inclusive participation, and increased interest in engineering among basic school learners in Northern Ghana.</p>
+            <p className="text-lg text-charcoal leading-8">The Brick STEAM Discovery Caravan is generating field evidence of practical learning, gender-inclusive participation, teamwork, first-time exposure to hands-on materials, and increased interest in engineering among basic school learners in Northern Ghana.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {impactSnapshot.map((metric) => (
@@ -259,7 +259,7 @@ export default function BrickSteamProgramPage() {
           <div className="text-center max-w-4xl mx-auto mb-14">
             <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Education Partnership and Implementation Sites</p>
             <h2 className="text-4xl md:text-5xl font-bold text-darkNavy leading-tight mb-6">Working through Ghana’s education ecosystem</h2>
-            <p className="text-lg text-charcoal leading-8">ISIR Ghana works through education stakeholders, school leadership, volunteers, and community actors to deliver structured learning experiences that build curiosity, confidence, creativity, and early innovation capacity.</p>
+            <p className="text-lg text-charcoal leading-8">ISIR Ghana works through education stakeholders, school leadership, partners, volunteers, and community actors to deliver structured learning experiences that build curiosity, confidence, creativity, and early innovation capacity.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {educationPartners.map((partner) => (
