@@ -2,64 +2,44 @@ import Image from 'next/image'
 
 const impactMetrics = [
   {
-    value: '90',
-    label: 'Brick STEAM Learners Reached',
-    description: 'Students directly engaged through 3 Brick STEAM Discovery Caravan sessions.',
+    value: '105',
+    label: 'Students Directly Reached',
+    description: 'Learners directly engaged through Brick STEAM and SheSTEAM practical education sessions.',
   },
   {
-    value: '54',
-    label: 'Girls Reached Through Brick STEAM',
-    description: 'Girls directly engaged across Bethany MA JHS and The Kings School sessions.',
+    value: '64',
+    label: 'Girls Directly Engaged',
+    description: 'Girls directly reached through ISIR Ghana’s STEAM and technology education activities.',
   },
   {
-    value: '60%',
+    value: '61%',
     label: 'Female Participation',
-    description: 'Female participation across direct Brick STEAM learners: 54 girls out of 90 students.',
-  },
-  {
-    value: '36',
-    label: 'Boys Reached Through Brick STEAM',
-    description: 'Boys directly engaged across the 3 Brick STEAM Discovery Caravan sessions.',
-  },
-  {
-    value: '20',
-    label: 'Indirect Learners Reached',
-    description: 'Additional students indirectly engaged during Bethany MA JHS Session Two.',
+    description: 'Female participation across direct student engagement in Brick STEAM and SheSTEAM sessions.',
   },
   {
     value: '2',
     label: 'Schools Engaged',
-    description: 'Bethany MA JHS and The Kings School have hosted Brick STEAM activities.',
-  },
-  {
-    value: '15',
-    label: 'SheSTEAM Learners Reached',
-    description: 'Students directly engaged through the SheSTEAM Ghana session at Anbariya SHS.',
+    description: 'Schools reached through practical STEAM and innovation-focused outreach activities.',
   },
   {
     value: '35',
     label: 'Women Engaged',
-    description: 'Women reached through Mother First Health Initiative community health outreach.',
+    description: 'Women reached through maternal health and community health activities.',
   },
   {
     value: '12',
     label: 'Mothers Supported',
-    description: 'Mothers directly supported with essential baby supplies and maternal health engagement.',
+    description: 'Mothers directly supported through the Mother First Health Initiative.',
   },
   {
-    value: '3',
-    label: 'Brick STEAM Sessions Delivered',
-    description: 'Hands-on STEAM sessions delivered at Bethany MA JHS and The Kings School.',
-  },
-  {
-    value: '60%',
-    label: 'First-Time Material Exposure',
-    description: 'Bethany Session Two learners experiencing this type of hands-on building material for the first time.',
+    value: '4',
+    label: 'Focus Areas',
+    description: 'Education, maternal health, agriculture, and climate resilience guide ISIR Ghana’s work.',
   },
   {
     value: '5+',
     label: 'Strategic Partners',
-    description: 'Organizations and institutions collaborating with ISIR Ghana on education, health, and innovation.',
+    description: 'Organizations collaborating with ISIR Ghana on education, health, and innovation.',
   },
 ]
 
@@ -135,7 +115,7 @@ export default function ImpactDashboard() {
           </h2>
 
           <p className="text-lg text-charcoal leading-8">
-            ISIR Ghana combines practical outreach, research-driven interventions, partnerships, and evidence-based community engagement to create measurable outcomes across Northern Ghana.
+            ISIR Ghana tracks practical outreach, participation, partnerships, and community engagement to understand what works and where support is needed most.
           </p>
         </div>
 
