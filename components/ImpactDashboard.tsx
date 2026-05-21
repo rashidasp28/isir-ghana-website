@@ -2,24 +2,24 @@ import Image from 'next/image'
 
 const impactMetrics = [
   {
-    value: '105',
+    value: '90',
     label: 'Students Directly Reached',
-    description: 'Learners directly engaged through Brick STEAM and SheSTEAM practical education sessions.',
+    description: 'Brick STEAM learners directly reached through documented school sessions.',
   },
   {
-    value: '64',
+    value: '54',
     label: 'Girls Directly Engaged',
-    description: 'Girls directly reached through ISIR Ghana’s STEAM and technology education activities.',
+    description: 'Girls directly engaged across Brick STEAM Discovery Caravan sessions.',
   },
   {
-    value: '61%',
+    value: '60%',
     label: 'Female Participation',
-    description: 'Female participation across direct student engagement in Brick STEAM and SheSTEAM sessions.',
+    description: 'Female participation across direct Brick STEAM learners.',
   },
   {
     value: '2',
     label: 'Schools Engaged',
-    description: 'Schools reached through practical STEAM and innovation-focused outreach activities.',
+    description: 'Bethany MA JHS and The Kings School have hosted Brick STEAM activities.',
   },
   {
     value: '35',
