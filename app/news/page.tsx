@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
 
 const internationalDayOfLightImage = '/images/news/international-day-of-light-isir-ghana.PNG'
-const brickSteamExpansionImage = '/images/news/brick-steam-zosimli-tamale-metro-june-2026.svg'
+const brickSteamExpansionImage = '/images/news/brick-steam-zosimli-tamale-metro-june-2026.png'
 
 const categories = [
   'Program Updates',
