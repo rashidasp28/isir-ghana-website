@@ -1,5 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1272" role="img" aria-labelledby="title desc">
-<title id="title">Brick STEAM Discovery Caravan expands to two new girls schools in Tamale</title>
-<desc id="desc">Event flyer for ISIR Ghana and GEM-GHANA Brick STEAM Discovery Caravan outreach at Zosimli Girls Junior High School and Tamale Metro Girls Model JHS on 24 June 2026.</desc>
-<image href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2w==" width="900" height="1272" preserveAspectRatio="xMidYMid meet"/>
+  <title id="title">Brick STEAM Discovery Caravan expands to two new girls schools in Tamale</title>
+  <desc id="desc">Flyer for ISIR Ghana and GEM-GHANA Brick STEAM Discovery Caravan outreach at Zosimli Girls Junior High School and Tamale Metro Girls Model JHS on 24 June 2026.</desc>
+  <defs>
+    <linearGradient id="blue" x1="0" x2="1"><stop offset="0" stop-color="#063B82"/><stop offset="1" stop-color="#0977D9"/></linearGradient>
+    <linearGradient id="green" x1="0" x2="1"><stop offset="0" stop-color="#10A64A"/><stop offset="1" stop-color="#057A37"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".18"/></filter>
+  </defs>
+  <rect width="900" height="1272" fill="#ffffff"/>
+  <rect y="1230" width="900" height="42" fill="url(#blue)"/>
+  <rect x="0" y="1230" width="180" height="42" fill="#0073CE"/><rect x="180" y="1230" width="180" height="42" fill="#F7941D"/><rect x="360" y="1230" width="180" height="42" fill="#04A64B"/><rect x="540" y="1230" width="180" height="42" fill="#C83BA0"/><rect x="720" y="1230" width="180" height="42" fill="#E41E2B"/>
+  <text x="55" y="100" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="900" fill="#0874D1">ISIR</text>
+  <text x="55" y="132" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#111">INSTITUTE FOR SUSTAINABLE</text>
+  <text x="55" y="150" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#111">&amp; INNOVATIVE RESEARCH</text>
+  <line x1="235" y1="45" x2="235" y2="165" stroke="#D6D6D6" stroke-width="5"/>
+  <circle cx="310" cy="92" r="36" fill="#fff" stroke="#0D7A3B" stroke-width="5"/><text x="278" y="100" font-family="Arial" font-size="16" font-weight="900" fill="#0D7A3B">GEM</text>
+  <text x="355" y="78" font-family="Arial" font-size="23" font-weight="900" fill="#111">GIRLS</text><text x="355" y="108" font-family="Arial" font-size="23" font-weight="900" fill="#111">EMPOWERMENT</text><text x="355" y="138" font-family="Arial" font-size="23" font-weight="900" fill="#111">MISSION</text>
+  <line x1="540" y1="45" x2="540" y2="165" stroke="#D6D6D6" stroke-width="5"/>
+  <circle cx="615" cy="96" r="43" fill="#fff" stroke="#0D7A3B" stroke-width="5"/><text x="585" y="85" font-family="Arial" font-size="15" font-weight="900" fill="#143A75">BRICK</text><text x="584" y="107" font-family="Arial" font-size="15" font-weight="900" fill="#143A75">STEAM</text>
+  <text x="675" y="100" font-family="Arial" font-size="38" font-weight="900" fill="#F37021">BRICK</text><text x="780" y="100" font-family="Arial" font-size="38" font-weight="900" fill="#C83BA0">STEAM</text><text x="675" y="137" font-family="Arial" font-size="30" font-weight="900" fill="#143A75">DISCOVERY CARAVAN</text>
+  <text x="70" y="285" font-family="Arial" font-size="66" font-weight="900" fill="#143A75">BRICK STEAM</text>
+  <text x="70" y="332" font-family="Arial" font-size="39" font-weight="900" fill="#0A9B48">DISCOVERY CARAVAN</text>
+  <rect x="72" y="355" width="420" height="86" fill="#F37021" rx="8"/><text x="96" y="420" font-family="Arial" font-size="64" font-weight="900" fill="#fff">RETURNS!</text>
+  <text x="72" y="492" font-family="Arial" font-size="31" font-weight="900" fill="#143A75">Inspiring the Next</text><text x="72" y="530" font-family="Arial" font-size="31" font-weight="900" fill="#143A75">Generation of Innovators</text>
+  <rect x="520" y="220" width="330" height="285" rx="28" fill="#EAF4FF" filter="url(#shadow)"/>
+  <circle cx="665" cy="330" r="82" fill="#F37021" opacity=".18"/><circle cx="735" cy="330" r="82" fill="#0A9B48" opacity=".18"/><circle cx="700" cy="260" r="82" fill="#0874D1" opacity=".18"/>
+  <text x="567" y="322" font-family="Arial" font-size="70" font-weight="900" fill="#143A75">STEAM</text><text x="590" y="372" font-family="Arial" font-size="24" font-weight="700" fill="#111">Hands-on learning,</text><text x="585" y="402" font-family="Arial" font-size="24" font-weight="700" fill="#111">creativity and design</text>
+  <text x="72" y="600" font-family="Arial" font-size="26" fill="#111">ISIR Ghana in partnership with </text><text x="420" y="600" font-family="Arial" font-size="26" font-weight="900" fill="#111">GEM-GHANA</text>
+  <text x="72" y="636" font-family="Arial" font-size="26" fill="#111">announces upcoming STEAM outreach</text>
+  <text x="72" y="672" font-family="Arial" font-size="26" fill="#111">sessions at two new schools in Tamale.</text>
+  <rect x="78" y="720" width="380" height="205" rx="22" fill="#fff" stroke="#0A9B48" stroke-width="2" filter="url(#shadow)"/>
+  <text x="105" y="752" font-family="Arial" font-size="20" font-weight="900" fill="#fff"><tspan> </tspan></text>
+  <rect x="104" y="736" width="220" height="37" rx="18" fill="#143A75"/><text x="138" y="762" font-family="Arial" font-size="19" font-weight="900" fill="#fff">WE WILL VISIT</text>
+  <text x="142" y="815" font-family="Arial" font-size="27" font-weight="900" fill="#0A9B48">ZOSIMLI GIRLS</text><text x="142" y="850" font-family="Arial" font-size="27" font-weight="900" fill="#0A9B48">JUNIOR HIGH SCHOOL</text>
+  <text x="142" y="885" font-family="Arial" font-size="21" fill="#111">Wednesday, 24 June 2026</text><text x="142" y="914" font-family="Arial" font-size="21" font-weight="700" fill="#111">10:00 AM – 11:00 AM</text>
+  <rect x="78" y="955" width="380" height="190" rx="22" fill="#fff" stroke="#F37021" stroke-width="2" filter="url(#shadow)"/>
+  <text x="142" y="1005" font-family="Arial" font-size="27" font-weight="900" fill="#F37021">TAMALE METRO</text><text x="142" y="1040" font-family="Arial" font-size="27" font-weight="900" fill="#F37021">GIRLS MODEL JHS</text>
+  <text x="142" y="1076" font-family="Arial" font-size="21" fill="#111">Wednesday, 24 June 2026</text><text x="142" y="1105" font-family="Arial" font-size="21" font-weight="700" fill="#111">12:30 PM – 1:30 PM</text>
+  <rect x="500" y="745" width="330" height="54" rx="23" fill="#143A75"/><text x="525" y="780" font-family="Arial" font-size="20" font-weight="900" fill="#fff">STUDENTS WILL PARTICIPATE IN:</text>
+  <g font-family="Arial" font-size="22" fill="#222"><text x="540" y="840">Hands-on LEGO® Building Challenges</text><text x="540" y="895">Engineering &amp; Design Activities</text><text x="540" y="950">Teamwork and Problem-Solving</text><text x="540" y="1005">Creativity and Innovation Sessions</text><text x="540" y="1060">Career Inspiration Discussions</text></g>
+  <rect x="56" y="1165" width="790" height="58" rx="8" fill="#143A75"/><text x="122" y="1205" font-family="Arial" font-size="30" font-weight="900" fill="#fff">UNLOCK CREATIVITY. </text><text x="455" y="1205" font-family="Arial" font-size="30" font-weight="900" fill="#FFD92E">BUILD THE FUTURE.</text>
+  <text x="70" y="1260" font-family="Arial" font-size="18" font-weight="700" fill="#143A75">#BrickSTEAMCaravan  #ISIRGhana  #GEMGhana  #GirlsInSTEM  #STEAMEducation</text>
 </svg>
