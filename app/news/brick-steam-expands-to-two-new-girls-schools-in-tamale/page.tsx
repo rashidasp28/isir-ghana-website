@@ -34,7 +34,7 @@ export default function BrickSteamGirlsSchoolsExpansionPage() {
           <div className="container-width max-w-5xl">
             <div className="relative aspect-[9/13] md:aspect-[9/13] rounded-3xl overflow-hidden border border-softGray shadow-sm bg-white mb-12">
               <Image
-                src="/images/news/brick-partnership-session-ii.png"
+                src="/images/news/brick-steam-zosimli-tamale-metro-june-2026.png"
                 alt="Brick STEAM Discovery Caravan flyer for Zosimli Girls Junior High School and Tamale Metro Girls Model JHS"
                 fill
                 className="object-contain"
