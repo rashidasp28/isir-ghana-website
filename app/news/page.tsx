@@ -18,6 +18,22 @@ const categories = [
 
 const latestStories = [
   {
+    title: 'Brick STEAM Discovery Caravan Reaches 46 Girls at Tamale Metro Girls Model JHS',
+    category: 'Field Story',
+    summary:
+      'ISIR Ghana and GEM-GHANA delivered a practical STEAM and life skills session at Tamale Metro Girls Model JHS, directly engaging 46 girls and reaching 10 more indirectly.',
+    href: '/news/brick-steam-tamale-metro-girls-model-jhs',
+    image: '/images/news/tamale-metro-girls-model-jhs.PNG',
+  },
+  {
+    title: 'Brick STEAM Discovery Caravan Inspires 40 Girls at Zosimli Girls Model JHS',
+    category: 'Field Story',
+    summary:
+      'ISIR Ghana and GEM-GHANA expanded the Brick STEAM Discovery Caravan to Zosimli Girls Model JHS, directly engaging 40 girls and reaching 15 additional learners.',
+    href: '/news/brick-steam-zosimli-girls-model-jhs',
+    image: '/images/news/zosimli-girls-model-jhs.PNG',
+  },
+  {
     title: "Brick STEAM Discovery Caravan Expands to Two New Girls' Schools in Tamale",
     category: 'Program Expansion',
     summary:
@@ -98,20 +114,20 @@ export default function NewsPage() {
           />
 
           <div className="grid lg:grid-cols-2 gap-10 items-center bg-lightBlue rounded-3xl p-8 md:p-12 border border-softGray">
-            <div className="relative aspect-[9/13] rounded-3xl overflow-hidden bg-white border border-softGray">
+            <div className="relative aspect-video rounded-3xl overflow-hidden bg-white border border-softGray">
               <Image
-                src={brickSteamExpansionImage}
-                alt="Brick STEAM Discovery Caravan expansion flyer for two girls schools in Tamale"
+                src="/images/news/tamale-metro-girls-model-jhs.PNG"
+                alt="Brick STEAM Discovery Caravan field story from Tamale Metro Girls Model JHS"
                 fill
-                className="object-contain"
+                className="object-cover"
               />
             </div>
 
             <div>
-              <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Program Expansion</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-darkNavy mb-6">Brick STEAM Discovery Caravan Expands to Two New Girls&apos; Schools in Tamale</h2>
-              <p className="text-lg text-charcoal leading-8 mb-8">ISIR Ghana, in partnership with GEM-GHANA, will implement the Brick STEAM Discovery Caravan at Zosimli Girls JHS and Tamale Metro Girls Model JHS on 24 June 2026.</p>
-              <Link href="/news/brick-steam-expands-to-two-new-girls-schools-in-tamale" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
+              <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Field Story</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-darkNavy mb-6">Brick STEAM Discovery Caravan Reaches 46 Girls at Tamale Metro Girls Model JHS</h2>
+              <p className="text-lg text-charcoal leading-8 mb-8">ISIR Ghana and GEM-GHANA delivered a practical STEAM and life skills session at Tamale Metro Girls Model JHS, directly engaging 46 girls and reaching 10 more indirectly.</p>
+              <Link href="/news/brick-steam-tamale-metro-girls-model-jhs" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
                 Read Full Story
               </Link>
             </div>
