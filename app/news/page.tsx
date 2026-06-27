@@ -6,6 +6,7 @@ import SectionHeader from '@/components/SectionHeader'
 
 const internationalDayOfLightImage = '/images/news/international-day-of-light-isir-ghana.PNG'
 const brickSteamExpansionImage = '/images/news/brick-steam-zosimli-tamale-metro-june-2026.png'
+const bethanyBrickSteamImage = '/images/news/brick-steam-bethany-brick-selection.png'
 
 const categories = [
   'Program Updates',
@@ -47,7 +48,7 @@ const latestStories = [
     summary:
       'ISIR Ghana and GEM-Ghana completed the second Brick STEAM Discovery Caravan session at Bethany MA JHS, directly engaging 30 students and reaching 20 more indirectly.',
     href: '/news/bethany-brick-steam-session-two-completed',
-    image: '/images/news/bethany-brick-steam-second-session.jpg',
+    image: bethanyBrickSteamImage,
   },
   {
     title: 'ISIR Ghana Returns to Bethany MA JHS for the Second Session of the Brick STEAM Discovery Caravan',
@@ -55,7 +56,7 @@ const latestStories = [
     summary:
       'ISIR Ghana continues its practical STEAM learning journey at Bethany MA Junior High School through the second session of the Brick STEAM Discovery Caravan.',
     href: '/news/bethany-brick-steam-second-session',
-    image: '/images/news/bethany-brick-steam-second-session.jpg',
+    image: bethanyBrickSteamImage,
   },
   {
     title: 'International Day of Light: Celebrating Science, Innovation and Discovery',
@@ -79,7 +80,7 @@ const latestStories = [
     summary:
       'ISIR Ghana launched the Brick STEAM Discovery Caravan in Tamale, directly engaging 30 students through hands-on engineering, creativity, and innovation-centered learning activities.',
     href: '/news/brick-steam-bethany-launch',
-    image: '/images/news/brick-steam-bethany-brick-selection.png',
+    image: bethanyBrickSteamImage,
   },
   {
     title: 'Africa’s Youth Boom: Opportunity or Crisis?',
