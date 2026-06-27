@@ -5,14 +5,14 @@ import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
 
 const counters = [
-  ['90', 'Students directly reached through Brick STEAM Discovery Caravan sessions'],
-  ['54', 'Girls directly engaged through Brick STEAM sessions'],
+  ['176', 'Students directly reached through Brick STEAM Discovery Caravan sessions'],
+  ['140', 'Girls directly engaged through Brick STEAM sessions'],
   ['36', 'Boys directly engaged through Brick STEAM sessions'],
-  ['60%', 'Female participation across direct Brick STEAM learners'],
-  ['20', 'Additional students indirectly reached during Bethany Session Two'],
-  ['3', 'Brick STEAM sessions delivered'],
-  ['2', 'Schools engaged through Brick STEAM activities'],
-  ['60%', 'Bethany Session Two learners experiencing this type of hands-on material for the first time'],
+  ['80%', 'Female participation across direct Brick STEAM learners'],
+  ['45', 'Additional students indirectly reached through Brick STEAM sessions'],
+  ['5', 'Brick STEAM sessions delivered'],
+  ['4', 'Schools engaged through Brick STEAM activities'],
+  ['86', 'Girls directly reached through the two June 2026 girls’ school sessions'],
   ['15', 'Students directly engaged through SheSTEAM at Anbariya SHS'],
   ['35', 'Women engaged through Mother First Health Initiative outreach'],
   ['12', 'Mothers directly supported with essential baby supplies'],
@@ -28,7 +28,7 @@ const areas = [
   {
     title: 'STEAM Education',
     description:
-      'ISIR Ghana has delivered 3 Brick STEAM Discovery Caravan sessions across 2 schools, directly reaching 90 learners: 54 girls and 36 boys. Bethany Session Two engaged 30 direct students, including 20 girls and 10 boys, and reached 20 additional students indirectly. Across the Brick STEAM sessions, female participation is now 60%.',
+      'ISIR Ghana has delivered 5 Brick STEAM Discovery Caravan sessions across 4 schools, directly reaching 176 learners: 140 girls and 36 boys. The two June 2026 girls’ school sessions at Zosimli Girls Model JHS and Tamale Metro Girls Model JHS added 86 girls directly and 25 additional learners indirectly. Across Brick STEAM sessions, female participation is now about 80%.',
   },
   {
     title: 'Agriculture',
@@ -45,9 +45,9 @@ const areas = [
 const programEvidence = [
   {
     title: 'Brick STEAM Discovery Caravan',
-    metrics: '3 sessions | 90 direct learners | 54 girls | 36 boys | 60% female participation | 20 indirect learners from Session Two',
+    metrics: '5 sessions | 176 direct learners | 140 girls | 36 boys | 80% female participation | 45 indirect learners | 4 schools',
     description:
-      'Sessions have been delivered at Bethany MA JHS and The Kings School, using LEGO-based learning to strengthen creativity, teamwork, engineering thinking, problem-solving, and learner confidence.',
+      'Sessions have been delivered at Bethany MA JHS, The Kings School, Zosimli Girls Model JHS, and Tamale Metro Girls Model JHS, using LEGO-based learning to strengthen creativity, teamwork, engineering thinking, problem-solving, and learner confidence.',
   },
   {
     title: 'SheSTEAM Ghana',
@@ -71,16 +71,16 @@ const programEvidence = [
 
 const impactVisuals = [
   {
-    image: '/images/field/brick-steam-1.jpg',
-    title: 'STEAM Education Outreach',
+    image: '/images/news/zosimli-girls-model-jhs.PNG',
+    title: 'Girls in STEAM at Zosimli Girls Model JHS',
+  },
+  {
+    image: '/images/news/tamale-metro-girls-model-jhs.PNG',
+    title: 'Brick STEAM at Tamale Metro Girls Model JHS',
   },
   {
     image: '/images/field/health-outreach-1.jpg',
     title: 'Maternal Health Community Engagement',
-  },
-  {
-    image: '/images/field/community-engagement-1.jpeg',
-    title: 'Community Participation and Learning',
   },
 ]
 
