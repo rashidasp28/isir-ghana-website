@@ -34,7 +34,7 @@ export default function BethanyBrickSteamSecondSessionPage() {
           <div className="container-width max-w-5xl">
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-softGray shadow-sm bg-lightBlue mb-12">
               <Image
-                src="/images/news/bethany-brick-steam-second-session.jpg"
+                src="/images/news/brick-steam-bethany-brick-selection.png"
                 alt="Brick STEAM Discovery Caravan second session flyer for Bethany MA Junior High School in partnership with GEM-GHANA"
                 fill
                 className="object-cover"
