@@ -80,7 +80,7 @@ const galleryImages = [
     caption: 'Tamale Metro Girls Model JHS learners participated in hands-on engineering and design activities.',
   },
   {
-    src: '/images/news/bethany-brick-steam-second-session.jpg',
+    src: '/images/news/brick-steam-bethany-brick-selection.png',
     caption: 'Bethany MA JHS Session Two expanded hands-on STEAM learning through teamwork, design, and model building.',
   },
   {
@@ -244,7 +244,7 @@ export default function BrickSteamProgramPage() {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {galleryImages.map((image) => (
-              <figure key={image.src} className="bg-white rounded-3xl overflow-hidden border border-softGray shadow-sm">
+              <figure key={`${image.src}-${image.caption}`} className="bg-white rounded-3xl overflow-hidden border border-softGray shadow-sm">
                 <div className="relative h-80 bg-white">
                   <Image src={image.src} alt={image.caption} fill className="object-cover" />
                 </div>
