@@ -48,7 +48,7 @@ const latestStories = [
     summary:
       'ISIR Ghana and GEM-Ghana completed the second Brick STEAM Discovery Caravan session at Bethany MA JHS, directly engaging 30 students and reaching 20 more indirectly.',
     href: '/news/bethany-brick-steam-session-two-completed',
-    image: bethanyBrickSteamImage,
+    image: '/images/news/bethany-session-two-completed-field-photo.PNG',
   },
   {
     title: 'ISIR Ghana Returns to Bethany MA JHS for the Second Session of the Brick STEAM Discovery Caravan',
@@ -56,7 +56,7 @@ const latestStories = [
     summary:
       'ISIR Ghana continues its practical STEAM learning journey at Bethany MA Junior High School through the second session of the Brick STEAM Discovery Caravan.',
     href: '/news/bethany-brick-steam-second-session',
-    image: bethanyBrickSteamImage,
+    image: brickSteamExpansionImage,
   },
   {
     title: 'International Day of Light: Celebrating Science, Innovation and Discovery',
