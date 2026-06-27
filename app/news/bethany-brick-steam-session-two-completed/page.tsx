@@ -34,7 +34,7 @@ export default function BethanyBrickSteamSessionTwoCompletedPage() {
           <div className="container-width max-w-5xl">
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-softGray shadow-sm bg-lightBlue mb-12">
               <Image
-                src="/images/news/brick-steam-bethany-brick-selection.png"
+                src="/images/news/bethany-session-two-completed-field-photo.PNG"
                 alt="Brick STEAM Discovery Caravan second session at Bethany MA Junior High School"
                 fill
                 className="object-cover"
