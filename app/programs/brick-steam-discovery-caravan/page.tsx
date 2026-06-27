@@ -8,7 +8,7 @@ const learningModel = [
   {
     title: 'Hands-on engineering challenges',
     description:
-      'Students build cars, rockets, motorbikes, and other structures to understand balance, motion, stability, design, and problem-solving through practical activity.',
+      'Students build cars, rockets, motorbikes, harvesters, fire trucks, flowers, and other structures to understand balance, motion, stability, design, and problem-solving through practical activity.',
   },
   {
     title: 'Creative problem-solving',
@@ -26,9 +26,9 @@ const learningModel = [
       'The sessions introduce learners to early engineering and design concepts in a simple, accessible, and playful way.',
   },
   {
-    title: 'Low-resource learning model',
+    title: 'Life skills and safety learning',
     description:
-      'The Caravan uses mobile, reusable, hands-on learning materials that can work in underserved schools with limited laboratory infrastructure.',
+      'Through GEM-GHANA’s contribution, learners also engage in life skills discussions such as staying safe in increasingly vulnerable environments.',
   },
   {
     title: 'Future STEAM Hub pipeline',
@@ -39,53 +39,53 @@ const learningModel = [
 
 const impactSnapshot = [
   {
-    value: '3',
+    value: '5',
     label: 'Sessions delivered',
-    description: 'Brick STEAM sessions have been delivered at Bethany MA JHS and The Kings School, including Bethany Session Two.',
+    description: 'Brick STEAM sessions have been delivered at Bethany MA JHS, The Kings School, Zosimli Girls Model JHS, and Tamale Metro Girls Model JHS.',
   },
   {
-    value: '90',
+    value: '176',
     label: 'Direct learners reached',
-    description: 'Three sessions have directly engaged 90 learners through practical STEAM learning activities.',
+    description: 'Five sessions have directly engaged 176 learners through practical STEAM learning activities.',
   },
   {
-    value: '54',
+    value: '140',
     label: 'Girls directly engaged',
-    description: 'Girls reached directly include 18 at Bethany Session One, 16 at The Kings School, and 20 at Bethany Session Two.',
+    description: 'Girls reached directly include learners from Bethany MA JHS, The Kings School, Zosimli Girls Model JHS, and Tamale Metro Girls Model JHS.',
   },
   {
     value: '36',
     label: 'Boys directly engaged',
-    description: 'Boys reached directly include 12 at Bethany Session One, 14 at The Kings School, and 10 at Bethany Session Two.',
+    description: 'Boys reached directly through the earlier mixed-school Brick STEAM sessions.',
   },
   {
-    value: '20',
-    label: 'Indirect learners reached in Session Two',
-    description: 'Bethany Session Two also pulled in an additional 20 students indirectly before the end of the day.',
+    value: '45',
+    label: 'Indirect learners reached',
+    description: 'Indirect learners include 20 from Bethany Session Two, 15 from Zosimli Girls Model JHS, and 10 from Tamale Metro Girls Model JHS.',
   },
   {
-    value: '60%',
-    label: 'First-time material exposure',
-    description: 'For 60% of Bethany Session Two participants, this was their first time working with this kind of hands-on building material.',
+    value: '80%',
+    label: 'Female participation',
+    description: 'Female participation across direct Brick STEAM learners is approximately 80%, with 140 girls out of 176 direct learners.',
   },
 ]
 
 const galleryImages = [
   {
-    src: '/images/gallery/steam/brick-steam-building-session-1.png',
-    caption: 'Learners building and testing creative structures during a hands-on STEAM session.',
+    src: '/images/news/zosimli-girls-model-jhs.PNG',
+    caption: 'Girls at Zosimli Girls Model JHS engaged in Brick STEAM building and life skills learning.',
   },
   {
-    src: '/images/field/brick-steam-1.jpg',
-    caption: 'Students engaging with practical materials during a Brick STEAM Discovery Caravan activity.',
-  },
-  {
-    src: '/images/field/brick-steam-2.png',
-    caption: 'Group-based learning moments that strengthen teamwork, confidence, and creativity.',
+    src: '/images/news/tamale-metro-girls-model-jhs.PNG',
+    caption: 'Tamale Metro Girls Model JHS learners participated in hands-on engineering and design activities.',
   },
   {
     src: '/images/news/bethany-brick-steam-second-session.jpg',
     caption: 'Bethany MA JHS Session Two expanded hands-on STEAM learning through teamwork, design, and model building.',
+  },
+  {
+    src: '/images/news/brick-steam-bethany-brick-selection.png',
+    caption: 'Brick selection and design exploration during the Bethany MA JHS launch session.',
   },
 ]
 
@@ -131,15 +131,15 @@ const educationPartners = [
   },
   {
     title: 'GEM-Ghana',
-    role: 'Implementation partner',
+    role: 'Girls empowerment and life skills partner',
     description:
-      'GEM-Ghana supports session implementation and community-centered collaboration, including the second Brick STEAM session at Bethany MA JHS.',
+      'GEM-Ghana supports implementation and leads life skills sessions focused on girls’ empowerment, confidence, and staying safe in increasingly vulnerable environments.',
   },
   {
-    title: 'Bethany MA JHS and The Kings School',
-    role: 'Implementation sites',
+    title: 'Four implementation schools',
+    role: 'School implementation sites',
     description:
-      'Bethany MA JHS and The Kings School have hosted Brick STEAM sessions, helping build early field evidence for practical STEAM education in Northern Ghana.',
+      'Bethany MA JHS, The Kings School, Zosimli Girls Model JHS, and Tamale Metro Girls Model JHS have hosted Brick STEAM sessions, helping build field evidence for practical STEAM education in Northern Ghana.',
   },
 ]
 
@@ -158,7 +158,7 @@ const resources = [
   },
   {
     title: 'Impact Brief',
-    description: 'A summary of schools reached, learners engaged, gender participation, first-time exposure, and field learning.',
+    description: 'A summary of schools reached, learners engaged, gender participation, life skills integration, and field learning.',
     href: '#impact',
     cta: 'View Impact Snapshot',
   },
@@ -173,7 +173,7 @@ const resources = [
 export const metadata: Metadata = {
   title: 'Brick STEAM Discovery Caravan | Hands-on STEM Education in Ghana',
   description:
-    'The Brick STEAM Discovery Caravan is ISIR Ghana’s mobile STEAM education initiative bringing hands-on engineering, creativity, robotics exposure, and problem-solving to underserved schools in Northern Ghana.',
+    'The Brick STEAM Discovery Caravan is ISIR Ghana’s mobile STEAM education initiative bringing hands-on engineering, creativity, robotics exposure, life skills learning, and problem-solving to underserved schools in Northern Ghana.',
 }
 
 export default function BrickSteamProgramPage() {
@@ -184,7 +184,7 @@ export default function BrickSteamProgramPage() {
         <div className="container-width max-w-6xl">
           <p className="uppercase tracking-widest text-sm mb-6 text-lightGreen font-semibold">STEAM Education</p>
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8">Brick STEAM Discovery Caravan</h1>
-          <p className="text-xl leading-9 max-w-4xl text-gray-100">A mobile STEAM education initiative delivering hands-on learning, creative engineering challenges, robotics exposure, and play-based innovation activities to underserved schools and communities across Northern Ghana.</p>
+          <p className="text-xl leading-9 max-w-4xl text-gray-100">A mobile STEAM education initiative delivering hands-on learning, creative engineering challenges, life skills learning, and play-based innovation activities to underserved schools and communities across Northern Ghana.</p>
         </div>
       </section>
       <section className="py-24 bg-white">
@@ -196,7 +196,7 @@ export default function BrickSteamProgramPage() {
             <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Program Overview</p>
             <h2 className="text-4xl font-bold text-darkNavy mb-6">Turning curiosity into confidence through practical learning</h2>
             <p className="text-charcoal leading-8 text-lg mb-6">The Brick STEAM Discovery Caravan helps children experience science, engineering, creativity, teamwork, and problem-solving through hands-on building activities. It is designed for low-resource school environments where learners often have limited access to practical STEM materials.</p>
-            <p className="text-charcoal leading-8 text-lg">The program supports early exposure to engineering thinking, innovation mindsets, and confidence-building among children aged 6 to 15.</p>
+            <p className="text-charcoal leading-8 text-lg">Through partnership with GEM-GHANA, the Caravan also integrates girls’ empowerment and life skills learning, helping learners build confidence, creativity, and practical safety awareness.</p>
           </div>
         </div>
       </section>
@@ -205,7 +205,7 @@ export default function BrickSteamProgramPage() {
           <div className="text-center max-w-4xl mx-auto mb-14">
             <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Learning Model</p>
             <h2 className="text-4xl md:text-5xl font-bold text-darkNavy leading-tight mb-6">How the Caravan builds practical STEAM confidence</h2>
-            <p className="text-lg text-charcoal leading-8">The Brick STEAM Discovery Caravan uses active learning, creativity, teamwork, and simple engineering challenges to make science and technology visible, enjoyable, and relevant to young learners.</p>
+            <p className="text-lg text-charcoal leading-8">The Brick STEAM Discovery Caravan uses active learning, creativity, teamwork, life skills, and simple engineering challenges to make science and technology visible, enjoyable, and relevant to young learners.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {learningModel.map((item) => (
@@ -222,7 +222,7 @@ export default function BrickSteamProgramPage() {
           <div className="text-center max-w-4xl mx-auto mb-14">
             <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Early Impact From the Field</p>
             <h2 className="text-4xl md:text-5xl font-bold text-darkNavy leading-tight mb-6">Evidence of curiosity, confidence, and growing engineering interest</h2>
-            <p className="text-lg text-charcoal leading-8">The Brick STEAM Discovery Caravan is generating field evidence of practical learning, gender-inclusive participation, teamwork, first-time exposure to hands-on materials, and increased interest in engineering among basic school learners in Northern Ghana.</p>
+            <p className="text-lg text-charcoal leading-8">The Brick STEAM Discovery Caravan is generating field evidence of practical learning, gender-inclusive participation, teamwork, life skills integration, and increased interest in engineering among basic school learners in Northern Ghana.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {impactSnapshot.map((metric) => (
@@ -240,7 +240,7 @@ export default function BrickSteamProgramPage() {
           <div className="text-center max-w-4xl mx-auto mb-14">
             <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Brick STEAM in Action</p>
             <h2 className="text-4xl md:text-5xl font-bold text-darkNavy leading-tight mb-6">Real moments from hands-on learning sessions</h2>
-            <p className="text-lg text-charcoal leading-8">Moments from ISIR Ghana’s hands-on learning sessions, where learners explore engineering, creativity, teamwork, and practical problem-solving.</p>
+            <p className="text-lg text-charcoal leading-8">Moments from ISIR Ghana’s hands-on learning sessions, where learners explore engineering, creativity, teamwork, life skills, and practical problem-solving.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {galleryImages.map((image) => (
@@ -259,7 +259,7 @@ export default function BrickSteamProgramPage() {
           <div className="text-center max-w-4xl mx-auto mb-14">
             <p className="text-primaryGreen font-semibold uppercase tracking-wide mb-4">Education Partnership and Implementation Sites</p>
             <h2 className="text-4xl md:text-5xl font-bold text-darkNavy leading-tight mb-6">Working through Ghana’s education ecosystem</h2>
-            <p className="text-lg text-charcoal leading-8">ISIR Ghana works through education stakeholders, school leadership, partners, volunteers, and community actors to deliver structured learning experiences that build curiosity, confidence, creativity, and early innovation capacity.</p>
+            <p className="text-lg text-charcoal leading-8">ISIR Ghana works through education stakeholders, school leadership, partners, volunteers, and community actors to deliver structured learning experiences that build curiosity, confidence, creativity, life skills, and early innovation capacity.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {educationPartners.map((partner) => (
@@ -318,7 +318,7 @@ export default function BrickSteamProgramPage() {
       <section className="py-24 bg-darkNavy text-white">
         <div className="container-width text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Support hands-on STEAM learning</h2>
-          <p className="text-lg leading-8 text-gray-300 mb-10">Partner with ISIR Ghana to bring practical STEAM education to more schools and communities.</p>
+          <p className="text-lg leading-8 text-gray-300 mb-10">Partner with ISIR Ghana to bring practical STEAM education and life skills learning to more schools and communities.</p>
           <Link href="/partners#partner-form" className="inline-flex bg-primaryGreen text-white px-8 py-4 rounded-full font-semibold text-lg">Partner With Us</Link>
         </div>
       </section>
