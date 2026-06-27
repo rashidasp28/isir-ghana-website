@@ -2,24 +2,24 @@ import Image from 'next/image'
 
 const impactMetrics = [
   {
-    value: '90',
+    value: '176',
     label: 'Students Directly Reached',
     description: 'Brick STEAM learners directly reached through documented school sessions.',
   },
   {
-    value: '54',
+    value: '140',
     label: 'Girls Directly Engaged',
     description: 'Girls directly engaged across Brick STEAM Discovery Caravan sessions.',
   },
   {
-    value: '60%',
+    value: '80%',
     label: 'Female Participation',
-    description: 'Female participation across direct Brick STEAM learners.',
+    description: 'Female participation across direct Brick STEAM learners: 140 girls out of 176 learners.',
   },
   {
-    value: '2',
+    value: '4',
     label: 'Schools Engaged',
-    description: 'Bethany MA JHS and The Kings School have hosted Brick STEAM activities.',
+    description: 'Bethany MA JHS, The Kings School, Zosimli Girls Model JHS, and Tamale Metro Girls Model JHS have hosted Brick STEAM activities.',
   },
   {
     value: '35',
