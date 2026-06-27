@@ -5,8 +5,9 @@ import Footer from '@/components/Footer'
 import SectionHeader from '@/components/SectionHeader'
 
 const internationalDayOfLightImage = '/images/news/international-day-of-light-isir-ghana.PNG'
-const brickSteamExpansionImage = '/images/news/brick-partnership-session-ii.png'
+const brickSteamExpansionImage = '/images/news/brick-steam-zosimli-tamale-metro-june-2026.png'
 const bethanyBrickSteamImage = '/images/news/brick-steam-bethany-brick-selection.png'
+const bethanyAnnouncementImage = '/images/news/brick-partnership-session-ii.png'
 
 const categories = [
   'Program Updates',
@@ -56,7 +57,7 @@ const latestStories = [
     summary:
       'ISIR Ghana continues its practical STEAM learning journey at Bethany MA Junior High School through the second session of the Brick STEAM Discovery Caravan.',
     href: '/news/bethany-brick-steam-second-session',
-    image: brickSteamExpansionImage,
+    image: bethanyAnnouncementImage,
   },
   {
     title: 'International Day of Light: Celebrating Science, Innovation and Discovery',
