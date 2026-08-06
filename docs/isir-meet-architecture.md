@@ -12,11 +12,16 @@ ISIR Meet will be a mobile-first meeting availability planner for ISIR Ghana, pa
 - Tailwind CSS
 - App Router and server-side route handlers
 
-### Database
-- Turso managed SQLite-compatible database
-- Drizzle ORM
+### Database and backend services
+- Existing Supabase account and project
+- Supabase PostgreSQL database
+- Supabase JavaScript client for server-side data access
+- SQL migrations stored in the repository
+- Row Level Security policies for protected data access
 
-Turso is selected instead of Supabase for the first release because it provides persistent managed storage without requiring an always-running application server. The database layer will remain isolated behind repository functions so a later migration to PostgreSQL remains practical.
+Supabase is retained to avoid creating and maintaining another platform account. The application will use the existing Supabase environment and keep all data-access logic isolated in repository and service functions. This makes later migration possible without rewriting the user interface.
+
+To reduce disruption from inactivity, the project will include database export and restoration documentation, migration files committed to GitHub, health checks, and a clear reactivation procedure. No credentials will be committed to the repository.
 
 ### Authentication
 The MVP will not require participants to create accounts. Meetings will use:
@@ -24,7 +29,7 @@ The MVP will not require participants to create accounts. Meetings will use:
 - Separate organizer management token
 - Optional participant email
 
-Organizer accounts, Google sign-in, Microsoft sign-in, and organization workspaces will be introduced after the MVP.
+Organizer accounts, Google sign-in, Microsoft sign-in, and organization workspaces will be introduced after the MVP. Supabase Auth may be used for these later phases.
 
 ## MVP scope
 
@@ -111,6 +116,16 @@ Organizer accounts, Google sign-in, Microsoft sign-in, and organization workspac
 - metadata_json
 - created_at
 
+## Supabase access model
+
+- Public users do not receive the Supabase service-role key.
+- Browser requests use tightly scoped server endpoints rather than unrestricted direct table access.
+- Server-only actions use protected environment variables.
+- Row Level Security is enabled on all meeting-planner tables.
+- Public meeting access is restricted by secure meeting codes and validated server-side.
+- Organizer actions require a separate hashed organizer token.
+- SQL migrations and policies are version-controlled in the repository.
+
 ## Security and privacy
 
 - Store organizer and response tokens as hashes
@@ -122,13 +137,15 @@ Organizer accounts, Google sign-in, Microsoft sign-in, and organization workspac
 - Set expiry and deletion policies for inactive meetings
 - Collect only the minimum personal information needed
 - Add a privacy notice before public launch
+- Keep Supabase URL, anonymous key, and service-role key in deployment environment variables
 
 ## Two-week implementation schedule
 
 ### Days 1 and 2: Foundation
 - Confirm MVP acceptance criteria
-- Add Drizzle and Turso dependencies
-- Define schema and migrations
+- Add Supabase client dependencies
+- Define PostgreSQL schema, indexes, triggers, and migrations
+- Define Row Level Security policies
 - Add environment validation
 - Establish meeting repository and service layers
 - Build initial route structure
@@ -137,7 +154,7 @@ Organizer accounts, Google sign-in, Microsoft sign-in, and organization workspac
 - Build branded landing page
 - Build meeting creation form
 - Generate secure public and organizer links
-- Implement validation and persistence
+- Implement validation and Supabase persistence
 - Add success and sharing screen
 
 ### Days 5 to 7: Availability experience
@@ -165,13 +182,14 @@ Organizer accounts, Google sign-in, Microsoft sign-in, and organization workspac
 - Mobile, tablet, and desktop testing
 - Time-zone and daylight-saving testing
 - Accessibility review
-- Security and abuse testing
+- Security, RLS, and abuse testing
 - Performance optimization
 - Error handling and empty states
+- Database backup and restoration test
 
 ### Day 14: Release
-- Production migration
-- Environment configuration
+- Apply production migrations
+- Configure Supabase and Vercel environment variables
 - Domain or route setup
 - Acceptance testing
 - Administrator documentation
@@ -186,9 +204,10 @@ The MVP will only go live when:
 - Aggregated availability and recommended slots are accurate
 - Organizer and participant links have separate permissions
 - Calendar export works in Google Calendar, Outlook, and Apple Calendar
+- Row Level Security policies pass access tests
 - No secret or database credential is committed to GitHub
-- Production database backups and restoration instructions are documented
+- Production database backup, export, reactivation, and restoration instructions are documented
 
 ## Future evolution
 
-Phase 2 can add user accounts, organization workspaces, saved contacts, recurring meetings, automated reminders, Google and Microsoft calendar synchronization, online meeting creation, analytics, and paid organizational plans.
+Phase 2 can add Supabase Auth accounts, organization workspaces, saved contacts, recurring meetings, automated reminders, Google and Microsoft calendar synchronization, online meeting creation, analytics, and paid organizational plans.
