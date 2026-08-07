@@ -235,7 +235,13 @@ export default function HomePage() {
             {latestStories.map((story) => (
               <article key={story.title} className="bg-white border border-softGray rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition">
                 <div className="relative h-60 bg-white">
-                  <Image src={story.image} alt={story.title} fill className="object-cover" />
+                  <Image
+                    src={story.image}
+                    alt={story.title}
+                    fill
+                    className="object-cover"
+                    unoptimized={story.title === 'ISIR Ghana Launches Mother First Health Initiative'}
+                  />
                 </div>
                 <div className="p-8">
                   <p className="text-primaryGreen text-sm font-semibold uppercase tracking-wide mb-3">{story.category}</p>
