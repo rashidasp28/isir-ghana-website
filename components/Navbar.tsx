@@ -13,7 +13,7 @@ const navLinks = [
   { href: '/impact', label: 'Impact' },
   { href: '/gallery', label: 'Gallery' },
   { href: '/consultancy', label: 'Consultancy' },
-  { href: '/meet', label: 'ISIR Meet' },
+  { href: '/meet', label: 'ISIR Meet', featured: true },
   { href: '/partners', label: 'Partners' },
   { href: '/news', label: 'News' },
   { href: '/contact', label: 'Contact' },
@@ -39,9 +39,15 @@ export default function Navbar() {
           <span className="sr-only">ISIR Ghana</span>
         </Link>
 
-        <div className="hidden xl:flex gap-4 text-charcoal font-medium text-sm">
+        <div className="hidden xl:flex items-center gap-3 text-charcoal font-medium text-sm">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="hover:text-primaryBlue transition whitespace-nowrap">
+            <Link
+              key={link.href}
+              href={link.href}
+              className={link.featured
+                ? 'inline-flex items-center rounded-full border border-primaryGreen/50 bg-lightGreen px-3.5 py-1.5 font-bold text-darkNavy hover:bg-primaryGreen hover:text-white transition whitespace-nowrap'
+                : 'hover:text-primaryBlue transition whitespace-nowrap'}
+            >
               {link.label}
             </Link>
           ))}
@@ -71,12 +77,19 @@ export default function Navbar() {
       <div
         id="mobile-menu"
         className={`xl:hidden overflow-hidden border-t border-softGray bg-white transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-[620px] opacity-100' : 'max-h-0 opacity-0 border-t-0'
+          isOpen ? 'max-h-[660px] opacity-100' : 'max-h-0 opacity-0 border-t-0'
         }`}
       >
         <div className="container-width py-4 grid grid-cols-2 gap-4 text-sm font-medium text-charcoal">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} onClick={closeMenu} className="hover:text-primaryBlue transition">
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={closeMenu}
+              className={link.featured
+                ? 'inline-flex w-fit rounded-full border border-primaryGreen/50 bg-lightGreen px-3 py-1.5 font-bold text-darkNavy hover:bg-primaryGreen hover:text-white transition'
+                : 'hover:text-primaryBlue transition'}
+            >
               {link.label}
             </Link>
           ))}
