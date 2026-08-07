@@ -12,24 +12,42 @@ ISIR Meet will be a mobile-first meeting availability planner for ISIR Ghana, pa
 - Tailwind CSS
 - App Router and server-side route handlers
 
-### Database and backend services
-- Existing Supabase account and project
-- Supabase PostgreSQL database
-- Supabase JavaScript client for server-side data access
-- SQL migrations stored in the repository
-- Row Level Security policies for protected data access
+### Database
+- Supabase managed PostgreSQL database
+- Supabase JavaScript client
+- SQL migrations versioned in the repository
 
-Supabase is retained to avoid creating and maintaining another platform account. The application will use the existing Supabase environment and keep all data-access logic isolated in repository and service functions. This makes later migration possible without rewriting the user interface.
-
-To reduce disruption from inactivity, the project will include database export and restoration documentation, migration files committed to GitHub, health checks, and a clear reactivation procedure. No credentials will be committed to the repository.
+Supabase is selected for the MVP because ISIR Ghana already maintains an account and can manage the database, backups, and project configuration in one place. The application will use protected server-side routes for privileged database operations.
 
 ### Authentication
 The MVP will not require participants to create accounts. Meetings will use:
 - Public participant link with an unguessable meeting code
-- Separate organizer management token
+- Separate organizer management token, stored only as a SHA-256 hash in the database
 - Optional participant email
 
-Organizer accounts, Google sign-in, Microsoft sign-in, and organization workspaces will be introduced after the MVP. Supabase Auth may be used for these later phases.
+Organizer accounts, Google sign-in, Microsoft sign-in, and organization workspaces will be introduced after the MVP.
+
+## Current build status
+
+Completed:
+- Branded `/meet` landing page
+- Supabase database migration and RLS foundation
+- Secure server-side Supabase admin client
+- `/meet/create` meeting creation workflow
+- Server-side meeting creation API
+- Secure public meeting code generation
+- Separate organizer token generation and hashing
+- Meeting and meeting-date persistence
+- Participant meeting page shell
+- Private organizer dashboard shell
+- Shareable participant and organizer URLs
+
+Next:
+- Interactive participant availability grid
+- Participant identity and response persistence
+- Availability aggregation and heat-map scoring
+- Best-time ranking
+- Organizer meeting controls
 
 ## MVP scope
 
@@ -116,16 +134,6 @@ Organizer accounts, Google sign-in, Microsoft sign-in, and organization workspac
 - metadata_json
 - created_at
 
-## Supabase access model
-
-- Public users do not receive the Supabase service-role key.
-- Browser requests use tightly scoped server endpoints rather than unrestricted direct table access.
-- Server-only actions use protected environment variables.
-- Row Level Security is enabled on all meeting-planner tables.
-- Public meeting access is restricted by secure meeting codes and validated server-side.
-- Organizer actions require a separate hashed organizer token.
-- SQL migrations and policies are version-controlled in the repository.
-
 ## Security and privacy
 
 - Store organizer and response tokens as hashes
@@ -137,15 +145,15 @@ Organizer accounts, Google sign-in, Microsoft sign-in, and organization workspac
 - Set expiry and deletion policies for inactive meetings
 - Collect only the minimum personal information needed
 - Add a privacy notice before public launch
-- Keep Supabase URL, anonymous key, and service-role key in deployment environment variables
+- Keep the Supabase service-role key server-side only
+- Keep direct browser database access denied by default through RLS
 
 ## Two-week implementation schedule
 
 ### Days 1 and 2: Foundation
 - Confirm MVP acceptance criteria
-- Add Supabase client dependencies
-- Define PostgreSQL schema, indexes, triggers, and migrations
-- Define Row Level Security policies
+- Add Supabase dependencies
+- Define schema and migrations
 - Add environment validation
 - Establish meeting repository and service layers
 - Build initial route structure
@@ -154,7 +162,7 @@ Organizer accounts, Google sign-in, Microsoft sign-in, and organization workspac
 - Build branded landing page
 - Build meeting creation form
 - Generate secure public and organizer links
-- Implement validation and Supabase persistence
+- Implement validation and persistence
 - Add success and sharing screen
 
 ### Days 5 to 7: Availability experience
@@ -182,14 +190,13 @@ Organizer accounts, Google sign-in, Microsoft sign-in, and organization workspac
 - Mobile, tablet, and desktop testing
 - Time-zone and daylight-saving testing
 - Accessibility review
-- Security, RLS, and abuse testing
+- Security and abuse testing
 - Performance optimization
 - Error handling and empty states
-- Database backup and restoration test
 
 ### Day 14: Release
-- Apply production migrations
-- Configure Supabase and Vercel environment variables
+- Production migration
+- Environment configuration
 - Domain or route setup
 - Acceptance testing
 - Administrator documentation
@@ -204,10 +211,9 @@ The MVP will only go live when:
 - Aggregated availability and recommended slots are accurate
 - Organizer and participant links have separate permissions
 - Calendar export works in Google Calendar, Outlook, and Apple Calendar
-- Row Level Security policies pass access tests
 - No secret or database credential is committed to GitHub
-- Production database backup, export, reactivation, and restoration instructions are documented
+- Production database backups and restoration instructions are documented
 
 ## Future evolution
 
-Phase 2 can add Supabase Auth accounts, organization workspaces, saved contacts, recurring meetings, automated reminders, Google and Microsoft calendar synchronization, online meeting creation, analytics, and paid organizational plans.
+Phase 2 can add user accounts, organization workspaces, saved contacts, recurring meetings, automated reminders, Google and Microsoft calendar synchronization, online meeting creation, analytics, and paid organizational plans.
