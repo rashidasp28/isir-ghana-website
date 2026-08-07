@@ -9,11 +9,11 @@ function pad(value: number) {
   return String(value).padStart(2, '0')
 }
 
-function toUtcStamp(dateValue: string, minutes: number) {
+function localDateTimeStamp(dateValue: string, minutes: number) {
   const hours = Math.floor(minutes / 60)
   const mins = minutes % 60
-  const date = new Date(`${dateValue}T${pad(hours)}:${pad(mins)}:00Z`)
-  return `${date.getUTCFullYear()}${pad(date.getUTCMonth() + 1)}${pad(date.getUTCDate())}T${pad(date.getUTCHours())}${pad(date.getUTCMinutes())}00Z`
+  const compactDate = dateValue.replace(/-/g, '')
+  return `${compactDate}T${pad(hours)}${pad(mins)}00`
 }
 
 export async function GET(_request: Request, { params }: { params: { code: string } }) {
@@ -53,20 +53,23 @@ export async function GET(_request: Request, { params }: { params: { code: strin
   const uid = `${meeting.id}@isirghana.org`
   const now = new Date()
   const dtStamp = `${now.getUTCFullYear()}${pad(now.getUTCMonth() + 1)}${pad(now.getUTCDate())}T${pad(now.getUTCHours())}${pad(now.getUTCMinutes())}${pad(now.getUTCSeconds())}Z`
+  const timezone = escapeIcs(meeting.timezone)
+
   const ics = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
     'PRODID:-//ISIR Ghana//ISIR Meet//EN',
     'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
     'BEGIN:VEVENT',
     `UID:${uid}`,
     `DTSTAMP:${dtStamp}`,
-    `DTSTART:${toUtcStamp(meetingDate.meeting_date, confirmed.start_minutes)}`,
-    `DTEND:${toUtcStamp(meetingDate.meeting_date, confirmed.end_minutes)}`,
+    `DTSTART;TZID=${timezone}:${localDateTimeStamp(meetingDate.meeting_date, confirmed.start_minutes)}`,
+    `DTEND;TZID=${timezone}:${localDateTimeStamp(meetingDate.meeting_date, confirmed.end_minutes)}`,
     `SUMMARY:${escapeIcs(meeting.title)}`,
     meeting.description ? `DESCRIPTION:${escapeIcs(meeting.description)}` : '',
     meeting.location ? `LOCATION:${escapeIcs(meeting.location)}` : '',
-    `X-ISIR-TIMEZONE:${escapeIcs(meeting.timezone)}`,
+    'STATUS:CONFIRMED',
     'END:VEVENT',
     'END:VCALENDAR',
   ].filter(Boolean).join('\r\n')
