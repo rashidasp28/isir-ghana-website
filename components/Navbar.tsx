@@ -13,6 +13,7 @@ const navLinks = [
   { href: '/impact', label: 'Impact' },
   { href: '/gallery', label: 'Gallery' },
   { href: '/consultancy', label: 'Consultancy' },
+  { href: '/meet', label: 'ISIR Meet' },
   { href: '/partners', label: 'Partners' },
   { href: '/news', label: 'News' },
   { href: '/contact', label: 'Contact' },
