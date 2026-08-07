@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { CalendarDays, Clock3, Download, ShieldCheck, Sparkles, Users } from 'lucide-react'
 import { createSupabaseAdminClient } from '@/lib/supabase/server'
 import ConfirmMeetingButton from '@/components/meet/ConfirmMeetingButton'
+import MeetingStatusControls from '@/components/meet/MeetingStatusControls'
 
 type MeetingDateRow = { id: string; meeting_date: string; display_order: number }
 type ParticipantRow = { id: string }
@@ -84,7 +85,7 @@ export default async function OrganizerMeetingPage({ params }: { params: { code:
           <p className="text-primaryGreen uppercase tracking-[0.18em] text-xs font-bold mb-3">Manage meeting</p>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div><h1 className="text-4xl md:text-5xl font-bold text-darkNavy mb-3">{meeting.title}</h1><p className="text-charcoal">Meeting code: <strong>{meeting.public_code}</strong> · Status: <strong className="capitalize">{meeting.status}</strong></p></div>
-            <Link href={`/meet/${meeting.public_code}`} className="inline-flex items-center justify-center rounded-xl bg-darkNavy text-white px-5 py-3 font-bold">View participant page</Link>
+            <div className="flex flex-wrap gap-3"><MeetingStatusControls code={meeting.public_code} organizerToken={params.token} status={meeting.status} /><Link href={`/meet/${meeting.public_code}`} className="inline-flex items-center justify-center rounded-xl bg-darkNavy text-white px-5 py-3 font-bold">View participant page</Link></div>
           </div>
         </section>
 
@@ -105,7 +106,7 @@ export default async function OrganizerMeetingPage({ params }: { params: { code:
           <section className="rounded-[2rem] bg-lightGreen border border-green-200 p-7 md:p-9 mb-7">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-5">
               <div className="flex gap-4"><Sparkles className="text-primaryGreen shrink-0" /><div><p className="text-xs uppercase tracking-[0.18em] font-bold text-primaryGreen mb-2">Best current option</p><h2 className="text-2xl font-bold text-darkNavy">{formatDate(best.dateId)} at {formatTime(best.minute)}</h2><p className="text-charcoal mt-2">{best.available} available · {best.maybe} maybe · {best.unavailable} unavailable</p></div></div>
-              <ConfirmMeetingButton code={meeting.public_code} organizerToken={params.token} meetingDateId={best.dateId} startMinutes={best.minute} />
+              {meeting.status === 'open' && <ConfirmMeetingButton code={meeting.public_code} organizerToken={params.token} meetingDateId={best.dateId} startMinutes={best.minute} />}
             </div>
           </section>
         ) : null}
