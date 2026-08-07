@@ -76,7 +76,7 @@ export default function AvailabilityGrid({ code, dates, dayStartMinutes, dayEndM
     <div className="rounded-3xl bg-lightGreen border border-green-200 p-8 text-center">
       <CheckCircle2 className="mx-auto text-primaryGreen mb-4" size={42} />
       <h2 className="text-2xl font-bold text-darkNavy mb-2">Availability submitted</h2>
-      <p className="text-charcoal">Thank you. The organizer can now include your response when choosing the best meeting time.</p>
+      <p className="text-charcoal">Thank you. Your email will be used to send the confirmed meeting time and joining link.</p>
     </div>
   )
 
@@ -84,7 +84,7 @@ export default function AvailabilityGrid({ code, dates, dayStartMinutes, dayEndM
     <form onSubmit={submit}>
       <div className="grid md:grid-cols-2 gap-4 mb-7">
         <label><span className="block text-sm font-bold text-darkNavy mb-2">Your name</span><input required minLength={2} maxLength={80} value={displayName} onChange={(e) => setDisplayName(e.target.value)} className="w-full rounded-xl border border-softGray px-4 py-3" placeholder="Full name" /></label>
-        <label><span className="block text-sm font-bold text-darkNavy mb-2">Email <span className="font-normal text-gray-500">(optional)</span></span><input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full rounded-xl border border-softGray px-4 py-3" placeholder="name@example.com" /></label>
+        <label><span className="block text-sm font-bold text-darkNavy mb-2">Email</span><input required type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full rounded-xl border border-softGray px-4 py-3" placeholder="name@example.com" /><span className="block text-xs text-gray-500 mt-1">Required so the organizer can send you the confirmed meeting details.</span></label>
       </div>
 
       <div className="flex flex-wrap gap-4 text-xs font-semibold mb-4">

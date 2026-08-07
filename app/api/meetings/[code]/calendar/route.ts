@@ -32,7 +32,7 @@ export async function GET(_request: Request, { params }: { params: { code: strin
 
   const { data: confirmed } = await supabase
     .from('confirmed_slots')
-    .select('meeting_date_id, start_minutes, end_minutes')
+    .select('meeting_date_id, start_minutes, end_minutes, meeting_link')
     .eq('meeting_id', meeting.id)
     .single()
 
@@ -54,6 +54,7 @@ export async function GET(_request: Request, { params }: { params: { code: strin
   const now = new Date()
   const dtStamp = `${now.getUTCFullYear()}${pad(now.getUTCMonth() + 1)}${pad(now.getUTCDate())}T${pad(now.getUTCHours())}${pad(now.getUTCMinutes())}${pad(now.getUTCSeconds())}Z`
   const timezone = escapeIcs(meeting.timezone)
+  const descriptionParts = [meeting.description || '', confirmed.meeting_link ? `Join meeting: ${confirmed.meeting_link}` : ''].filter(Boolean)
 
   const ics = [
     'BEGIN:VCALENDAR',
@@ -67,8 +68,9 @@ export async function GET(_request: Request, { params }: { params: { code: strin
     `DTSTART;TZID=${timezone}:${localDateTimeStamp(meetingDate.meeting_date, confirmed.start_minutes)}`,
     `DTEND;TZID=${timezone}:${localDateTimeStamp(meetingDate.meeting_date, confirmed.end_minutes)}`,
     `SUMMARY:${escapeIcs(meeting.title)}`,
-    meeting.description ? `DESCRIPTION:${escapeIcs(meeting.description)}` : '',
+    descriptionParts.length ? `DESCRIPTION:${escapeIcs(descriptionParts.join('\n\n'))}` : '',
     meeting.location ? `LOCATION:${escapeIcs(meeting.location)}` : '',
+    confirmed.meeting_link ? `URL:${escapeIcs(confirmed.meeting_link)}` : '',
     'STATUS:CONFIRMED',
     'END:VEVENT',
     'END:VCALENDAR',

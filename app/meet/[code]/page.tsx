@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { CalendarDays, Clock3, Download, MapPin, Sparkles } from 'lucide-react'
+import { CalendarDays, Clock3, Download, ExternalLink, MapPin, Sparkles } from 'lucide-react'
 import { createSupabaseAdminClient } from '@/lib/supabase/server'
 import AvailabilityGrid from '@/components/meet/AvailabilityGrid'
 
 type MeetingDateRow = { id: string; meeting_date: string; display_order: number }
-type ConfirmedRow = { meeting_date_id: string; start_minutes: number; end_minutes: number }
+type ConfirmedRow = { meeting_date_id: string; start_minutes: number; end_minutes: number; meeting_link: string | null }
 
 function formatMinutes(total: number) {
   const hours = Math.floor(total / 60)
@@ -23,7 +23,7 @@ export default async function ParticipantMeetingPage({ params }: { params: { cod
 
   const [{ data: datesData }, { data: confirmedData }] = await Promise.all([
     supabase.from('meeting_dates').select('id, meeting_date, display_order').eq('meeting_id', meeting.id).order('display_order'),
-    supabase.from('confirmed_slots').select('meeting_date_id, start_minutes, end_minutes').eq('meeting_id', meeting.id).maybeSingle(),
+    supabase.from('confirmed_slots').select('meeting_date_id, start_minutes, end_minutes, meeting_link').eq('meeting_id', meeting.id).maybeSingle(),
   ])
 
   const dates = (datesData || []) as MeetingDateRow[]
@@ -53,7 +53,7 @@ export default async function ParticipantMeetingPage({ params }: { params: { cod
           <div className="p-7 md:p-10">
             {meeting.status === 'confirmed' && confirmed && confirmedDate ? (
               <div className="rounded-[1.75rem] bg-lightGreen border border-green-200 p-7 md:p-9">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div className="flex flex-col gap-6">
                   <div className="flex gap-4">
                     <Sparkles className="text-primaryGreen shrink-0" size={26} />
                     <div>
@@ -63,7 +63,10 @@ export default async function ParticipantMeetingPage({ params }: { params: { cod
                       {meeting.location && <p className="text-charcoal mt-2">{meeting.location}</p>}
                     </div>
                   </div>
-                  <a href={`/api/meetings/${code}/calendar`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-darkNavy text-white px-5 py-3 font-bold"><Download size={18} /> Add to calendar</a>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    {confirmed.meeting_link && <a href={confirmed.meeting_link} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-primaryGreen text-white px-5 py-3 font-bold"><ExternalLink size={18} /> Join meeting</a>}
+                    <a href={`/api/meetings/${code}/calendar`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-darkNavy text-white px-5 py-3 font-bold"><Download size={18} /> Add to calendar</a>
+                  </div>
                 </div>
               </div>
             ) : meeting.status === 'open' ? (
