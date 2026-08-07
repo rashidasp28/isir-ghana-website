@@ -17,9 +17,9 @@ const impactMetrics = [
     description: 'Female participation across direct Brick STEAM learners: 140 girls out of 176 learners.',
   },
   {
-    value: '4',
+    value: '5',
     label: 'Schools Engaged',
-    description: 'Bethany MA JHS, The Kings School, Zosimli Girls Model JHS, and Tamale Metro Girls Model JHS have hosted Brick STEAM activities.',
+    description: 'ISIR Ghana has engaged five partner schools through its STEAM education initiatives.',
   },
   {
     value: '35',
