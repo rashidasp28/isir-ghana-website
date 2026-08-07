@@ -40,7 +40,7 @@ const latestStories = [
     title: 'ISIR Ghana Launches Mother First Health Initiative',
     category: 'Maternal Health',
     href: '/news/mother-first-health-initiative',
-    image: '/images/field/mother-first-health-initiative.jpg',
+    image: '/images/field/health-outreach-1.jpg',
   },
   {
     title: 'Brick STEAM Discovery Caravan reaches The Kings School',
