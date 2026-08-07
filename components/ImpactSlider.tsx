@@ -6,7 +6,7 @@ const impactItems = [
   { number: '5,000+', label: 'Students targeted through STEAM programs' },
   { number: '500+', label: 'Youth and women empowered annually' },
   { number: '4', label: 'Communities reached' },
-  { number: '3', label: 'Partner schools engaged' },
+  { number: '5', label: 'Partner schools engaged' },
   { number: '10', label: 'Climate-resilient communities targeted' },
   { number: '4', label: 'Strategic development focus areas' },
 ]
