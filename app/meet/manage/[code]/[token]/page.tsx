@@ -7,8 +7,8 @@ import ConfirmMeetingButton from '@/components/meet/ConfirmMeetingButton'
 import MeetingStatusControls from '@/components/meet/MeetingStatusControls'
 
 type MeetingDateRow = { id: string; meeting_date: string; display_order: number }
-type ParticipantRow = { id: string }
-type AvailabilitySlotRow = { meeting_date_id: string; start_minutes: number; response: 'available' | 'maybe' | 'unavailable' }
+type ParticipantRow = { id: string; display_name: string }
+type AvailabilitySlotRow = { participant_id: string; meeting_date_id: string; start_minutes: number; response: 'available' | 'maybe' | 'unavailable' }
 type RankedSlot = { dateId: string; minute: number; available: number; maybe: number; unavailable: number }
 type ConfirmedSlotRow = { meeting_date_id: string; start_minutes: number; end_minutes: number }
 
@@ -31,7 +31,7 @@ export default async function OrganizerMeetingPage({ params }: { params: { code:
   const [{ count: participantCount }, { data: datesData }, { data: participantsData }, { data: confirmedData }] = await Promise.all([
     supabase.from('participants').select('*', { count: 'exact', head: true }).eq('meeting_id', meeting.id),
     supabase.from('meeting_dates').select('id, meeting_date, display_order').eq('meeting_id', meeting.id).order('display_order'),
-    supabase.from('participants').select('id').eq('meeting_id', meeting.id),
+    supabase.from('participants').select('id, display_name').eq('meeting_id', meeting.id).order('submitted_at'),
     supabase.from('confirmed_slots').select('meeting_date_id, start_minutes, end_minutes').eq('meeting_id', meeting.id).maybeSingle(),
   ])
 
@@ -42,7 +42,7 @@ export default async function OrganizerMeetingPage({ params }: { params: { code:
   let slots: AvailabilitySlotRow[] = []
 
   if (participantIds.length > 0) {
-    const { data: slotData } = await supabase.from('availability_slots').select('meeting_date_id, start_minutes, response').in('participant_id', participantIds)
+    const { data: slotData } = await supabase.from('availability_slots').select('participant_id, meeting_date_id, start_minutes, response').in('participant_id', participantIds)
     slots = (slotData || []) as AvailabilitySlotRow[]
   }
 
@@ -110,6 +110,26 @@ export default async function OrganizerMeetingPage({ params }: { params: { code:
             </div>
           </section>
         ) : null}
+
+        {participants.length > 0 && (
+          <section className="bg-white rounded-[2rem] border border-softGray shadow-sm p-7 md:p-10 mb-7">
+            <div className="flex items-center gap-3 mb-5">
+              <Users className="text-primaryBlue" size={24} />
+              <div>
+                <h2 className="text-2xl font-bold text-darkNavy">Participants who responded</h2>
+                <p className="text-charcoal mt-1">{participants.length} participant{participants.length === 1 ? '' : 's'} submitted availability.</p>
+              </div>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {participants.map((participant, index) => (
+                <div key={participant.id} className="flex items-center gap-3 rounded-2xl bg-lightBlue border border-softGray px-4 py-3">
+                  <div className="w-9 h-9 rounded-full bg-primaryGreen text-white flex items-center justify-center text-sm font-bold">{index + 1}</div>
+                  <p className="font-semibold text-darkNavy">{participant.display_name}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         <section className="bg-white rounded-[2rem] border border-softGray shadow-sm p-7 md:p-10">
           <h2 className="text-2xl font-bold text-darkNavy mb-2">Top meeting times</h2>
