@@ -8,7 +8,7 @@ function hashToken(token: string) {
   return createHash('sha256').update(token).digest('hex')
 }
 
-export async function POST(request: Request, { params }: { params: { code: string } }) {
+export async function POST(request: Request, { params }: { params: Promise<{ code: string }> }) {
   try {
     const body = (await request.json()) as Record<string, unknown>
     const organizerToken = typeof body.organizerToken === 'string' ? body.organizerToken : ''
@@ -19,7 +19,8 @@ export async function POST(request: Request, { params }: { params: { code: strin
     }
 
     const supabase = createSupabaseAdminClient()
-    const code = params.code.toUpperCase()
+    const { code: rawCode } = await params
+    const code = rawCode.toUpperCase()
     const tokenHash = hashToken(organizerToken)
 
     const { data: meeting } = await supabase

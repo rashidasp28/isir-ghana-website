@@ -20,10 +20,11 @@ function formatTime(total: number) {
   return `${hours % 12 || 12}:${String(minutes).padStart(2, '0')} ${suffix}`
 }
 
-export default async function OrganizerMeetingPage({ params }: { params: { code: string; token: string } }) {
+export default async function OrganizerMeetingPage({ params }: { params: Promise<{ code: string; token: string }> }) {
+  const { code: rawCode, token } = await params
   const supabase = createSupabaseAdminClient()
-  const code = params.code.toUpperCase()
-  const tokenHash = hashToken(params.token)
+  const code = rawCode.toUpperCase()
+  const tokenHash = hashToken(token)
 
   const { data: meeting } = await supabase.from('meetings').select('id, title, public_code, status, timezone, slot_duration_minutes, day_start_minutes, day_end_minutes, created_at').eq('public_code', code).eq('organizer_token_hash', tokenHash).single()
   if (!meeting) notFound()
@@ -85,7 +86,7 @@ export default async function OrganizerMeetingPage({ params }: { params: { code:
           <p className="text-primaryGreen uppercase tracking-[0.18em] text-xs font-bold mb-3">Manage meeting</p>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div><h1 className="text-4xl md:text-5xl font-bold text-darkNavy mb-3">{meeting.title}</h1><p className="text-charcoal">Meeting code: <strong>{meeting.public_code}</strong> · Status: <strong className="capitalize">{meeting.status}</strong></p></div>
-            <div className="flex flex-wrap gap-3"><MeetingStatusControls code={meeting.public_code} organizerToken={params.token} status={meeting.status} /><Link href={`/meet/${meeting.public_code}`} className="inline-flex items-center justify-center rounded-xl bg-darkNavy text-white px-5 py-3 font-bold">View participant page</Link></div>
+            <div className="flex flex-wrap gap-3"><MeetingStatusControls code={meeting.public_code} organizerToken={token} status={meeting.status} /><Link href={`/meet/${meeting.public_code}`} className="inline-flex items-center justify-center rounded-xl bg-darkNavy text-white px-5 py-3 font-bold">View participant page</Link></div>
           </div>
         </section>
 
@@ -106,7 +107,7 @@ export default async function OrganizerMeetingPage({ params }: { params: { code:
           <section className="rounded-[2rem] bg-lightGreen border border-green-200 p-7 md:p-9 mb-7">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-5">
               <div className="flex gap-4"><Sparkles className="text-primaryGreen shrink-0" /><div><p className="text-xs uppercase tracking-[0.18em] font-bold text-primaryGreen mb-2">Best current option</p><h2 className="text-2xl font-bold text-darkNavy">{formatDate(best.dateId)} at {formatTime(best.minute)}</h2><p className="text-charcoal mt-2">{best.available} available · {best.maybe} maybe · {best.unavailable} unavailable</p></div></div>
-              {meeting.status === 'open' && <ConfirmMeetingButton code={meeting.public_code} organizerToken={params.token} meetingDateId={best.dateId} startMinutes={best.minute} />}
+              {meeting.status === 'open' && <ConfirmMeetingButton code={meeting.public_code} organizerToken={token} meetingDateId={best.dateId} startMinutes={best.minute} />}
             </div>
           </section>
         ) : null}
@@ -139,7 +140,7 @@ export default async function OrganizerMeetingPage({ params }: { params: { code:
               <div className="w-10 h-10 rounded-full bg-lightBlue flex items-center justify-center font-bold text-darkNavy">{index + 1}</div>
               <div><p className="font-bold text-darkNavy">{formatDate(slot.dateId)} · {formatTime(slot.minute)}</p><p className="text-sm text-gray-500">{meeting.timezone}</p></div>
               <div className="flex gap-2 text-xs font-bold"><span className="rounded-full bg-green-100 text-green-800 px-3 py-1">{slot.available} yes</span><span className="rounded-full bg-amber-100 text-amber-800 px-3 py-1">{slot.maybe} maybe</span><span className="rounded-full bg-gray-100 text-gray-600 px-3 py-1">{slot.unavailable} no</span></div>
-              {meeting.status === 'open' && <ConfirmMeetingButton code={meeting.public_code} organizerToken={params.token} meetingDateId={slot.dateId} startMinutes={slot.minute} />}
+              {meeting.status === 'open' && <ConfirmMeetingButton code={meeting.public_code} organizerToken={token} meetingDateId={slot.dateId} startMinutes={slot.minute} />}
             </div>
           ))}</div>}
         </section>
