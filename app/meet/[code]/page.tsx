@@ -15,9 +15,10 @@ function formatMinutes(total: number) {
   return `${displayHours}:${String(minutes).padStart(2, '0')} ${suffix}`
 }
 
-export default async function ParticipantMeetingPage({ params }: { params: { code: string } }) {
+export default async function ParticipantMeetingPage({ params }: { params: Promise<{ code: string }> }) {
+  const { code: rawCode } = await params
   const supabase = createSupabaseAdminClient()
-  const code = params.code.toUpperCase()
+  const code = rawCode.toUpperCase()
   const { data: meeting } = await supabase.from('meetings').select('id, title, description, location, meeting_type, timezone, slot_duration_minutes, day_start_minutes, day_end_minutes, status').eq('public_code', code).single()
   if (!meeting) notFound()
 

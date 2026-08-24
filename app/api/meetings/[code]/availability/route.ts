@@ -11,9 +11,10 @@ function hashToken(token: string) {
   return createHash('sha256').update(token).digest('hex')
 }
 
-export async function POST(request: Request, { params }: { params: { code: string } }) {
+export async function POST(request: Request, { params }: { params: Promise<{ code: string }> }) {
   try {
-    const code = params.code.toUpperCase()
+    const { code: rawCode } = await params
+    const code = rawCode.toUpperCase()
     const body = (await request.json()) as Record<string, unknown>
     const displayName = typeof body.displayName === 'string' ? body.displayName.trim() : ''
     const email = typeof body.email === 'string' ? body.email.trim() : ''

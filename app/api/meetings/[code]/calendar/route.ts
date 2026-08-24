@@ -16,9 +16,10 @@ function localDateTimeStamp(dateValue: string, minutes: number) {
   return `${compactDate}T${pad(hours)}${pad(mins)}00`
 }
 
-export async function GET(_request: Request, { params }: { params: { code: string } }) {
+export async function GET(_request: Request, { params }: { params: Promise<{ code: string }> }) {
+  const { code: rawCode } = await params
   const supabase = createSupabaseAdminClient()
-  const code = params.code.toUpperCase()
+  const code = rawCode.toUpperCase()
 
   const { data: meeting } = await supabase
     .from('meetings')
