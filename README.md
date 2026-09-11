@@ -75,7 +75,6 @@ Use clear image filenames and always keep a short description of what each image
 | `public/images/programs/shesteam.jpg` | A program image showing girls or mixed student groups working with electronic components, laptops, ESP32 or Arduino boards, sensors, wires, or creative technology tools. |
 | `public/images/programs/mothers-first.jpg` | A respectful maternal and child health image showing women, mothers, health education, community dialogue, or health outreach. Avoid images that feel intrusive or exploitative. |
 | `public/images/about/community.jpg` | ISIR Ghana team members engaging with students, women, youth, farmers, teachers, or local community members. The image should show respectful partnership and community connection. |
-```
 
 ## Media quality check
 
