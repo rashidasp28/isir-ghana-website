@@ -77,6 +77,16 @@ Use clear image filenames and always keep a short description of what each image
 | `public/images/about/community.jpg` | ISIR Ghana team members engaging with students, women, youth, farmers, teachers, or local community members. The image should show respectful partnership and community connection. |
 ```
 
+## Media quality check
+
+New images must not exceed 5 MiB and new videos must not exceed 20 MiB. Run the automated check before committing media:
+
+```bash
+npm run check:media
+```
+
+See the [media asset guidelines](docs/media-assets.md) for preparation, consent, accessibility, and legacy-file handling.
+
 ## Local Development
 
 ```bash
