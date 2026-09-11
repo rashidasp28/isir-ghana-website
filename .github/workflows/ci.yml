@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check media file sizes
+        run: npm run check:media
+
       - name: Run lint checks
         run: npm run lint
 
