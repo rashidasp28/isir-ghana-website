@@ -35,6 +35,9 @@ jobs:
       - name: Check media file sizes
         run: npm run check:media
 
+      - name: Check internal links
+        run: npm run check:links
+
       - name: Run lint checks
         run: npm run lint
 

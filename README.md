@@ -86,6 +86,16 @@ npm run check:media
 
 See the [media asset guidelines](docs/media-assets.md) for preparation, consent, accessibility, and legacy-file handling.
 
+## Internal link check
+
+Static internal page, API, document, and asset links are checked without making network requests:
+
+```bash
+npm run check:links
+```
+
+Six pre-existing download links whose documents are not yet present are recorded in `config/internal-link-baseline.json`. They remain visible as warnings. New broken links fail the check, and stale exceptions must be removed when a document is added or a link is retired.
+
 ## Local Development
 
 ```bash

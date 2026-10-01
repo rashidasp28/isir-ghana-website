@@ -4,7 +4,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "check:media": "node scripts/check-media-size.mjs"
+    "check:media": "node scripts/check-media-size.mjs",
+    "check:links": "node scripts/check-internal-links.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
