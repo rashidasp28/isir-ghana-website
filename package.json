@@ -4,6 +4,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "test": "node --test tests/*.test.mjs",
     "check:media": "node scripts/check-media-size.mjs",
     "check:links": "node scripts/check-internal-links.mjs"
   },
