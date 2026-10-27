@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Test repository checks
+        run: npm test
+
       - name: Check media file sizes
         run: npm run check:media
 
